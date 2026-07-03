@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT for Students | ChatGPT Tutorials</title>
+  <meta name="description" content="ChatGPT tutorials for students, study support, and academic tasks." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/for-students/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT for Students</h1>
+    <p>Study guides, assignment help, and learning workflows using ChatGPT.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 150</p>
+      <ul>
+        <li>Study summaries and research assistance</li>
+        <li>Essay and report drafting support</li>
+        <li>Learning plans and revision tools</li>
+      </ul>
+    </section>
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Study (150)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-student-checklist-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-academic-success.md">Student Checklist For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-assignment-help.md">Student Checklist For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-better-grades.md">Student Checklist For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-college.md">Student Checklist For Study Plan For College</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-exam-prep.md">Student Checklist For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-fast-review.md">Student Checklist For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-high-school.md">Student Checklist For Study Plan For High School</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-history-class.md">Student Checklist For Study Plan For History Class</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-language-learning.md">Student Checklist For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-learning-faster.md">Student Checklist For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-math-study.md">Student Checklist For Study Plan For Math Study</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-note-taking.md">Student Checklist For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-presentation-skills.md">Student Checklist For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-project-work.md">Student Checklist For Study Plan For Project Work</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-remote-learning.md">Student Checklist For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-research-papers.md">Student Checklist For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-science-classes.md">Student Checklist For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-study-groups.md">Student Checklist For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-university.md">Student Checklist For Study Plan For University</a>
+            <a href="chatgpt-student-checklist-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-checklist-for-study-plan-for-writing-class.md">Student Checklist For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-academic-success.md">Student Guide For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-assignment-help.md">Student Guide For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-better-grades.md">Student Guide For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-college.md">Student Guide For Study Plan For College</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-exam-prep.md">Student Guide For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-fast-review.md">Student Guide For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-high-school.md">Student Guide For Study Plan For High School</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-history-class.md">Student Guide For Study Plan For History Class</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-language-learning.md">Student Guide For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-learning-faster.md">Student Guide For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-math-study.md">Student Guide For Study Plan For Math Study</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-note-taking.md">Student Guide For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-presentation-skills.md">Student Guide For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-project-work.md">Student Guide For Study Plan For Project Work</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-remote-learning.md">Student Guide For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-research-papers.md">Student Guide For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-science-classes.md">Student Guide For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-study-groups.md">Student Guide For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-university.md">Student Guide For Study Plan For University</a>
+            <a href="chatgpt-student-guide-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-guide-for-study-plan-for-writing-class.md">Student Guide For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-better-grades.md">Student Outline For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-college.md">Student Outline For Study Plan For College</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-exam-prep.md">Student Outline For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-fast-review.md">Student Outline For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-high-school.md">Student Outline For Study Plan For High School</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-language-learning.md">Student Outline For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-remote-learning.md">Student Outline For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-science-classes.md">Student Outline For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-study-groups.md">Student Outline For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-outline-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-outline-for-study-plan-for-university.md">Student Outline For Study Plan For University</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-academic-success.md">Student Plan For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-assignment-help.md">Student Plan For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-better-grades.md">Student Plan For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-college.md">Student Plan For Study Plan For College</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-exam-prep.md">Student Plan For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-fast-review.md">Student Plan For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-high-school.md">Student Plan For Study Plan For High School</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-history-class.md">Student Plan For Study Plan For History Class</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-language-learning.md">Student Plan For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-learning-faster.md">Student Plan For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-math-study.md">Student Plan For Study Plan For Math Study</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-note-taking.md">Student Plan For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-presentation-skills.md">Student Plan For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-project-work.md">Student Plan For Study Plan For Project Work</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-remote-learning.md">Student Plan For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-research-papers.md">Student Plan For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-science-classes.md">Student Plan For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-study-groups.md">Student Plan For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-university.md">Student Plan For Study Plan For University</a>
+            <a href="chatgpt-student-plan-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-plan-for-study-plan-for-writing-class.md">Student Plan For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-academic-success.md">Student Strategy For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-assignment-help.md">Student Strategy For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-better-grades.md">Student Strategy For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-college.md">Student Strategy For Study Plan For College</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-exam-prep.md">Student Strategy For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-fast-review.md">Student Strategy For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-high-school.md">Student Strategy For Study Plan For High School</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-history-class.md">Student Strategy For Study Plan For History Class</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-language-learning.md">Student Strategy For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-learning-faster.md">Student Strategy For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-math-study.md">Student Strategy For Study Plan For Math Study</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-note-taking.md">Student Strategy For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-presentation-skills.md">Student Strategy For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-project-work.md">Student Strategy For Study Plan For Project Work</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-remote-learning.md">Student Strategy For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-research-papers.md">Student Strategy For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-science-classes.md">Student Strategy For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-study-groups.md">Student Strategy For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-university.md">Student Strategy For Study Plan For University</a>
+            <a href="chatgpt-student-strategy-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-strategy-for-study-plan-for-writing-class.md">Student Strategy For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-academic-success.md">Student Summary For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-assignment-help.md">Student Summary For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-better-grades.md">Student Summary For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-college.md">Student Summary For Study Plan For College</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-exam-prep.md">Student Summary For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-fast-review.md">Student Summary For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-high-school.md">Student Summary For Study Plan For High School</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-history-class.md">Student Summary For Study Plan For History Class</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-language-learning.md">Student Summary For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-learning-faster.md">Student Summary For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-math-study.md">Student Summary For Study Plan For Math Study</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-note-taking.md">Student Summary For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-presentation-skills.md">Student Summary For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-project-work.md">Student Summary For Study Plan For Project Work</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-remote-learning.md">Student Summary For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-research-papers.md">Student Summary For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-science-classes.md">Student Summary For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-study-groups.md">Student Summary For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-university.md">Student Summary For Study Plan For University</a>
+            <a href="chatgpt-student-summary-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-summary-for-study-plan-for-writing-class.md">Student Summary For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-template-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-academic-success.md">Student Template For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-template-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-assignment-help.md">Student Template For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-template-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-better-grades.md">Student Template For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-template-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-college.md">Student Template For Study Plan For College</a>
+            <a href="chatgpt-student-template-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-exam-prep.md">Student Template For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-template-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-fast-review.md">Student Template For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-template-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-high-school.md">Student Template For Study Plan For High School</a>
+            <a href="chatgpt-student-template-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-history-class.md">Student Template For Study Plan For History Class</a>
+            <a href="chatgpt-student-template-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-language-learning.md">Student Template For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-template-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-learning-faster.md">Student Template For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-template-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-math-study.md">Student Template For Study Plan For Math Study</a>
+            <a href="chatgpt-student-template-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-note-taking.md">Student Template For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-template-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-presentation-skills.md">Student Template For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-template-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-project-work.md">Student Template For Study Plan For Project Work</a>
+            <a href="chatgpt-student-template-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-remote-learning.md">Student Template For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-template-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-research-papers.md">Student Template For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-template-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-science-classes.md">Student Template For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-template-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-study-groups.md">Student Template For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-template-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-university.md">Student Template For Study Plan For University</a>
+            <a href="chatgpt-student-template-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-template-for-study-plan-for-writing-class.md">Student Template For Study Plan For Writing Class</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-academic-success.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-academic-success.md">Student Workflow For Study Plan For Academic Success</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-assignment-help.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-assignment-help.md">Student Workflow For Study Plan For Assignment Help</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-better-grades.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-better-grades.md">Student Workflow For Study Plan For Better Grades</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-college.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-college.md">Student Workflow For Study Plan For College</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-exam-prep.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-exam-prep.md">Student Workflow For Study Plan For Exam Prep</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-fast-review.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-fast-review.md">Student Workflow For Study Plan For Fast Review</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-high-school.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-high-school.md">Student Workflow For Study Plan For High School</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-history-class.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-history-class.md">Student Workflow For Study Plan For History Class</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-language-learning.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-language-learning.md">Student Workflow For Study Plan For Language Learning</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-learning-faster.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-learning-faster.md">Student Workflow For Study Plan For Learning Faster</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-math-study.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-math-study.md">Student Workflow For Study Plan For Math Study</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-note-taking.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-note-taking.md">Student Workflow For Study Plan For Note Taking</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-presentation-skills.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-presentation-skills.md">Student Workflow For Study Plan For Presentation Skills</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-project-work.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-project-work.md">Student Workflow For Study Plan For Project Work</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-remote-learning.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-remote-learning.md">Student Workflow For Study Plan For Remote Learning</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-research-papers.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-research-papers.md">Student Workflow For Study Plan For Research Papers</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-science-classes.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-science-classes.md">Student Workflow For Study Plan For Science Classes</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-study-groups.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-study-groups.md">Student Workflow For Study Plan For Study Groups</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-university.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-university.md">Student Workflow For Study Plan For University</a>
+            <a href="chatgpt-student-workflow-for-study-plan-for-writing-class.md" class="article-card" data-title="chatgpt-student-workflow-for-study-plan-for-writing-class.md">Student Workflow For Study Plan For Writing Class</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT for Students</footer>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Guides | ChatGPT Tutorials</title>
+  <meta name="description" content="Detailed ChatGPT guides for workflow, productivity, and creative use cases." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/guides/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT Guides</h1>
+    <p>Comprehensive guides for using ChatGPT in real tasks and workflows.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 12</p>
+      <ul>
+        <li>ChatGPT basics and setup</li>
+        <li>Advanced prompt strategies and templates</li>
+        <li>Conversation management and results optimization</li>
+      </ul>
+    </section>
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Blog (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-blog-post-outlines.md" class="article-card" data-title="chatgpt-for-blog-post-outlines.md">For Blog Post Outlines</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Brainstorming (1)</h3>
+          <div class="articles-grid">
+            <a href="how-to-use-chatgpt-for-brainstorming.md" class="article-card" data-title="how-to-use-chatgpt-for-brainstorming.md">how to use chatgpt for brainstorming</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Building (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-building-customer-personas.md" class="article-card" data-title="chatgpt-for-building-customer-personas.md">For Building Customer Personas</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Clear (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-formatting-for-clear-results.md" class="article-card" data-title="chatgpt-prompt-formatting-for-clear-results.md">Prompt Formatting For Clear Results</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Crafting (2)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-crafting-a-personal-bio.md" class="article-card" data-title="chatgpt-for-crafting-a-personal-bio.md">For Crafting A Personal Bio</a>
+            <a href="chatgpt-for-crafting-followup-emails.md" class="article-card" data-title="chatgpt-for-crafting-followup-emails.md">For Crafting Followup Emails</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Creating (10)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-creating-advertising-headlines.md" class="article-card" data-title="chatgpt-for-creating-advertising-headlines.md">For Creating Advertising Headlines</a>
+            <a href="chatgpt-for-creating-creative-prompts.md" class="article-card" data-title="chatgpt-for-creating-creative-prompts.md">For Creating Creative Prompts</a>
+            <a href="chatgpt-for-creating-email-sequences.md" class="article-card" data-title="chatgpt-for-creating-email-sequences.md">For Creating Email Sequences</a>
+            <a href="chatgpt-for-creating-faq-pages.md" class="article-card" data-title="chatgpt-for-creating-faq-pages.md">For Creating Faq Pages</a>
+            <a href="chatgpt-for-creating-lesson-plans.md" class="article-card" data-title="chatgpt-for-creating-lesson-plans.md">For Creating Lesson Plans</a>
+            <a href="chatgpt-for-creating-marketing-campaigns.md" class="article-card" data-title="chatgpt-for-creating-marketing-campaigns.md">For Creating Marketing Campaigns</a>
+            <a href="chatgpt-for-creating-onboarding-content.md" class="article-card" data-title="chatgpt-for-creating-onboarding-content.md">For Creating Onboarding Content</a>
+            <a href="chatgpt-for-creating-product-titles.md" class="article-card" data-title="chatgpt-for-creating-product-titles.md">For Creating Product Titles</a>
+            <a href="chatgpt-for-creating-video-scripts.md" class="article-card" data-title="chatgpt-for-creating-video-scripts.md">For Creating Video Scripts</a>
+            <a href="chatgpt-for-creating-webinar-scripts.md" class="article-card" data-title="chatgpt-for-creating-webinar-scripts.md">For Creating Webinar Scripts</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Customer (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-customer-support-templates.md" class="article-card" data-title="chatgpt-for-customer-support-templates.md">For Customer Support Templates</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Daily (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-daily-planning-and-todo-lists.md" class="article-card" data-title="chatgpt-for-daily-planning-and-todo-lists.md">For Daily Planning And Todo Lists</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Developing (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-developing-brand-messaging.md" class="article-card" data-title="chatgpt-for-developing-brand-messaging.md">For Developing Brand Messaging</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Editing (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-editing-grammar-and-style.md" class="article-card" data-title="chatgpt-for-editing-grammar-and-style.md">For Editing Grammar And Style</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Email (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-email-writing-and-replies.md" class="article-card" data-title="chatgpt-for-email-writing-and-replies.md">For Email Writing And Replies</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Everyday (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-use-cases-for-everyday-productivity.md" class="article-card" data-title="chatgpt-use-cases-for-everyday-productivity.md">Use Cases For Everyday Productivity</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">General (11)</h3>
+          <div class="articles-grid">
+            <a href="building-your-first-chatgpt-workflow.md" class="article-card" data-title="building-your-first-chatgpt-workflow.md">building your first chatgpt workflow</a>
+            <a href="chatgpt-account-setup-and-settings.md" class="article-card" data-title="chatgpt-account-setup-and-settings.md">Account Setup And Settings</a>
+            <a href="chatgpt-keyboard-shortcuts-and-tips.md" class="article-card" data-title="chatgpt-keyboard-shortcuts-and-tips.md">Keyboard Shortcuts And Tips</a>
+            <a href="creating-better-content-with-chatgpt.md" class="article-card" data-title="creating-better-content-with-chatgpt.md">creating better content with chatgpt</a>
+            <a href="getting-started-with-chatgpt-a-beginners-guide.md" class="article-card" data-title="getting-started-with-chatgpt-a-beginners-guide.md">getting started with chatgpt a beginners guide</a>
+            <a href="how-to-write-effective-chatgpt-prompts.md" class="article-card" data-title="how-to-write-effective-chatgpt-prompts.md">how to write effective chatgpt prompts</a>
+            <a href="improving-chatgpt-responses-with-context.md" class="article-card" data-title="improving-chatgpt-responses-with-context.md">improving chatgpt responses with context</a>
+            <a href="understanding-chatgpt-conversation-flow.md" class="article-card" data-title="understanding-chatgpt-conversation-flow.md">understanding chatgpt conversation flow</a>
+            <a href="using-chatgpt-to-draft-announcements.md" class="article-card" data-title="using-chatgpt-to-draft-announcements.md">using chatgpt to draft announcements</a>
+            <a href="using-chatgpt-to-edit-documents.md" class="article-card" data-title="using-chatgpt-to-edit-documents.md">using chatgpt to edit documents</a>
+            <a href="writing-meeting-notes-with-chatgpt.md" class="article-card" data-title="writing-meeting-notes-with-chatgpt.md">writing meeting notes with chatgpt</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Generating (3)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-generating-business-ideas.md" class="article-card" data-title="chatgpt-for-generating-business-ideas.md">For Generating Business Ideas</a>
+            <a href="chatgpt-for-generating-content-ideas.md" class="article-card" data-title="chatgpt-for-generating-content-ideas.md">For Generating Content Ideas</a>
+            <a href="chatgpt-for-generating-presentation-slides.md" class="article-card" data-title="chatgpt-for-generating-presentation-slides.md">For Generating Presentation Slides</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Goal (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-goal-setting-and-tracking.md" class="article-card" data-title="chatgpt-for-goal-setting-and-tracking.md">For Goal Setting And Tracking</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Improving (2)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-improving-email-subject-lines.md" class="article-card" data-title="chatgpt-for-improving-email-subject-lines.md">For Improving Email Subject Lines</a>
+            <a href="chatgpt-for-improving-vocabulary.md" class="article-card" data-title="chatgpt-for-improving-vocabulary.md">For Improving Vocabulary</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Interview (2)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-interview-preparation.md" class="article-card" data-title="chatgpt-for-interview-preparation.md">For Interview Preparation</a>
+            <a href="chatgpt-for-interview-question-practice.md" class="article-card" data-title="chatgpt-for-interview-question-practice.md">For Interview Question Practice</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Learning (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-learning-new-skills.md" class="article-card" data-title="chatgpt-for-learning-new-skills.md">For Learning New Skills</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Marketing (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-examples-for-marketing.md" class="article-card" data-title="chatgpt-prompt-examples-for-marketing.md">Prompt Examples For Marketing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Newsletters (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-newsletters-and-update-emails.md" class="article-card" data-title="chatgpt-for-newsletters-and-update-emails.md">For Newsletters And Update Emails</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Note (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-note-taking-and-summaries.md" class="article-card" data-title="chatgpt-for-note-taking-and-summaries.md">For Note Taking And Summaries</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Organizing (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-organizing-meeting-agendas.md" class="article-card" data-title="chatgpt-for-organizing-meeting-agendas.md">For Organizing Meeting Agendas</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Personal (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-personal-productivity.md" class="article-card" data-title="chatgpt-for-personal-productivity.md">For Personal Productivity</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Planning (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-planning-projects-stepbystep.md" class="article-card" data-title="chatgpt-for-planning-projects-stepbystep.md">For Planning Projects Stepbystep</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Preparing (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-preparing-reports.md" class="article-card" data-title="chatgpt-for-preparing-reports.md">For Preparing Reports</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Project (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-project-planning-and-tasks.md" class="article-card" data-title="chatgpt-for-project-planning-and-tasks.md">For Project Planning And Tasks</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Research (1)</h3>
+          <div class="articles-grid">
+            <a href="using-chatgpt-for-research-summaries.md" class="article-card" data-title="using-chatgpt-for-research-summaries.md">using chatgpt for research summaries</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Resume (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-resume-and-cover-letter-help.md" class="article-card" data-title="chatgpt-for-resume-and-cover-letter-help.md">For Resume And Cover Letter Help</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Social (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-social-media-post-ideas.md" class="article-card" data-title="chatgpt-for-social-media-post-ideas.md">For Social Media Post Ideas</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Storytelling (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-storytelling-and-creative-writing.md" class="article-card" data-title="chatgpt-for-storytelling-and-creative-writing.md">For Storytelling And Creative Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Time (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-time-management-strategies.md" class="article-card" data-title="chatgpt-for-time-management-strategies.md">For Time Management Strategies</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Travel (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-travel-planning.md" class="article-card" data-title="chatgpt-for-travel-planning.md">For Travel Planning</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Uploading (1)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-uploading-research-insights.md" class="article-card" data-title="chatgpt-for-uploading-research-insights.md">For Uploading Research Insights</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Writing (143)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-for-writing-ad-copy.md" class="article-card" data-title="chatgpt-for-writing-ad-copy.md">For Writing Ad Copy</a>
+            <a href="chatgpt-for-writing-ad-headlines.md" class="article-card" data-title="chatgpt-for-writing-ad-headlines.md">For Writing Ad Headlines</a>
+            <a href="chatgpt-for-writing-audience-engagement-tips.md" class="article-card" data-title="chatgpt-for-writing-audience-engagement-tips.md">For Writing Audience Engagement Tips</a>
+            <a href="chatgpt-for-writing-audience-research-notes.md" class="article-card" data-title="chatgpt-for-writing-audience-research-notes.md">For Writing Audience Research Notes</a>
+            <a href="chatgpt-for-writing-brand-positioning-statements.md" class="article-card" data-title="chatgpt-for-writing-brand-positioning-statements.md">For Writing Brand Positioning Statements</a>
+            <a href="chatgpt-for-writing-brand-stories.md" class="article-card" data-title="chatgpt-for-writing-brand-stories.md">For Writing Brand Stories</a>
+            <a href="chatgpt-for-writing-branding-guidelines.md" class="article-card" data-title="chatgpt-for-writing-branding-guidelines.md">For Writing Branding Guidelines</a>
+            <a href="chatgpt-for-writing-business-plans.md" class="article-card" data-title="chatgpt-for-writing-business-plans.md">For Writing Business Plans</a>
+            <a href="chatgpt-for-writing-business-proposals.md" class="article-card" data-title="chatgpt-for-writing-business-proposals.md">For Writing Business Proposals</a>
+            <a href="chatgpt-for-writing-campaign-briefs.md" class="article-card" data-title="chatgpt-for-writing-campaign-briefs.md">For Writing Campaign Briefs</a>
+            <a href="chatgpt-for-writing-campaign-objectives.md" class="article-card" data-title="chatgpt-for-writing-campaign-objectives.md">For Writing Campaign Objectives</a>
+            <a href="chatgpt-for-writing-case-studies.md" class="article-card" data-title="chatgpt-for-writing-case-studies.md">For Writing Case Studies</a>
+            <a href="chatgpt-for-writing-case-study-insights.md" class="article-card" data-title="chatgpt-for-writing-case-study-insights.md">For Writing Case Study Insights</a>
+            <a href="chatgpt-for-writing-case-study-questions.md" class="article-card" data-title="chatgpt-for-writing-case-study-questions.md">For Writing Case Study Questions</a>
+            <a href="chatgpt-for-writing-case-study-summaries.md" class="article-card" data-title="chatgpt-for-writing-case-study-summaries.md">For Writing Case Study Summaries</a>
+            <a href="chatgpt-for-writing-client-proposals.md" class="article-card" data-title="chatgpt-for-writing-client-proposals.md">For Writing Client Proposals</a>
+            <a href="chatgpt-for-writing-collaboration-guides.md" class="article-card" data-title="chatgpt-for-writing-collaboration-guides.md">For Writing Collaboration Guides</a>
+            <a href="chatgpt-for-writing-communication-plans.md" class="article-card" data-title="chatgpt-for-writing-communication-plans.md">For Writing Communication Plans</a>
+            <a href="chatgpt-for-writing-communication-playbooks.md" class="article-card" data-title="chatgpt-for-writing-communication-playbooks.md">For Writing Communication Playbooks</a>
+            <a href="chatgpt-for-writing-communication-templates.md" class="article-card" data-title="chatgpt-for-writing-communication-templates.md">For Writing Communication Templates</a>
+            <a href="chatgpt-for-writing-communications-guides.md" class="article-card" data-title="chatgpt-for-writing-communications-guides.md">For Writing Communications Guides</a>
+            <a href="chatgpt-for-writing-concept-notes.md" class="article-card" data-title="chatgpt-for-writing-concept-notes.md">For Writing Concept Notes</a>
+            <a href="chatgpt-for-writing-content-briefs.md" class="article-card" data-title="chatgpt-for-writing-content-briefs.md">For Writing Content Briefs</a>
+            <a href="chatgpt-for-writing-content-calendars.md" class="article-card" data-title="chatgpt-for-writing-content-calendars.md">For Writing Content Calendars</a>
+            <a href="chatgpt-for-writing-content-distribution-plans.md" class="article-card" data-title="chatgpt-for-writing-content-distribution-plans.md">For Writing Content Distribution Plans</a>
+            <a href="chatgpt-for-writing-content-enhancements.md" class="article-card" data-title="chatgpt-for-writing-content-enhancements.md">For Writing Content Enhancements</a>
+            <a href="chatgpt-for-writing-content-growth-strategies.md" class="article-card" data-title="chatgpt-for-writing-content-growth-strategies.md">For Writing Content Growth Strategies</a>
+            <a href="chatgpt-for-writing-content-optimization-tips.md" class="article-card" data-title="chatgpt-for-writing-content-optimization-tips.md">For Writing Content Optimization Tips</a>
+            <a href="chatgpt-for-writing-content-outreach-plans.md" class="article-card" data-title="chatgpt-for-writing-content-outreach-plans.md">For Writing Content Outreach Plans</a>
+            <a href="chatgpt-for-writing-content-research-notes.md" class="article-card" data-title="chatgpt-for-writing-content-research-notes.md">For Writing Content Research Notes</a>
+            <a href="chatgpt-for-writing-content-review-notes.md" class="article-card" data-title="chatgpt-for-writing-content-review-notes.md">For Writing Content Review Notes</a>
+            <a href="chatgpt-for-writing-content-strategy-documents.md" class="article-card" data-title="chatgpt-for-writing-content-strategy-documents.md">For Writing Content Strategy Documents</a>
+            <a href="chatgpt-for-writing-course-curriculums.md" class="article-card" data-title="chatgpt-for-writing-course-curriculums.md">For Writing Course Curriculums</a>
+            <a href="chatgpt-for-writing-course-descriptions.md" class="article-card" data-title="chatgpt-for-writing-course-descriptions.md">For Writing Course Descriptions</a>
+            <a href="chatgpt-for-writing-creative-brainstorm-prompts.md" class="article-card" data-title="chatgpt-for-writing-creative-brainstorm-prompts.md">For Writing Creative Brainstorm Prompts</a>
+            <a href="chatgpt-for-writing-creative-briefs.md" class="article-card" data-title="chatgpt-for-writing-creative-briefs.md">For Writing Creative Briefs</a>
+            <a href="chatgpt-for-writing-creative-experiment-summaries.md" class="article-card" data-title="chatgpt-for-writing-creative-experiment-summaries.md">For Writing Creative Experiment Summaries</a>
+            <a href="chatgpt-for-writing-creative-process-guides.md" class="article-card" data-title="chatgpt-for-writing-creative-process-guides.md">For Writing Creative Process Guides</a>
+            <a href="chatgpt-for-writing-creative-strategy-notes.md" class="article-card" data-title="chatgpt-for-writing-creative-strategy-notes.md">For Writing Creative Strategy Notes</a>
+            <a href="chatgpt-for-writing-customer-experience-content.md" class="article-card" data-title="chatgpt-for-writing-customer-experience-content.md">For Writing Customer Experience Content</a>
+            <a href="chatgpt-for-writing-customer-interview-notes.md" class="article-card" data-title="chatgpt-for-writing-customer-interview-notes.md">For Writing Customer Interview Notes</a>
+            <a href="chatgpt-for-writing-customer-success-stories.md" class="article-card" data-title="chatgpt-for-writing-customer-success-stories.md">For Writing Customer Success Stories</a>
+            <a href="chatgpt-for-writing-customer-surveys.md" class="article-card" data-title="chatgpt-for-writing-customer-surveys.md">For Writing Customer Surveys</a>
+            <a href="chatgpt-for-writing-design-thinking-guides.md" class="article-card" data-title="chatgpt-for-writing-design-thinking-guides.md">For Writing Design Thinking Guides</a>
+            <a href="chatgpt-for-writing-digital-marketing-plans.md" class="article-card" data-title="chatgpt-for-writing-digital-marketing-plans.md">For Writing Digital Marketing Plans</a>
+            <a href="chatgpt-for-writing-ebook-chapters.md" class="article-card" data-title="chatgpt-for-writing-ebook-chapters.md">For Writing Ebook Chapters</a>
+            <a href="chatgpt-for-writing-editorial-calendars.md" class="article-card" data-title="chatgpt-for-writing-editorial-calendars.md">For Writing Editorial Calendars</a>
+            <a href="chatgpt-for-writing-editorial-guidelines.md" class="article-card" data-title="chatgpt-for-writing-editorial-guidelines.md">For Writing Editorial Guidelines</a>
+            <a href="chatgpt-for-writing-editorial-summaries.md" class="article-card" data-title="chatgpt-for-writing-editorial-summaries.md">For Writing Editorial Summaries</a>
+            <a href="chatgpt-for-writing-email-templates.md" class="article-card" data-title="chatgpt-for-writing-email-templates.md">For Writing Email Templates</a>
+            <a href="chatgpt-for-writing-event-invitations.md" class="article-card" data-title="chatgpt-for-writing-event-invitations.md">For Writing Event Invitations</a>
+            <a href="chatgpt-for-writing-execution-plans.md" class="article-card" data-title="chatgpt-for-writing-execution-plans.md">For Writing Execution Plans</a>
+            <a href="chatgpt-for-writing-feature-planning-notes.md" class="article-card" data-title="chatgpt-for-writing-feature-planning-notes.md">For Writing Feature Planning Notes</a>
+            <a href="chatgpt-for-writing-feature-releases.md" class="article-card" data-title="chatgpt-for-writing-feature-releases.md">For Writing Feature Releases</a>
+            <a href="chatgpt-for-writing-feedback-requests.md" class="article-card" data-title="chatgpt-for-writing-feedback-requests.md">For Writing Feedback Requests</a>
+            <a href="chatgpt-for-writing-goals-and-milestones.md" class="article-card" data-title="chatgpt-for-writing-goals-and-milestones.md">For Writing Goals And Milestones</a>
+            <a href="chatgpt-for-writing-howto-guides.md" class="article-card" data-title="chatgpt-for-writing-howto-guides.md">For Writing Howto Guides</a>
+            <a href="chatgpt-for-writing-idea-validation-notes.md" class="article-card" data-title="chatgpt-for-writing-idea-validation-notes.md">For Writing Idea Validation Notes</a>
+            <a href="chatgpt-for-writing-improvement-reports.md" class="article-card" data-title="chatgpt-for-writing-improvement-reports.md">For Writing Improvement Reports</a>
+            <a href="chatgpt-for-writing-instructions-clearly.md" class="article-card" data-title="chatgpt-for-writing-instructions-clearly.md">For Writing Instructions Clearly</a>
+            <a href="chatgpt-for-writing-interview-questions.md" class="article-card" data-title="chatgpt-for-writing-interview-questions.md">For Writing Interview Questions</a>
+            <a href="chatgpt-for-writing-interview-scripts.md" class="article-card" data-title="chatgpt-for-writing-interview-scripts.md">For Writing Interview Scripts</a>
+            <a href="chatgpt-for-writing-job-descriptions.md" class="article-card" data-title="chatgpt-for-writing-job-descriptions.md">For Writing Job Descriptions</a>
+            <a href="chatgpt-for-writing-journey-maps.md" class="article-card" data-title="chatgpt-for-writing-journey-maps.md">For Writing Journey Maps</a>
+            <a href="chatgpt-for-writing-knowledge-base-articles.md" class="article-card" data-title="chatgpt-for-writing-knowledge-base-articles.md">For Writing Knowledge Base Articles</a>
+            <a href="chatgpt-for-writing-knowledge-management-notes.md" class="article-card" data-title="chatgpt-for-writing-knowledge-management-notes.md">For Writing Knowledge Management Notes</a>
+            <a href="chatgpt-for-writing-knowledge-transfer-guides.md" class="article-card" data-title="chatgpt-for-writing-knowledge-transfer-guides.md">For Writing Knowledge Transfer Guides</a>
+            <a href="chatgpt-for-writing-landing-page-copy.md" class="article-card" data-title="chatgpt-for-writing-landing-page-copy.md">For Writing Landing Page Copy</a>
+            <a href="chatgpt-for-writing-launch-announcements.md" class="article-card" data-title="chatgpt-for-writing-launch-announcements.md">For Writing Launch Announcements</a>
+            <a href="chatgpt-for-writing-launch-plans.md" class="article-card" data-title="chatgpt-for-writing-launch-plans.md">For Writing Launch Plans</a>
+            <a href="chatgpt-for-writing-lead-magnets.md" class="article-card" data-title="chatgpt-for-writing-lead-magnets.md">For Writing Lead Magnets</a>
+            <a href="chatgpt-for-writing-learning-agendas.md" class="article-card" data-title="chatgpt-for-writing-learning-agendas.md">For Writing Learning Agendas</a>
+            <a href="chatgpt-for-writing-learning-path-guides.md" class="article-card" data-title="chatgpt-for-writing-learning-path-guides.md">For Writing Learning Path Guides</a>
+            <a href="chatgpt-for-writing-learning-support-guides.md" class="article-card" data-title="chatgpt-for-writing-learning-support-guides.md">For Writing Learning Support Guides</a>
+            <a href="chatgpt-for-writing-lesson-summaries.md" class="article-card" data-title="chatgpt-for-writing-lesson-summaries.md">For Writing Lesson Summaries</a>
+            <a href="chatgpt-for-writing-marketing-analytics-reports.md" class="article-card" data-title="chatgpt-for-writing-marketing-analytics-reports.md">For Writing Marketing Analytics Reports</a>
+            <a href="chatgpt-for-writing-marketing-funnels.md" class="article-card" data-title="chatgpt-for-writing-marketing-funnels.md">For Writing Marketing Funnels</a>
+            <a href="chatgpt-for-writing-meeting-outcomes.md" class="article-card" data-title="chatgpt-for-writing-meeting-outcomes.md">For Writing Meeting Outcomes</a>
+            <a href="chatgpt-for-writing-meeting-recaps.md" class="article-card" data-title="chatgpt-for-writing-meeting-recaps.md">For Writing Meeting Recaps</a>
+            <a href="chatgpt-for-writing-performance-summaries.md" class="article-card" data-title="chatgpt-for-writing-performance-summaries.md">For Writing Performance Summaries</a>
+            <a href="chatgpt-for-writing-planning-documents.md" class="article-card" data-title="chatgpt-for-writing-planning-documents.md">For Writing Planning Documents</a>
+            <a href="chatgpt-for-writing-planning-workbooks.md" class="article-card" data-title="chatgpt-for-writing-planning-workbooks.md">For Writing Planning Workbooks</a>
+            <a href="chatgpt-for-writing-podcast-scripts.md" class="article-card" data-title="chatgpt-for-writing-podcast-scripts.md">For Writing Podcast Scripts</a>
+            <a href="chatgpt-for-writing-policy-summaries.md" class="article-card" data-title="chatgpt-for-writing-policy-summaries.md">For Writing Policy Summaries</a>
+            <a href="chatgpt-for-writing-presentation-notes.md" class="article-card" data-title="chatgpt-for-writing-presentation-notes.md">For Writing Presentation Notes</a>
+            <a href="chatgpt-for-writing-press-releases.md" class="article-card" data-title="chatgpt-for-writing-press-releases.md">For Writing Press Releases</a>
+            <a href="chatgpt-for-writing-problem-statements.md" class="article-card" data-title="chatgpt-for-writing-problem-statements.md">For Writing Problem Statements</a>
+            <a href="chatgpt-for-writing-process-automation-guides.md" class="article-card" data-title="chatgpt-for-writing-process-automation-guides.md">For Writing Process Automation Guides</a>
+            <a href="chatgpt-for-writing-product-comparisons.md" class="article-card" data-title="chatgpt-for-writing-product-comparisons.md">For Writing Product Comparisons</a>
+            <a href="chatgpt-for-writing-product-descriptions.md" class="article-card" data-title="chatgpt-for-writing-product-descriptions.md">For Writing Product Descriptions</a>
+            <a href="chatgpt-for-writing-product-documentation.md" class="article-card" data-title="chatgpt-for-writing-product-documentation.md">For Writing Product Documentation</a>
+            <a href="chatgpt-for-writing-product-evaluation-notes.md" class="article-card" data-title="chatgpt-for-writing-product-evaluation-notes.md">For Writing Product Evaluation Notes</a>
+            <a href="chatgpt-for-writing-product-faqs.md" class="article-card" data-title="chatgpt-for-writing-product-faqs.md">For Writing Product Faqs</a>
+            <a href="chatgpt-for-writing-product-feature-notes.md" class="article-card" data-title="chatgpt-for-writing-product-feature-notes.md">For Writing Product Feature Notes</a>
+            <a href="chatgpt-for-writing-product-idea-notes.md" class="article-card" data-title="chatgpt-for-writing-product-idea-notes.md">For Writing Product Idea Notes</a>
+            <a href="chatgpt-for-writing-product-launch-briefs.md" class="article-card" data-title="chatgpt-for-writing-product-launch-briefs.md">For Writing Product Launch Briefs</a>
+            <a href="chatgpt-for-writing-product-launch-copy.md" class="article-card" data-title="chatgpt-for-writing-product-launch-copy.md">For Writing Product Launch Copy</a>
+            <a href="chatgpt-for-writing-product-reviews.md" class="article-card" data-title="chatgpt-for-writing-product-reviews.md">For Writing Product Reviews</a>
+            <a href="chatgpt-for-writing-product-strategy-notes.md" class="article-card" data-title="chatgpt-for-writing-product-strategy-notes.md">For Writing Product Strategy Notes</a>
+            <a href="chatgpt-for-writing-productivity-assessments.md" class="article-card" data-title="chatgpt-for-writing-productivity-assessments.md">For Writing Productivity Assessments</a>
+            <a href="chatgpt-for-writing-productivity-checklists.md" class="article-card" data-title="chatgpt-for-writing-productivity-checklists.md">For Writing Productivity Checklists</a>
+            <a href="chatgpt-for-writing-productivity-improvement-guides.md" class="article-card" data-title="chatgpt-for-writing-productivity-improvement-guides.md">For Writing Productivity Improvement Guides</a>
+            <a href="chatgpt-for-writing-productivity-playbooks.md" class="article-card" data-title="chatgpt-for-writing-productivity-playbooks.md">For Writing Productivity Playbooks</a>
+            <a href="chatgpt-for-writing-productivity-tool-guides.md" class="article-card" data-title="chatgpt-for-writing-productivity-tool-guides.md">For Writing Productivity Tool Guides</a>
+            <a href="chatgpt-for-writing-productivity-workflows.md" class="article-card" data-title="chatgpt-for-writing-productivity-workflows.md">For Writing Productivity Workflows</a>
+            <a href="chatgpt-for-writing-project-briefs.md" class="article-card" data-title="chatgpt-for-writing-project-briefs.md">For Writing Project Briefs</a>
+            <a href="chatgpt-for-writing-project-kickoff-notes.md" class="article-card" data-title="chatgpt-for-writing-project-kickoff-notes.md">For Writing Project Kickoff Notes</a>
+            <a href="chatgpt-for-writing-project-retrospectives.md" class="article-card" data-title="chatgpt-for-writing-project-retrospectives.md">For Writing Project Retrospectives</a>
+            <a href="chatgpt-for-writing-project-tracking-notes.md" class="article-card" data-title="chatgpt-for-writing-project-tracking-notes.md">For Writing Project Tracking Notes</a>
+            <a href="chatgpt-for-writing-proposal-outlines.md" class="article-card" data-title="chatgpt-for-writing-proposal-outlines.md">For Writing Proposal Outlines</a>
+            <a href="chatgpt-for-writing-quarterly-reviews.md" class="article-card" data-title="chatgpt-for-writing-quarterly-reviews.md">For Writing Quarterly Reviews</a>
+            <a href="chatgpt-for-writing-research-briefs.md" class="article-card" data-title="chatgpt-for-writing-research-briefs.md">For Writing Research Briefs</a>
+            <a href="chatgpt-for-writing-research-summaries.md" class="article-card" data-title="chatgpt-for-writing-research-summaries.md">For Writing Research Summaries</a>
+            <a href="chatgpt-for-writing-research-synthesis-notes.md" class="article-card" data-title="chatgpt-for-writing-research-synthesis-notes.md">For Writing Research Synthesis Notes</a>
+            <a href="chatgpt-for-writing-resource-planning-notes.md" class="article-card" data-title="chatgpt-for-writing-resource-planning-notes.md">For Writing Resource Planning Notes</a>
+            <a href="chatgpt-for-writing-review-checklists.md" class="article-card" data-title="chatgpt-for-writing-review-checklists.md">For Writing Review Checklists</a>
+            <a href="chatgpt-for-writing-roadmap-summaries.md" class="article-card" data-title="chatgpt-for-writing-roadmap-summaries.md">For Writing Roadmap Summaries</a>
+            <a href="chatgpt-for-writing-sales-emails.md" class="article-card" data-title="chatgpt-for-writing-sales-emails.md">For Writing Sales Emails</a>
+            <a href="chatgpt-for-writing-sales-pages.md" class="article-card" data-title="chatgpt-for-writing-sales-pages.md">For Writing Sales Pages</a>
+            <a href="chatgpt-for-writing-script-dialogues.md" class="article-card" data-title="chatgpt-for-writing-script-dialogues.md">For Writing Script Dialogues</a>
+            <a href="chatgpt-for-writing-seofriendly-content.md" class="article-card" data-title="chatgpt-for-writing-seofriendly-content.md">For Writing Seofriendly Content</a>
+            <a href="chatgpt-for-writing-social-media-captions.md" class="article-card" data-title="chatgpt-for-writing-social-media-captions.md">For Writing Social Media Captions</a>
+            <a href="chatgpt-for-writing-social-post-plans.md" class="article-card" data-title="chatgpt-for-writing-social-post-plans.md">For Writing Social Post Plans</a>
+            <a href="chatgpt-for-writing-sprint-reviews.md" class="article-card" data-title="chatgpt-for-writing-sprint-reviews.md">For Writing Sprint Reviews</a>
+            <a href="chatgpt-for-writing-strategic-presentations.md" class="article-card" data-title="chatgpt-for-writing-strategic-presentations.md">For Writing Strategic Presentations</a>
+            <a href="chatgpt-for-writing-study-notes.md" class="article-card" data-title="chatgpt-for-writing-study-notes.md">For Writing Study Notes</a>
+            <a href="chatgpt-for-writing-success-metrics.md" class="article-card" data-title="chatgpt-for-writing-success-metrics.md">For Writing Success Metrics</a>
+            <a href="chatgpt-for-writing-task-automation-guides.md" class="article-card" data-title="chatgpt-for-writing-task-automation-guides.md">For Writing Task Automation Guides</a>
+            <a href="chatgpt-for-writing-technical-documentation.md" class="article-card" data-title="chatgpt-for-writing-technical-documentation.md">For Writing Technical Documentation</a>
+            <a href="chatgpt-for-writing-testing-and-feedback-notes.md" class="article-card" data-title="chatgpt-for-writing-testing-and-feedback-notes.md">For Writing Testing And Feedback Notes</a>
+            <a href="chatgpt-for-writing-tools-and-setup-guides.md" class="article-card" data-title="chatgpt-for-writing-tools-and-setup-guides.md">For Writing Tools And Setup Guides</a>
+            <a href="chatgpt-for-writing-training-guides.md" class="article-card" data-title="chatgpt-for-writing-training-guides.md">For Writing Training Guides</a>
+            <a href="chatgpt-for-writing-training-materials.md" class="article-card" data-title="chatgpt-for-writing-training-materials.md">For Writing Training Materials</a>
+            <a href="chatgpt-for-writing-training-outlines.md" class="article-card" data-title="chatgpt-for-writing-training-outlines.md">For Writing Training Outlines</a>
+            <a href="chatgpt-for-writing-user-experience-reports.md" class="article-card" data-title="chatgpt-for-writing-user-experience-reports.md">For Writing User Experience Reports</a>
+            <a href="chatgpt-for-writing-user-guides.md" class="article-card" data-title="chatgpt-for-writing-user-guides.md">For Writing User Guides</a>
+            <a href="chatgpt-for-writing-ux-research-notes.md" class="article-card" data-title="chatgpt-for-writing-ux-research-notes.md">For Writing Ux Research Notes</a>
+            <a href="chatgpt-for-writing-website-copy.md" class="article-card" data-title="chatgpt-for-writing-website-copy.md">For Writing Website Copy</a>
+            <a href="chatgpt-for-writing-white-papers.md" class="article-card" data-title="chatgpt-for-writing-white-papers.md">For Writing White Papers</a>
+            <a href="chatgpt-for-writing-workflow-procedures.md" class="article-card" data-title="chatgpt-for-writing-workflow-procedures.md">For Writing Workflow Procedures</a>
+            <a href="chatgpt-for-writing-workshop-agendas.md" class="article-card" data-title="chatgpt-for-writing-workshop-agendas.md">For Writing Workshop Agendas</a>
+            <a href="chatgpt-for-writing-workshop-descriptions.md" class="article-card" data-title="chatgpt-for-writing-workshop-descriptions.md">For Writing Workshop Descriptions</a>
+            <a href="chatgpt-for-writing-workshop-guides.md" class="article-card" data-title="chatgpt-for-writing-workshop-guides.md">For Writing Workshop Guides</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT Guides</footer>
+</body>
+</html>

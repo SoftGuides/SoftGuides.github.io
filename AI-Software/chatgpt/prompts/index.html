@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Prompts | ChatGPT Tutorials</title>
+  <meta name="description" content="Effective ChatGPT prompt examples and templates for better outputs." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/prompts/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT Prompts</h1>
+    <p>Prompt writing techniques and sample prompts to improve ChatGPT output quality.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 10</p>
+      <ul>
+        <li>Prompt structures for clear answers</li>
+        <li>Templates for summaries, emails, and workflows</li>
+        <li>How to refine prompts for better responses</li>
+      </ul>
+    </section>
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Analyzing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-analyzing-in-marketing.md">Prompt Analysis For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-analyzing-in-marketing.md">Prompt Brainstorm For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-analyzing-in-marketing.md">Prompt Checklist For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-analyzing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-analyzing-in-writing.md">Prompt Checklist For Analyzing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-analyzing-in-marketing.md">Prompt Comparison For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-analyzing-in-marketing.md">Prompt Conversion For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-analyzing-in-marketing.md">Prompt Expansion For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-analyzing-in-marketing.md">Prompt Feedback For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-analyzing-in-marketing.md">Prompt Guide For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-analyzing-in-marketing.md">Prompt Idea For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-analyzing-in-marketing.md">Prompt Outline For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-analyzing-in-marketing.md">Prompt Prompt For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-analyzing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-analyzing-in-writing.md">Prompt Prompt For Analyzing In Writing</a>
+            <a href="chatgpt-prompt-report-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-analyzing-in-marketing.md">Prompt Report For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-analyzing-in-marketing.md">Prompt Review For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-analyzing-in-marketing.md">Prompt Revision For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-analyzing-in-marketing.md">Prompt Script For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-analyzing-in-marketing.md">Prompt Sentence For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-analyzing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-analyzing-in-writing.md">Prompt Sentence For Analyzing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-analyzing-in-marketing.md">Prompt Summary For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-analyzing-in-marketing.md">Prompt Template For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-analyzing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-analyzing-in-writing.md">Prompt Template For Analyzing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-analyzing-in-marketing.md">Prompt Translation For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-analyzing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-analyzing-in-marketing.md">Prompt Workflow For Analyzing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-analyzing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-analyzing-in-writing.md">Prompt Workflow For Analyzing In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Brainstorming (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-brainstorming-in-marketing.md">Prompt Analysis For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-brainstorming-in-marketing.md">Prompt Brainstorm For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-brainstorming-in-marketing.md">Prompt Checklist For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-brainstorming-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-brainstorming-in-writing.md">Prompt Checklist For Brainstorming In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-brainstorming-in-marketing.md">Prompt Comparison For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-brainstorming-in-marketing.md">Prompt Conversion For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-brainstorming-in-marketing.md">Prompt Expansion For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-brainstorming-in-marketing.md">Prompt Feedback For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-brainstorming-in-marketing.md">Prompt Guide For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-brainstorming-in-marketing.md">Prompt Idea For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-brainstorming-in-marketing.md">Prompt Outline For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-brainstorming-in-marketing.md">Prompt Prompt For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-brainstorming-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-brainstorming-in-writing.md">Prompt Prompt For Brainstorming In Writing</a>
+            <a href="chatgpt-prompt-report-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-brainstorming-in-marketing.md">Prompt Report For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-review-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-brainstorming-in-marketing.md">Prompt Review For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-brainstorming-in-marketing.md">Prompt Revision For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-script-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-brainstorming-in-marketing.md">Prompt Script For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-brainstorming-in-marketing.md">Prompt Sentence For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-brainstorming-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-brainstorming-in-writing.md">Prompt Sentence For Brainstorming In Writing</a>
+            <a href="chatgpt-prompt-summary-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-brainstorming-in-marketing.md">Prompt Summary For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-template-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-brainstorming-in-marketing.md">Prompt Template For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-template-for-brainstorming-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-brainstorming-in-writing.md">Prompt Template For Brainstorming In Writing</a>
+            <a href="chatgpt-prompt-translation-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-brainstorming-in-marketing.md">Prompt Translation For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-brainstorming-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-brainstorming-in-marketing.md">Prompt Workflow For Brainstorming In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-brainstorming-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-brainstorming-in-writing.md">Prompt Workflow For Brainstorming In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Business (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-business-in-marketing.md">Prompt Analysis For Business In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-business-in-marketing.md">Prompt Brainstorm For Business In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-business-in-marketing.md">Prompt Checklist For Business In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-business-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-business-in-writing.md">Prompt Checklist For Business In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-business-in-marketing.md">Prompt Comparison For Business In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-business-in-marketing.md">Prompt Conversion For Business In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-business-in-marketing.md">Prompt Expansion For Business In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-business-in-marketing.md">Prompt Feedback For Business In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-business-in-marketing.md">Prompt Guide For Business In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-business-in-marketing.md">Prompt Idea For Business In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-business-in-marketing.md">Prompt Outline For Business In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-business-in-marketing.md">Prompt Prompt For Business In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-business-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-business-in-writing.md">Prompt Prompt For Business In Writing</a>
+            <a href="chatgpt-prompt-report-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-business-in-marketing.md">Prompt Report For Business In Marketing</a>
+            <a href="chatgpt-prompt-review-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-business-in-marketing.md">Prompt Review For Business In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-business-in-marketing.md">Prompt Revision For Business In Marketing</a>
+            <a href="chatgpt-prompt-script-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-business-in-marketing.md">Prompt Script For Business In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-business-in-marketing.md">Prompt Sentence For Business In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-business-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-business-in-writing.md">Prompt Sentence For Business In Writing</a>
+            <a href="chatgpt-prompt-summary-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-business-in-marketing.md">Prompt Summary For Business In Marketing</a>
+            <a href="chatgpt-prompt-template-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-business-in-marketing.md">Prompt Template For Business In Marketing</a>
+            <a href="chatgpt-prompt-template-for-business-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-business-in-writing.md">Prompt Template For Business In Writing</a>
+            <a href="chatgpt-prompt-translation-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-business-in-marketing.md">Prompt Translation For Business In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-business-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-business-in-marketing.md">Prompt Workflow For Business In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-business-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-business-in-writing.md">Prompt Workflow For Business In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Collaboration (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-collaboration-in-marketing.md">Prompt Analysis For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-collaboration-in-marketing.md">Prompt Brainstorm For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-collaboration-in-marketing.md">Prompt Checklist For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-collaboration-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-collaboration-in-writing.md">Prompt Checklist For Collaboration In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-collaboration-in-marketing.md">Prompt Comparison For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-collaboration-in-marketing.md">Prompt Conversion For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-collaboration-in-marketing.md">Prompt Expansion For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-collaboration-in-marketing.md">Prompt Feedback For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-collaboration-in-marketing.md">Prompt Guide For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-collaboration-in-marketing.md">Prompt Idea For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-collaboration-in-marketing.md">Prompt Outline For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-collaboration-in-marketing.md">Prompt Prompt For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-collaboration-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-collaboration-in-writing.md">Prompt Prompt For Collaboration In Writing</a>
+            <a href="chatgpt-prompt-report-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-collaboration-in-marketing.md">Prompt Report For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-review-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-collaboration-in-marketing.md">Prompt Review For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-collaboration-in-marketing.md">Prompt Revision For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-script-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-collaboration-in-marketing.md">Prompt Script For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-collaboration-in-marketing.md">Prompt Sentence For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-collaboration-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-collaboration-in-writing.md">Prompt Sentence For Collaboration In Writing</a>
+            <a href="chatgpt-prompt-summary-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-collaboration-in-marketing.md">Prompt Summary For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-template-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-collaboration-in-marketing.md">Prompt Template For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-template-for-collaboration-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-collaboration-in-writing.md">Prompt Template For Collaboration In Writing</a>
+            <a href="chatgpt-prompt-translation-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-collaboration-in-marketing.md">Prompt Translation For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-collaboration-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-collaboration-in-marketing.md">Prompt Workflow For Collaboration In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-collaboration-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-collaboration-in-writing.md">Prompt Workflow For Collaboration In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Creating (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-creating-in-marketing.md">Prompt Analysis For Creating In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-creating-in-marketing.md">Prompt Brainstorm For Creating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-creating-in-marketing.md">Prompt Checklist For Creating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-creating-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-creating-in-writing.md">Prompt Checklist For Creating In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-creating-in-marketing.md">Prompt Comparison For Creating In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-creating-in-marketing.md">Prompt Conversion For Creating In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-creating-in-marketing.md">Prompt Expansion For Creating In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-creating-in-marketing.md">Prompt Feedback For Creating In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-creating-in-marketing.md">Prompt Guide For Creating In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-creating-in-marketing.md">Prompt Idea For Creating In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-creating-in-marketing.md">Prompt Outline For Creating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-creating-in-marketing.md">Prompt Prompt For Creating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-creating-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-creating-in-writing.md">Prompt Prompt For Creating In Writing</a>
+            <a href="chatgpt-prompt-report-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-creating-in-marketing.md">Prompt Report For Creating In Marketing</a>
+            <a href="chatgpt-prompt-review-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-creating-in-marketing.md">Prompt Review For Creating In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-creating-in-marketing.md">Prompt Revision For Creating In Marketing</a>
+            <a href="chatgpt-prompt-script-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-creating-in-marketing.md">Prompt Script For Creating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-creating-in-marketing.md">Prompt Sentence For Creating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-creating-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-creating-in-writing.md">Prompt Sentence For Creating In Writing</a>
+            <a href="chatgpt-prompt-summary-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-creating-in-marketing.md">Prompt Summary For Creating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-creating-in-marketing.md">Prompt Template For Creating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-creating-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-creating-in-writing.md">Prompt Template For Creating In Writing</a>
+            <a href="chatgpt-prompt-translation-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-creating-in-marketing.md">Prompt Translation For Creating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-creating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-creating-in-marketing.md">Prompt Workflow For Creating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-creating-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-creating-in-writing.md">Prompt Workflow For Creating In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Drafting (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-drafting-in-marketing.md">Prompt Analysis For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-drafting-in-marketing.md">Prompt Brainstorm For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-drafting-in-marketing.md">Prompt Checklist For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-drafting-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-drafting-in-writing.md">Prompt Checklist For Drafting In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-drafting-in-marketing.md">Prompt Comparison For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-drafting-in-marketing.md">Prompt Conversion For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-drafting-in-marketing.md">Prompt Expansion For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-drafting-in-marketing.md">Prompt Feedback For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-drafting-in-marketing.md">Prompt Guide For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-drafting-in-marketing.md">Prompt Idea For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-drafting-in-marketing.md">Prompt Outline For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-drafting-in-marketing.md">Prompt Prompt For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-drafting-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-drafting-in-writing.md">Prompt Prompt For Drafting In Writing</a>
+            <a href="chatgpt-prompt-report-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-drafting-in-marketing.md">Prompt Report For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-review-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-drafting-in-marketing.md">Prompt Review For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-drafting-in-marketing.md">Prompt Revision For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-script-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-drafting-in-marketing.md">Prompt Script For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-drafting-in-marketing.md">Prompt Sentence For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-drafting-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-drafting-in-writing.md">Prompt Sentence For Drafting In Writing</a>
+            <a href="chatgpt-prompt-summary-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-drafting-in-marketing.md">Prompt Summary For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-template-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-drafting-in-marketing.md">Prompt Template For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-template-for-drafting-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-drafting-in-writing.md">Prompt Template For Drafting In Writing</a>
+            <a href="chatgpt-prompt-translation-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-drafting-in-marketing.md">Prompt Translation For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-drafting-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-drafting-in-marketing.md">Prompt Workflow For Drafting In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-drafting-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-drafting-in-writing.md">Prompt Workflow For Drafting In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Editing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-editing-in-marketing.md">Prompt Analysis For Editing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-editing-in-marketing.md">Prompt Brainstorm For Editing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-editing-in-marketing.md">Prompt Checklist For Editing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-editing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-editing-in-writing.md">Prompt Checklist For Editing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-editing-in-marketing.md">Prompt Comparison For Editing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-editing-in-marketing.md">Prompt Conversion For Editing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-editing-in-marketing.md">Prompt Expansion For Editing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-editing-in-marketing.md">Prompt Feedback For Editing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-editing-in-marketing.md">Prompt Guide For Editing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-editing-in-marketing.md">Prompt Idea For Editing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-editing-in-marketing.md">Prompt Outline For Editing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-editing-in-marketing.md">Prompt Prompt For Editing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-editing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-editing-in-writing.md">Prompt Prompt For Editing In Writing</a>
+            <a href="chatgpt-prompt-report-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-editing-in-marketing.md">Prompt Report For Editing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-editing-in-marketing.md">Prompt Review For Editing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-editing-in-marketing.md">Prompt Revision For Editing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-editing-in-marketing.md">Prompt Script For Editing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-editing-in-marketing.md">Prompt Sentence For Editing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-editing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-editing-in-writing.md">Prompt Sentence For Editing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-editing-in-marketing.md">Prompt Summary For Editing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-editing-in-marketing.md">Prompt Template For Editing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-editing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-editing-in-writing.md">Prompt Template For Editing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-editing-in-marketing.md">Prompt Translation For Editing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-editing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-editing-in-marketing.md">Prompt Workflow For Editing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-editing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-editing-in-writing.md">Prompt Workflow For Editing In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Generating (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-generating-in-marketing.md">Prompt Analysis For Generating In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-generating-in-marketing.md">Prompt Brainstorm For Generating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-generating-in-marketing.md">Prompt Checklist For Generating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-generating-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-generating-in-writing.md">Prompt Checklist For Generating In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-generating-in-marketing.md">Prompt Comparison For Generating In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-generating-in-marketing.md">Prompt Conversion For Generating In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-generating-in-marketing.md">Prompt Expansion For Generating In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-generating-in-marketing.md">Prompt Feedback For Generating In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-generating-in-marketing.md">Prompt Guide For Generating In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-generating-in-marketing.md">Prompt Idea For Generating In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-generating-in-marketing.md">Prompt Outline For Generating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-generating-in-marketing.md">Prompt Prompt For Generating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-generating-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-generating-in-writing.md">Prompt Prompt For Generating In Writing</a>
+            <a href="chatgpt-prompt-report-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-generating-in-marketing.md">Prompt Report For Generating In Marketing</a>
+            <a href="chatgpt-prompt-review-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-generating-in-marketing.md">Prompt Review For Generating In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-generating-in-marketing.md">Prompt Revision For Generating In Marketing</a>
+            <a href="chatgpt-prompt-script-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-generating-in-marketing.md">Prompt Script For Generating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-generating-in-marketing.md">Prompt Sentence For Generating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-generating-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-generating-in-writing.md">Prompt Sentence For Generating In Writing</a>
+            <a href="chatgpt-prompt-summary-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-generating-in-marketing.md">Prompt Summary For Generating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-generating-in-marketing.md">Prompt Template For Generating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-generating-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-generating-in-writing.md">Prompt Template For Generating In Writing</a>
+            <a href="chatgpt-prompt-translation-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-generating-in-marketing.md">Prompt Translation For Generating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-generating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-generating-in-marketing.md">Prompt Workflow For Generating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-generating-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-generating-in-writing.md">Prompt Workflow For Generating In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Improving (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-improving-in-marketing.md">Prompt Analysis For Improving In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-improving-in-marketing.md">Prompt Brainstorm For Improving In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-improving-in-marketing.md">Prompt Checklist For Improving In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-improving-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-improving-in-writing.md">Prompt Checklist For Improving In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-improving-in-marketing.md">Prompt Comparison For Improving In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-improving-in-marketing.md">Prompt Conversion For Improving In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-improving-in-marketing.md">Prompt Expansion For Improving In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-improving-in-marketing.md">Prompt Feedback For Improving In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-improving-in-marketing.md">Prompt Guide For Improving In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-improving-in-marketing.md">Prompt Idea For Improving In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-improving-in-marketing.md">Prompt Outline For Improving In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-improving-in-marketing.md">Prompt Prompt For Improving In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-improving-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-improving-in-writing.md">Prompt Prompt For Improving In Writing</a>
+            <a href="chatgpt-prompt-report-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-improving-in-marketing.md">Prompt Report For Improving In Marketing</a>
+            <a href="chatgpt-prompt-review-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-improving-in-marketing.md">Prompt Review For Improving In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-improving-in-marketing.md">Prompt Revision For Improving In Marketing</a>
+            <a href="chatgpt-prompt-script-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-improving-in-marketing.md">Prompt Script For Improving In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-improving-in-marketing.md">Prompt Sentence For Improving In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-improving-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-improving-in-writing.md">Prompt Sentence For Improving In Writing</a>
+            <a href="chatgpt-prompt-summary-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-improving-in-marketing.md">Prompt Summary For Improving In Marketing</a>
+            <a href="chatgpt-prompt-template-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-improving-in-marketing.md">Prompt Template For Improving In Marketing</a>
+            <a href="chatgpt-prompt-template-for-improving-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-improving-in-writing.md">Prompt Template For Improving In Writing</a>
+            <a href="chatgpt-prompt-translation-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-improving-in-marketing.md">Prompt Translation For Improving In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-improving-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-improving-in-marketing.md">Prompt Workflow For Improving In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-improving-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-improving-in-writing.md">Prompt Workflow For Improving In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Learning (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-learning-in-marketing.md">Prompt Analysis For Learning In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-learning-in-marketing.md">Prompt Brainstorm For Learning In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-learning-in-marketing.md">Prompt Checklist For Learning In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-learning-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-learning-in-writing.md">Prompt Checklist For Learning In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-learning-in-marketing.md">Prompt Comparison For Learning In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-learning-in-marketing.md">Prompt Conversion For Learning In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-learning-in-marketing.md">Prompt Expansion For Learning In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-learning-in-marketing.md">Prompt Feedback For Learning In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-learning-in-marketing.md">Prompt Guide For Learning In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-learning-in-marketing.md">Prompt Idea For Learning In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-learning-in-marketing.md">Prompt Outline For Learning In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-learning-in-marketing.md">Prompt Prompt For Learning In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-learning-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-learning-in-writing.md">Prompt Prompt For Learning In Writing</a>
+            <a href="chatgpt-prompt-report-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-learning-in-marketing.md">Prompt Report For Learning In Marketing</a>
+            <a href="chatgpt-prompt-review-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-learning-in-marketing.md">Prompt Review For Learning In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-learning-in-marketing.md">Prompt Revision For Learning In Marketing</a>
+            <a href="chatgpt-prompt-script-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-learning-in-marketing.md">Prompt Script For Learning In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-learning-in-marketing.md">Prompt Sentence For Learning In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-learning-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-learning-in-writing.md">Prompt Sentence For Learning In Writing</a>
+            <a href="chatgpt-prompt-summary-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-learning-in-marketing.md">Prompt Summary For Learning In Marketing</a>
+            <a href="chatgpt-prompt-template-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-learning-in-marketing.md">Prompt Template For Learning In Marketing</a>
+            <a href="chatgpt-prompt-template-for-learning-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-learning-in-writing.md">Prompt Template For Learning In Writing</a>
+            <a href="chatgpt-prompt-translation-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-learning-in-marketing.md">Prompt Translation For Learning In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-learning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-learning-in-marketing.md">Prompt Workflow For Learning In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-learning-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-learning-in-writing.md">Prompt Workflow For Learning In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Optimizing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-optimizing-in-marketing.md">Prompt Analysis For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-optimizing-in-marketing.md">Prompt Brainstorm For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-optimizing-in-marketing.md">Prompt Checklist For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-optimizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-optimizing-in-writing.md">Prompt Checklist For Optimizing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-optimizing-in-marketing.md">Prompt Comparison For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-optimizing-in-marketing.md">Prompt Conversion For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-optimizing-in-marketing.md">Prompt Expansion For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-optimizing-in-marketing.md">Prompt Feedback For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-optimizing-in-marketing.md">Prompt Guide For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-optimizing-in-marketing.md">Prompt Idea For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-optimizing-in-marketing.md">Prompt Outline For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-optimizing-in-marketing.md">Prompt Prompt For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-optimizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-optimizing-in-writing.md">Prompt Prompt For Optimizing In Writing</a>
+            <a href="chatgpt-prompt-report-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-optimizing-in-marketing.md">Prompt Report For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-optimizing-in-marketing.md">Prompt Review For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-optimizing-in-marketing.md">Prompt Revision For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-optimizing-in-marketing.md">Prompt Script For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-optimizing-in-marketing.md">Prompt Sentence For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-optimizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-optimizing-in-writing.md">Prompt Sentence For Optimizing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-optimizing-in-marketing.md">Prompt Summary For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-optimizing-in-marketing.md">Prompt Template For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-optimizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-optimizing-in-writing.md">Prompt Template For Optimizing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-optimizing-in-marketing.md">Prompt Translation For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-optimizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-optimizing-in-marketing.md">Prompt Workflow For Optimizing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-optimizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-optimizing-in-writing.md">Prompt Workflow For Optimizing In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Planning (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-planning-in-marketing.md">Prompt Analysis For Planning In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-planning-in-marketing.md">Prompt Brainstorm For Planning In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-planning-in-marketing.md">Prompt Checklist For Planning In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-planning-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-planning-in-writing.md">Prompt Checklist For Planning In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-planning-in-marketing.md">Prompt Comparison For Planning In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-planning-in-marketing.md">Prompt Conversion For Planning In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-planning-in-marketing.md">Prompt Expansion For Planning In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-planning-in-marketing.md">Prompt Feedback For Planning In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-planning-in-marketing.md">Prompt Guide For Planning In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-planning-in-marketing.md">Prompt Idea For Planning In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-planning-in-marketing.md">Prompt Outline For Planning In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-planning-in-marketing.md">Prompt Prompt For Planning In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-planning-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-planning-in-writing.md">Prompt Prompt For Planning In Writing</a>
+            <a href="chatgpt-prompt-report-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-planning-in-marketing.md">Prompt Report For Planning In Marketing</a>
+            <a href="chatgpt-prompt-review-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-planning-in-marketing.md">Prompt Review For Planning In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-planning-in-marketing.md">Prompt Revision For Planning In Marketing</a>
+            <a href="chatgpt-prompt-script-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-planning-in-marketing.md">Prompt Script For Planning In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-planning-in-marketing.md">Prompt Sentence For Planning In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-planning-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-planning-in-writing.md">Prompt Sentence For Planning In Writing</a>
+            <a href="chatgpt-prompt-summary-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-planning-in-marketing.md">Prompt Summary For Planning In Marketing</a>
+            <a href="chatgpt-prompt-template-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-planning-in-marketing.md">Prompt Template For Planning In Marketing</a>
+            <a href="chatgpt-prompt-template-for-planning-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-planning-in-writing.md">Prompt Template For Planning In Writing</a>
+            <a href="chatgpt-prompt-translation-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-planning-in-marketing.md">Prompt Translation For Planning In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-planning-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-planning-in-marketing.md">Prompt Workflow For Planning In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-planning-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-planning-in-writing.md">Prompt Workflow For Planning In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Presentations (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-presentations-in-marketing.md">Prompt Analysis For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-presentations-in-marketing.md">Prompt Brainstorm For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-presentations-in-marketing.md">Prompt Checklist For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-presentations-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-presentations-in-writing.md">Prompt Checklist For Presentations In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-presentations-in-marketing.md">Prompt Comparison For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-presentations-in-marketing.md">Prompt Conversion For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-presentations-in-marketing.md">Prompt Expansion For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-presentations-in-marketing.md">Prompt Feedback For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-presentations-in-marketing.md">Prompt Guide For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-presentations-in-marketing.md">Prompt Idea For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-presentations-in-marketing.md">Prompt Outline For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-presentations-in-marketing.md">Prompt Prompt For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-presentations-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-presentations-in-writing.md">Prompt Prompt For Presentations In Writing</a>
+            <a href="chatgpt-prompt-report-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-presentations-in-marketing.md">Prompt Report For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-review-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-presentations-in-marketing.md">Prompt Review For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-presentations-in-marketing.md">Prompt Revision For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-script-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-presentations-in-marketing.md">Prompt Script For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-presentations-in-marketing.md">Prompt Sentence For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-presentations-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-presentations-in-writing.md">Prompt Sentence For Presentations In Writing</a>
+            <a href="chatgpt-prompt-summary-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-presentations-in-marketing.md">Prompt Summary For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-template-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-presentations-in-marketing.md">Prompt Template For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-template-for-presentations-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-presentations-in-writing.md">Prompt Template For Presentations In Writing</a>
+            <a href="chatgpt-prompt-translation-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-presentations-in-marketing.md">Prompt Translation For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-presentations-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-presentations-in-marketing.md">Prompt Workflow For Presentations In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-presentations-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-presentations-in-writing.md">Prompt Workflow For Presentations In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Productivity (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-productivity-in-marketing.md">Prompt Analysis For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-productivity-in-marketing.md">Prompt Brainstorm For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-productivity-in-marketing.md">Prompt Checklist For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-productivity-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-productivity-in-writing.md">Prompt Checklist For Productivity In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-productivity-in-marketing.md">Prompt Comparison For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-productivity-in-marketing.md">Prompt Conversion For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-productivity-in-marketing.md">Prompt Expansion For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-productivity-in-marketing.md">Prompt Feedback For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-productivity-in-marketing.md">Prompt Guide For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-productivity-in-marketing.md">Prompt Idea For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-productivity-in-marketing.md">Prompt Outline For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-productivity-in-marketing.md">Prompt Prompt For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-productivity-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-productivity-in-writing.md">Prompt Prompt For Productivity In Writing</a>
+            <a href="chatgpt-prompt-report-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-productivity-in-marketing.md">Prompt Report For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-review-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-productivity-in-marketing.md">Prompt Review For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-productivity-in-marketing.md">Prompt Revision For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-script-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-productivity-in-marketing.md">Prompt Script For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-productivity-in-marketing.md">Prompt Sentence For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-productivity-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-productivity-in-writing.md">Prompt Sentence For Productivity In Writing</a>
+            <a href="chatgpt-prompt-summary-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-productivity-in-marketing.md">Prompt Summary For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-template-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-productivity-in-marketing.md">Prompt Template For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-template-for-productivity-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-productivity-in-writing.md">Prompt Template For Productivity In Writing</a>
+            <a href="chatgpt-prompt-translation-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-productivity-in-marketing.md">Prompt Translation For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-productivity-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-productivity-in-marketing.md">Prompt Workflow For Productivity In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-productivity-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-productivity-in-writing.md">Prompt Workflow For Productivity In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Refining (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-refining-in-marketing.md">Prompt Analysis For Refining In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-refining-in-marketing.md">Prompt Brainstorm For Refining In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-refining-in-marketing.md">Prompt Checklist For Refining In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-refining-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-refining-in-writing.md">Prompt Checklist For Refining In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-refining-in-marketing.md">Prompt Comparison For Refining In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-refining-in-marketing.md">Prompt Conversion For Refining In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-refining-in-marketing.md">Prompt Expansion For Refining In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-refining-in-marketing.md">Prompt Feedback For Refining In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-refining-in-marketing.md">Prompt Guide For Refining In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-refining-in-marketing.md">Prompt Idea For Refining In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-refining-in-marketing.md">Prompt Outline For Refining In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-refining-in-marketing.md">Prompt Prompt For Refining In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-refining-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-refining-in-writing.md">Prompt Prompt For Refining In Writing</a>
+            <a href="chatgpt-prompt-report-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-refining-in-marketing.md">Prompt Report For Refining In Marketing</a>
+            <a href="chatgpt-prompt-review-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-refining-in-marketing.md">Prompt Review For Refining In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-refining-in-marketing.md">Prompt Revision For Refining In Marketing</a>
+            <a href="chatgpt-prompt-script-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-refining-in-marketing.md">Prompt Script For Refining In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-refining-in-marketing.md">Prompt Sentence For Refining In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-refining-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-refining-in-writing.md">Prompt Sentence For Refining In Writing</a>
+            <a href="chatgpt-prompt-summary-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-refining-in-marketing.md">Prompt Summary For Refining In Marketing</a>
+            <a href="chatgpt-prompt-template-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-refining-in-marketing.md">Prompt Template For Refining In Marketing</a>
+            <a href="chatgpt-prompt-template-for-refining-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-refining-in-writing.md">Prompt Template For Refining In Writing</a>
+            <a href="chatgpt-prompt-translation-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-refining-in-marketing.md">Prompt Translation For Refining In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-refining-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-refining-in-marketing.md">Prompt Workflow For Refining In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-refining-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-refining-in-writing.md">Prompt Workflow For Refining In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Researching (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-researching-in-marketing.md">Prompt Analysis For Researching In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-researching-in-marketing.md">Prompt Brainstorm For Researching In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-researching-in-marketing.md">Prompt Checklist For Researching In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-researching-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-researching-in-writing.md">Prompt Checklist For Researching In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-researching-in-marketing.md">Prompt Comparison For Researching In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-researching-in-marketing.md">Prompt Conversion For Researching In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-researching-in-marketing.md">Prompt Expansion For Researching In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-researching-in-marketing.md">Prompt Feedback For Researching In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-researching-in-marketing.md">Prompt Guide For Researching In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-researching-in-marketing.md">Prompt Idea For Researching In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-researching-in-marketing.md">Prompt Outline For Researching In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-researching-in-marketing.md">Prompt Prompt For Researching In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-researching-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-researching-in-writing.md">Prompt Prompt For Researching In Writing</a>
+            <a href="chatgpt-prompt-report-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-researching-in-marketing.md">Prompt Report For Researching In Marketing</a>
+            <a href="chatgpt-prompt-review-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-researching-in-marketing.md">Prompt Review For Researching In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-researching-in-marketing.md">Prompt Revision For Researching In Marketing</a>
+            <a href="chatgpt-prompt-script-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-researching-in-marketing.md">Prompt Script For Researching In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-researching-in-marketing.md">Prompt Sentence For Researching In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-researching-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-researching-in-writing.md">Prompt Sentence For Researching In Writing</a>
+            <a href="chatgpt-prompt-summary-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-researching-in-marketing.md">Prompt Summary For Researching In Marketing</a>
+            <a href="chatgpt-prompt-template-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-researching-in-marketing.md">Prompt Template For Researching In Marketing</a>
+            <a href="chatgpt-prompt-template-for-researching-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-researching-in-writing.md">Prompt Template For Researching In Writing</a>
+            <a href="chatgpt-prompt-translation-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-researching-in-marketing.md">Prompt Translation For Researching In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-researching-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-researching-in-marketing.md">Prompt Workflow For Researching In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-researching-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-researching-in-writing.md">Prompt Workflow For Researching In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Reviewing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-reviewing-in-marketing.md">Prompt Analysis For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-reviewing-in-marketing.md">Prompt Brainstorm For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-reviewing-in-marketing.md">Prompt Checklist For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-reviewing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-reviewing-in-writing.md">Prompt Checklist For Reviewing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-reviewing-in-marketing.md">Prompt Comparison For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-reviewing-in-marketing.md">Prompt Conversion For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-reviewing-in-marketing.md">Prompt Expansion For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-reviewing-in-marketing.md">Prompt Feedback For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-reviewing-in-marketing.md">Prompt Guide For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-reviewing-in-marketing.md">Prompt Idea For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-reviewing-in-marketing.md">Prompt Outline For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-reviewing-in-marketing.md">Prompt Prompt For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-reviewing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-reviewing-in-writing.md">Prompt Prompt For Reviewing In Writing</a>
+            <a href="chatgpt-prompt-report-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-reviewing-in-marketing.md">Prompt Report For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-reviewing-in-marketing.md">Prompt Review For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-reviewing-in-marketing.md">Prompt Revision For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-reviewing-in-marketing.md">Prompt Script For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-reviewing-in-marketing.md">Prompt Sentence For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-reviewing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-reviewing-in-writing.md">Prompt Sentence For Reviewing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-reviewing-in-marketing.md">Prompt Summary For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-reviewing-in-marketing.md">Prompt Template For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-reviewing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-reviewing-in-writing.md">Prompt Template For Reviewing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-reviewing-in-marketing.md">Prompt Translation For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-reviewing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-reviewing-in-marketing.md">Prompt Workflow For Reviewing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-reviewing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-reviewing-in-writing.md">Prompt Workflow For Reviewing In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Summarizing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-summarizing-in-marketing.md">Prompt Analysis For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-summarizing-in-marketing.md">Prompt Brainstorm For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-summarizing-in-marketing.md">Prompt Checklist For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-summarizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-summarizing-in-writing.md">Prompt Checklist For Summarizing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-summarizing-in-marketing.md">Prompt Comparison For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-summarizing-in-marketing.md">Prompt Conversion For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-summarizing-in-marketing.md">Prompt Expansion For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-summarizing-in-marketing.md">Prompt Feedback For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-summarizing-in-marketing.md">Prompt Guide For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-summarizing-in-marketing.md">Prompt Idea For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-summarizing-in-marketing.md">Prompt Outline For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-summarizing-in-marketing.md">Prompt Prompt For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-summarizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-summarizing-in-writing.md">Prompt Prompt For Summarizing In Writing</a>
+            <a href="chatgpt-prompt-report-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-summarizing-in-marketing.md">Prompt Report For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-summarizing-in-marketing.md">Prompt Review For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-summarizing-in-marketing.md">Prompt Revision For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-summarizing-in-marketing.md">Prompt Script For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-summarizing-in-marketing.md">Prompt Sentence For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-summarizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-summarizing-in-writing.md">Prompt Sentence For Summarizing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-summarizing-in-marketing.md">Prompt Summary For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-summarizing-in-marketing.md">Prompt Template For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-summarizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-summarizing-in-writing.md">Prompt Template For Summarizing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-summarizing-in-marketing.md">Prompt Translation For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-summarizing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-summarizing-in-marketing.md">Prompt Workflow For Summarizing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-summarizing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-summarizing-in-writing.md">Prompt Workflow For Summarizing In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Translating (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-translating-in-marketing.md">Prompt Analysis For Translating In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-translating-in-marketing.md">Prompt Brainstorm For Translating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-translating-in-marketing.md">Prompt Checklist For Translating In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-translating-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-translating-in-writing.md">Prompt Checklist For Translating In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-translating-in-marketing.md">Prompt Comparison For Translating In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-translating-in-marketing.md">Prompt Conversion For Translating In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-translating-in-marketing.md">Prompt Expansion For Translating In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-translating-in-marketing.md">Prompt Feedback For Translating In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-translating-in-marketing.md">Prompt Guide For Translating In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-translating-in-marketing.md">Prompt Idea For Translating In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-translating-in-marketing.md">Prompt Outline For Translating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-translating-in-marketing.md">Prompt Prompt For Translating In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-translating-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-translating-in-writing.md">Prompt Prompt For Translating In Writing</a>
+            <a href="chatgpt-prompt-report-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-translating-in-marketing.md">Prompt Report For Translating In Marketing</a>
+            <a href="chatgpt-prompt-review-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-translating-in-marketing.md">Prompt Review For Translating In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-translating-in-marketing.md">Prompt Revision For Translating In Marketing</a>
+            <a href="chatgpt-prompt-script-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-translating-in-marketing.md">Prompt Script For Translating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-translating-in-marketing.md">Prompt Sentence For Translating In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-translating-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-translating-in-writing.md">Prompt Sentence For Translating In Writing</a>
+            <a href="chatgpt-prompt-summary-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-translating-in-marketing.md">Prompt Summary For Translating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-translating-in-marketing.md">Prompt Template For Translating In Marketing</a>
+            <a href="chatgpt-prompt-template-for-translating-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-translating-in-writing.md">Prompt Template For Translating In Writing</a>
+            <a href="chatgpt-prompt-translation-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-translating-in-marketing.md">Prompt Translation For Translating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-translating-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-translating-in-marketing.md">Prompt Workflow For Translating In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-translating-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-translating-in-writing.md">Prompt Workflow For Translating In Writing</a>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-title">Writing (25)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-prompt-analysis-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-analysis-for-writing-in-marketing.md">Prompt Analysis For Writing In Marketing</a>
+            <a href="chatgpt-prompt-brainstorm-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-brainstorm-for-writing-in-marketing.md">Prompt Brainstorm For Writing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-writing-in-marketing.md">Prompt Checklist For Writing In Marketing</a>
+            <a href="chatgpt-prompt-checklist-for-writing-in-writing.md" class="article-card" data-title="chatgpt-prompt-checklist-for-writing-in-writing.md">Prompt Checklist For Writing In Writing</a>
+            <a href="chatgpt-prompt-comparison-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-comparison-for-writing-in-marketing.md">Prompt Comparison For Writing In Marketing</a>
+            <a href="chatgpt-prompt-conversion-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-conversion-for-writing-in-marketing.md">Prompt Conversion For Writing In Marketing</a>
+            <a href="chatgpt-prompt-expansion-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-expansion-for-writing-in-marketing.md">Prompt Expansion For Writing In Marketing</a>
+            <a href="chatgpt-prompt-feedback-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-feedback-for-writing-in-marketing.md">Prompt Feedback For Writing In Marketing</a>
+            <a href="chatgpt-prompt-guide-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-guide-for-writing-in-marketing.md">Prompt Guide For Writing In Marketing</a>
+            <a href="chatgpt-prompt-idea-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-idea-for-writing-in-marketing.md">Prompt Idea For Writing In Marketing</a>
+            <a href="chatgpt-prompt-outline-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-outline-for-writing-in-marketing.md">Prompt Outline For Writing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-writing-in-marketing.md">Prompt Prompt For Writing In Marketing</a>
+            <a href="chatgpt-prompt-prompt-for-writing-in-writing.md" class="article-card" data-title="chatgpt-prompt-prompt-for-writing-in-writing.md">Prompt Prompt For Writing In Writing</a>
+            <a href="chatgpt-prompt-report-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-report-for-writing-in-marketing.md">Prompt Report For Writing In Marketing</a>
+            <a href="chatgpt-prompt-review-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-review-for-writing-in-marketing.md">Prompt Review For Writing In Marketing</a>
+            <a href="chatgpt-prompt-revision-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-revision-for-writing-in-marketing.md">Prompt Revision For Writing In Marketing</a>
+            <a href="chatgpt-prompt-script-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-script-for-writing-in-marketing.md">Prompt Script For Writing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-writing-in-marketing.md">Prompt Sentence For Writing In Marketing</a>
+            <a href="chatgpt-prompt-sentence-for-writing-in-writing.md" class="article-card" data-title="chatgpt-prompt-sentence-for-writing-in-writing.md">Prompt Sentence For Writing In Writing</a>
+            <a href="chatgpt-prompt-summary-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-summary-for-writing-in-marketing.md">Prompt Summary For Writing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-template-for-writing-in-marketing.md">Prompt Template For Writing In Marketing</a>
+            <a href="chatgpt-prompt-template-for-writing-in-writing.md" class="article-card" data-title="chatgpt-prompt-template-for-writing-in-writing.md">Prompt Template For Writing In Writing</a>
+            <a href="chatgpt-prompt-translation-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-translation-for-writing-in-marketing.md">Prompt Translation For Writing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-writing-in-marketing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-writing-in-marketing.md">Prompt Workflow For Writing In Marketing</a>
+            <a href="chatgpt-prompt-workflow-for-writing-in-writing.md" class="article-card" data-title="chatgpt-prompt-workflow-for-writing-in-writing.md">Prompt Workflow For Writing In Writing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT Prompts</footer>
+</body>
+</html>

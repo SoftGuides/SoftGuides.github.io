@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Features | ChatGPT Tutorials</title>
+  <meta name="description" content="ChatGPT features, settings, and new updates explained." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/features/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT Features</h1>
+    <p>Explore ChatGPT features, settings, and updates for better usage.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 100</p>
+      <ul>
+        <li>Core ChatGPT capabilities and tools</li>
+        <li>Feature updates and new releases</li>
+        <li>Useful settings and customization tips</li>
+      </ul>
+    </section>
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Conversation (100)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-advanced-users.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-advanced-users.md">Feature Comparison For Conversation History For Advanced Users</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-automation.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-automation.md">Feature Comparison For Conversation History For Automation</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-beginners.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-beginners.md">Feature Comparison For Conversation History For Beginners</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-business.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-business.md">Feature Comparison For Conversation History For Business</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-collaboration.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-collaboration.md">Feature Comparison For Conversation History For Collaboration</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-creators.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-creators.md">Feature Comparison For Conversation History For Creators</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-customer-support.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-customer-support.md">Feature Comparison For Conversation History For Customer Support</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-design.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-design.md">Feature Comparison For Conversation History For Design</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-developers.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-developers.md">Feature Comparison For Conversation History For Developers</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-marketing.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-marketing.md">Feature Comparison For Conversation History For Marketing</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-modern-workflows.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-modern-workflows.md">Feature Comparison For Conversation History For Modern Workflows</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-operations.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-operations.md">Feature Comparison For Conversation History For Operations</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-productivity.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-productivity.md">Feature Comparison For Conversation History For Productivity</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-research.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-research.md">Feature Comparison For Conversation History For Research</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-students.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-students.md">Feature Comparison For Conversation History For Students</a>
+            <a href="chatgpt-feature-comparison-for-conversation-history-for-teams.md" class="article-card" data-title="chatgpt-feature-comparison-for-conversation-history-for-teams.md">Feature Comparison For Conversation History For Teams</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-advanced-users.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-advanced-users.md">Feature Explanation For Conversation History For Advanced Users</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-automation.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-automation.md">Feature Explanation For Conversation History For Automation</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-beginners.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-beginners.md">Feature Explanation For Conversation History For Beginners</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-business.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-business.md">Feature Explanation For Conversation History For Business</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-collaboration.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-collaboration.md">Feature Explanation For Conversation History For Collaboration</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-creators.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-creators.md">Feature Explanation For Conversation History For Creators</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-customer-support.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-customer-support.md">Feature Explanation For Conversation History For Customer Support</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-design.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-design.md">Feature Explanation For Conversation History For Design</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-developers.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-developers.md">Feature Explanation For Conversation History For Developers</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-efficiency.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-efficiency.md">Feature Explanation For Conversation History For Efficiency</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-fast-results.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-fast-results.md">Feature Explanation For Conversation History For Fast Results</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-marketing.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-marketing.md">Feature Explanation For Conversation History For Marketing</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-modern-workflows.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-modern-workflows.md">Feature Explanation For Conversation History For Modern Workflows</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-operations.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-operations.md">Feature Explanation For Conversation History For Operations</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-productivity.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-productivity.md">Feature Explanation For Conversation History For Productivity</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-quality-output.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-quality-output.md">Feature Explanation For Conversation History For Quality Output</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-reliability.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-reliability.md">Feature Explanation For Conversation History For Reliability</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-research.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-research.md">Feature Explanation For Conversation History For Research</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-scaling.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-scaling.md">Feature Explanation For Conversation History For Scaling</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-students.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-students.md">Feature Explanation For Conversation History For Students</a>
+            <a href="chatgpt-feature-explanation-for-conversation-history-for-teams.md" class="article-card" data-title="chatgpt-feature-explanation-for-conversation-history-for-teams.md">Feature Explanation For Conversation History For Teams</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-advanced-users.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-advanced-users.md">Feature Guide For Conversation History For Advanced Users</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-automation.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-automation.md">Feature Guide For Conversation History For Automation</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-beginners.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-beginners.md">Feature Guide For Conversation History For Beginners</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-business.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-business.md">Feature Guide For Conversation History For Business</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-collaboration.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-collaboration.md">Feature Guide For Conversation History For Collaboration</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-creators.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-creators.md">Feature Guide For Conversation History For Creators</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-customer-support.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-customer-support.md">Feature Guide For Conversation History For Customer Support</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-design.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-design.md">Feature Guide For Conversation History For Design</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-developers.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-developers.md">Feature Guide For Conversation History For Developers</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-efficiency.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-efficiency.md">Feature Guide For Conversation History For Efficiency</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-fast-results.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-fast-results.md">Feature Guide For Conversation History For Fast Results</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-marketing.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-marketing.md">Feature Guide For Conversation History For Marketing</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-modern-workflows.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-modern-workflows.md">Feature Guide For Conversation History For Modern Workflows</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-operations.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-operations.md">Feature Guide For Conversation History For Operations</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-productivity.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-productivity.md">Feature Guide For Conversation History For Productivity</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-quality-output.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-quality-output.md">Feature Guide For Conversation History For Quality Output</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-reliability.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-reliability.md">Feature Guide For Conversation History For Reliability</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-research.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-research.md">Feature Guide For Conversation History For Research</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-scaling.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-scaling.md">Feature Guide For Conversation History For Scaling</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-students.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-students.md">Feature Guide For Conversation History For Students</a>
+            <a href="chatgpt-feature-guide-for-conversation-history-for-teams.md" class="article-card" data-title="chatgpt-feature-guide-for-conversation-history-for-teams.md">Feature Guide For Conversation History For Teams</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-advanced-users.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-advanced-users.md">Feature Overview For Conversation History For Advanced Users</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-automation.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-automation.md">Feature Overview For Conversation History For Automation</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-beginners.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-beginners.md">Feature Overview For Conversation History For Beginners</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-business.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-business.md">Feature Overview For Conversation History For Business</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-collaboration.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-collaboration.md">Feature Overview For Conversation History For Collaboration</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-creators.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-creators.md">Feature Overview For Conversation History For Creators</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-customer-support.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-customer-support.md">Feature Overview For Conversation History For Customer Support</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-design.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-design.md">Feature Overview For Conversation History For Design</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-developers.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-developers.md">Feature Overview For Conversation History For Developers</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-efficiency.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-efficiency.md">Feature Overview For Conversation History For Efficiency</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-fast-results.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-fast-results.md">Feature Overview For Conversation History For Fast Results</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-marketing.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-marketing.md">Feature Overview For Conversation History For Marketing</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-modern-workflows.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-modern-workflows.md">Feature Overview For Conversation History For Modern Workflows</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-operations.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-operations.md">Feature Overview For Conversation History For Operations</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-productivity.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-productivity.md">Feature Overview For Conversation History For Productivity</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-quality-output.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-quality-output.md">Feature Overview For Conversation History For Quality Output</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-reliability.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-reliability.md">Feature Overview For Conversation History For Reliability</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-research.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-research.md">Feature Overview For Conversation History For Research</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-scaling.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-scaling.md">Feature Overview For Conversation History For Scaling</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-students.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-students.md">Feature Overview For Conversation History For Students</a>
+            <a href="chatgpt-feature-overview-for-conversation-history-for-teams.md" class="article-card" data-title="chatgpt-feature-overview-for-conversation-history-for-teams.md">Feature Overview For Conversation History For Teams</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-advanced-users.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-advanced-users.md">Feature Tutorial For Conversation History For Advanced Users</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-automation.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-automation.md">Feature Tutorial For Conversation History For Automation</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-beginners.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-beginners.md">Feature Tutorial For Conversation History For Beginners</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-business.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-business.md">Feature Tutorial For Conversation History For Business</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-collaboration.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-collaboration.md">Feature Tutorial For Conversation History For Collaboration</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-creators.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-creators.md">Feature Tutorial For Conversation History For Creators</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-customer-support.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-customer-support.md">Feature Tutorial For Conversation History For Customer Support</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-design.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-design.md">Feature Tutorial For Conversation History For Design</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-developers.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-developers.md">Feature Tutorial For Conversation History For Developers</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-efficiency.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-efficiency.md">Feature Tutorial For Conversation History For Efficiency</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-fast-results.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-fast-results.md">Feature Tutorial For Conversation History For Fast Results</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-marketing.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-marketing.md">Feature Tutorial For Conversation History For Marketing</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-modern-workflows.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-modern-workflows.md">Feature Tutorial For Conversation History For Modern Workflows</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-operations.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-operations.md">Feature Tutorial For Conversation History For Operations</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-productivity.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-productivity.md">Feature Tutorial For Conversation History For Productivity</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-quality-output.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-quality-output.md">Feature Tutorial For Conversation History For Quality Output</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-reliability.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-reliability.md">Feature Tutorial For Conversation History For Reliability</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-research.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-research.md">Feature Tutorial For Conversation History For Research</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-scaling.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-scaling.md">Feature Tutorial For Conversation History For Scaling</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-students.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-students.md">Feature Tutorial For Conversation History For Students</a>
+            <a href="chatgpt-feature-tutorial-for-conversation-history-for-teams.md" class="article-card" data-title="chatgpt-feature-tutorial-for-conversation-history-for-teams.md">Feature Tutorial For Conversation History For Teams</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT Features</footer>
+</body>
+</html>

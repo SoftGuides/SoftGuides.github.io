@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT for Work | ChatGPT Tutorials</title>
+  <meta name="description" content="ChatGPT use cases for work, productivity, and office workflows." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/for-work/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT for Work</h1>
+    <p>Practical ChatGPT workflows for business documents, reports, and productivity.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 300</p>
+      <ul>
+        <li>Meeting notes and email drafts</li>
+        <li>Project planning and content creation</li>
+        <li>Automation and process improvement with ChatGPT</li>
+      </ul>
+    </section>
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Meeting (300)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-collaboration.md">Work Analysis For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-customer-support.md">Work Analysis For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-decision-making.md">Work Analysis For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-executives.md">Work Analysis For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-finance.md">Work Analysis For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-hr.md">Work Analysis For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-leadership.md">Work Analysis For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-managers.md">Work Analysis For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-marketers.md">Work Analysis For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-onboarding.md">Work Analysis For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-operations.md">Work Analysis For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-planning.md">Work Analysis For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-productivity.md">Work Analysis For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-project-success.md">Work Analysis For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-remote-work.md">Work Analysis For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-reporting.md">Work Analysis For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-reviews.md">Work Analysis For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-sales.md">Work Analysis For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-startups.md">Work Analysis For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-analysis-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-analysis-for-meeting-notes-for-teams.md">Work Analysis For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-collaboration.md">Work Checklist For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-customer-support.md">Work Checklist For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-decision-making.md">Work Checklist For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-executives.md">Work Checklist For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-finance.md">Work Checklist For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-hr.md">Work Checklist For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-leadership.md">Work Checklist For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-managers.md">Work Checklist For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-marketers.md">Work Checklist For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-onboarding.md">Work Checklist For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-operations.md">Work Checklist For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-planning.md">Work Checklist For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-productivity.md">Work Checklist For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-project-success.md">Work Checklist For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-remote-work.md">Work Checklist For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-reporting.md">Work Checklist For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-reviews.md">Work Checklist For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-sales.md">Work Checklist For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-startups.md">Work Checklist For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-checklist-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-checklist-for-meeting-notes-for-teams.md">Work Checklist For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-collaboration.md">Work Draft For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-customer-support.md">Work Draft For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-decision-making.md">Work Draft For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-executives.md">Work Draft For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-finance.md">Work Draft For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-hr.md">Work Draft For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-leadership.md">Work Draft For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-managers.md">Work Draft For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-marketers.md">Work Draft For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-onboarding.md">Work Draft For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-operations.md">Work Draft For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-planning.md">Work Draft For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-productivity.md">Work Draft For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-project-success.md">Work Draft For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-remote-work.md">Work Draft For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-reporting.md">Work Draft For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-reviews.md">Work Draft For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-sales.md">Work Draft For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-startups.md">Work Draft For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-draft-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-draft-for-meeting-notes-for-teams.md">Work Draft For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-collaboration.md">Work Framework For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-customer-support.md">Work Framework For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-decision-making.md">Work Framework For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-executives.md">Work Framework For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-finance.md">Work Framework For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-hr.md">Work Framework For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-leadership.md">Work Framework For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-managers.md">Work Framework For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-marketers.md">Work Framework For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-onboarding.md">Work Framework For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-operations.md">Work Framework For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-planning.md">Work Framework For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-productivity.md">Work Framework For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-project-success.md">Work Framework For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-remote-work.md">Work Framework For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-reporting.md">Work Framework For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-reviews.md">Work Framework For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-sales.md">Work Framework For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-startups.md">Work Framework For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-framework-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-framework-for-meeting-notes-for-teams.md">Work Framework For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-collaboration.md">Work Guide For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-customer-support.md">Work Guide For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-decision-making.md">Work Guide For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-executives.md">Work Guide For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-finance.md">Work Guide For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-hr.md">Work Guide For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-leadership.md">Work Guide For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-managers.md">Work Guide For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-marketers.md">Work Guide For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-onboarding.md">Work Guide For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-operations.md">Work Guide For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-planning.md">Work Guide For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-productivity.md">Work Guide For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-project-success.md">Work Guide For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-remote-work.md">Work Guide For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-reporting.md">Work Guide For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-reviews.md">Work Guide For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-sales.md">Work Guide For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-startups.md">Work Guide For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-guide-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-guide-for-meeting-notes-for-teams.md">Work Guide For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-collaboration.md">Work Notes For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-customer-support.md">Work Notes For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-decision-making.md">Work Notes For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-executives.md">Work Notes For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-finance.md">Work Notes For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-hr.md">Work Notes For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-leadership.md">Work Notes For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-managers.md">Work Notes For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-marketers.md">Work Notes For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-onboarding.md">Work Notes For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-operations.md">Work Notes For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-planning.md">Work Notes For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-productivity.md">Work Notes For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-project-success.md">Work Notes For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-remote-work.md">Work Notes For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-reporting.md">Work Notes For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-reviews.md">Work Notes For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-sales.md">Work Notes For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-startups.md">Work Notes For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-notes-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-notes-for-meeting-notes-for-teams.md">Work Notes For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-collaboration.md">Work Outline For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-customer-support.md">Work Outline For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-decision-making.md">Work Outline For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-executives.md">Work Outline For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-finance.md">Work Outline For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-hr.md">Work Outline For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-leadership.md">Work Outline For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-managers.md">Work Outline For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-marketers.md">Work Outline For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-onboarding.md">Work Outline For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-operations.md">Work Outline For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-planning.md">Work Outline For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-productivity.md">Work Outline For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-project-success.md">Work Outline For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-remote-work.md">Work Outline For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-reporting.md">Work Outline For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-reviews.md">Work Outline For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-sales.md">Work Outline For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-startups.md">Work Outline For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-outline-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-outline-for-meeting-notes-for-teams.md">Work Outline For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-collaboration.md">Work Plan For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-customer-support.md">Work Plan For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-decision-making.md">Work Plan For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-executives.md">Work Plan For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-finance.md">Work Plan For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-hr.md">Work Plan For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-leadership.md">Work Plan For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-managers.md">Work Plan For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-marketers.md">Work Plan For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-onboarding.md">Work Plan For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-operations.md">Work Plan For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-planning.md">Work Plan For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-productivity.md">Work Plan For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-project-success.md">Work Plan For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-remote-work.md">Work Plan For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-reporting.md">Work Plan For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-reviews.md">Work Plan For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-sales.md">Work Plan For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-startups.md">Work Plan For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-plan-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-plan-for-meeting-notes-for-teams.md">Work Plan For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-collaboration.md">Work Report For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-customer-support.md">Work Report For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-decision-making.md">Work Report For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-executives.md">Work Report For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-finance.md">Work Report For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-hr.md">Work Report For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-leadership.md">Work Report For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-managers.md">Work Report For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-marketers.md">Work Report For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-onboarding.md">Work Report For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-operations.md">Work Report For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-planning.md">Work Report For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-productivity.md">Work Report For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-project-success.md">Work Report For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-remote-work.md">Work Report For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-reporting.md">Work Report For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-reviews.md">Work Report For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-sales.md">Work Report For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-startups.md">Work Report For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-report-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-report-for-meeting-notes-for-teams.md">Work Report For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-collaboration.md">Work Review For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-customer-support.md">Work Review For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-decision-making.md">Work Review For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-executives.md">Work Review For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-finance.md">Work Review For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-hr.md">Work Review For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-leadership.md">Work Review For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-managers.md">Work Review For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-marketers.md">Work Review For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-onboarding.md">Work Review For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-operations.md">Work Review For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-planning.md">Work Review For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-productivity.md">Work Review For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-project-success.md">Work Review For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-remote-work.md">Work Review For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-reporting.md">Work Review For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-reviews.md">Work Review For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-sales.md">Work Review For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-startups.md">Work Review For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-review-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-review-for-meeting-notes-for-teams.md">Work Review For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-collaboration.md">Work Script For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-customer-support.md">Work Script For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-decision-making.md">Work Script For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-executives.md">Work Script For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-finance.md">Work Script For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-hr.md">Work Script For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-leadership.md">Work Script For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-managers.md">Work Script For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-marketers.md">Work Script For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-onboarding.md">Work Script For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-operations.md">Work Script For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-planning.md">Work Script For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-productivity.md">Work Script For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-project-success.md">Work Script For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-remote-work.md">Work Script For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-reporting.md">Work Script For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-reviews.md">Work Script For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-sales.md">Work Script For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-startups.md">Work Script For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-script-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-script-for-meeting-notes-for-teams.md">Work Script For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-collaboration.md">Work Strategy For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-customer-support.md">Work Strategy For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-decision-making.md">Work Strategy For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-executives.md">Work Strategy For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-finance.md">Work Strategy For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-hr.md">Work Strategy For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-leadership.md">Work Strategy For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-managers.md">Work Strategy For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-marketers.md">Work Strategy For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-onboarding.md">Work Strategy For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-operations.md">Work Strategy For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-planning.md">Work Strategy For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-productivity.md">Work Strategy For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-project-success.md">Work Strategy For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-remote-work.md">Work Strategy For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-reporting.md">Work Strategy For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-reviews.md">Work Strategy For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-sales.md">Work Strategy For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-startups.md">Work Strategy For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-strategy-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-strategy-for-meeting-notes-for-teams.md">Work Strategy For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-collaboration.md">Work Summary For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-customer-support.md">Work Summary For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-decision-making.md">Work Summary For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-executives.md">Work Summary For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-finance.md">Work Summary For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-hr.md">Work Summary For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-leadership.md">Work Summary For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-managers.md">Work Summary For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-marketers.md">Work Summary For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-onboarding.md">Work Summary For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-operations.md">Work Summary For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-planning.md">Work Summary For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-productivity.md">Work Summary For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-project-success.md">Work Summary For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-remote-work.md">Work Summary For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-reporting.md">Work Summary For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-reviews.md">Work Summary For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-sales.md">Work Summary For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-startups.md">Work Summary For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-summary-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-summary-for-meeting-notes-for-teams.md">Work Summary For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-collaboration.md">Work Template For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-customer-support.md">Work Template For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-decision-making.md">Work Template For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-executives.md">Work Template For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-finance.md">Work Template For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-hr.md">Work Template For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-leadership.md">Work Template For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-managers.md">Work Template For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-marketers.md">Work Template For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-onboarding.md">Work Template For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-operations.md">Work Template For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-planning.md">Work Template For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-productivity.md">Work Template For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-project-success.md">Work Template For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-remote-work.md">Work Template For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-reporting.md">Work Template For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-reviews.md">Work Template For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-sales.md">Work Template For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-startups.md">Work Template For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-template-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-template-for-meeting-notes-for-teams.md">Work Template For Meeting Notes For Teams</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-collaboration.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-collaboration.md">Work Workflow For Meeting Notes For Collaboration</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-customer-support.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-customer-support.md">Work Workflow For Meeting Notes For Customer Support</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-decision-making.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-decision-making.md">Work Workflow For Meeting Notes For Decision Making</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-executives.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-executives.md">Work Workflow For Meeting Notes For Executives</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-finance.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-finance.md">Work Workflow For Meeting Notes For Finance</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-hr.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-hr.md">Work Workflow For Meeting Notes For Hr</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-leadership.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-leadership.md">Work Workflow For Meeting Notes For Leadership</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-managers.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-managers.md">Work Workflow For Meeting Notes For Managers</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-marketers.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-marketers.md">Work Workflow For Meeting Notes For Marketers</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-onboarding.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-onboarding.md">Work Workflow For Meeting Notes For Onboarding</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-operations.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-operations.md">Work Workflow For Meeting Notes For Operations</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-planning.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-planning.md">Work Workflow For Meeting Notes For Planning</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-productivity.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-productivity.md">Work Workflow For Meeting Notes For Productivity</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-project-success.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-project-success.md">Work Workflow For Meeting Notes For Project Success</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-remote-work.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-remote-work.md">Work Workflow For Meeting Notes For Remote Work</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-reporting.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-reporting.md">Work Workflow For Meeting Notes For Reporting</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-reviews.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-reviews.md">Work Workflow For Meeting Notes For Reviews</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-sales.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-sales.md">Work Workflow For Meeting Notes For Sales</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-startups.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-startups.md">Work Workflow For Meeting Notes For Startups</a>
+            <a href="chatgpt-work-workflow-for-meeting-notes-for-teams.md" class="article-card" data-title="chatgpt-work-workflow-for-meeting-notes-for-teams.md">Work Workflow For Meeting Notes For Teams</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT for Work</footer>
+</body>
+</html>

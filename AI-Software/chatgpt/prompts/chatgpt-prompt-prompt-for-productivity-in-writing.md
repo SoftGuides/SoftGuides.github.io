@@ -1,0 +1,3 @@
+# ChatGPT prompt Prompt for productivity in Writing
+
+This prompt file contains the title: ChatGPT prompt Prompt for productivity in Writing.

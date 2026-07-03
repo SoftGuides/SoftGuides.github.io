@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Coding | ChatGPT Tutorials</title>
+  <meta name="description" content="ChatGPT tutorials for coding assistants, debugging, and developer support." />
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/index.html" />
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6fb; color:#111; }
+    header, main, footer { max-width:960px; margin:0 auto; padding:20px; }
+    header { background:#142d56; color:#fff; }
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:10px 0 0; color:#d3def4; }
+    nav a { color:#ffd; text-decoration:none; display:inline-block; margin-top:14px; }
+    section { background:#fff; border-radius:14px; border:1px solid #d7dee8; padding:22px; margin-top:20px; box-shadow:0 8px 24px rgba(15,40,80,.08); }
+    ul { margin:16px 0 20px 20px; }
+    li { margin-bottom:10px; }
+    footer { padding:14px 0; color:#555; font-size:.95rem; }
+  
+    .search-box { margin:20px 0; }
+    #search-input { width:100%; max-width:400px; padding:10px; font-size:1rem; border:1px solid #d7dee8; border-radius:8px; }
+    #search-info { margin-top:8px; color:#666; font-size:0.9rem; }
+    #articles-container { margin-top:20px; }
+    .category-group { margin-bottom:30px; }
+    .category-group h3 { margin:0 0 15px; padding-bottom:10px; border-bottom:2px solid #142d56; color:#142d56; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+    .article-link { display:block; padding:12px; background:#f8fbff; border:1px solid #dfe6f4; border-radius:8px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.4; transition:all 0.3s; }
+    .article-link:hover { background:#142d56; color:#fff; border-color:#142d56; box-shadow:0 4px 8px rgba(20,45,86,0.2); }
+  
+    .search-controls { margin:20px 0; padding:16px; background:#f8fbff; border-radius:8px; }
+    #search-input { width:100%; max-width:500px; padding:12px; font-size:1rem; border:1px solid #d7dee8; border-radius:6px; box-sizing:border-box; }
+    #search-input:focus { outline:none; border-color:#142d56; box-shadow:0 0 0 3px rgba(20,45,86,0.1); }
+    #articles-container { margin-top:24px; }
+    .category-group { margin-bottom:32px; }
+    .category-title { margin:0 0 16px 0; padding-bottom:12px; border-bottom:2px solid #142d56; color:#142d56; font-size:1.2rem; font-weight:600; }
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+    .article-card { display:block; padding:14px 16px; background:#fff; border:1px solid #dfe6f4; border-radius:6px; text-decoration:none; color:#142d56; font-size:0.95rem; line-height:1.5; transition:all 0.25s ease; }
+    .article-card:hover { background:#142d56; color:#fff; border-color:#142d56; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,45,86,0.15); }
+    @media (max-width:768px) {
+      .articles-grid { grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; }
+      #search-input { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChatGPT Coding</h1>
+    <p>Use ChatGPT for code generation, debugging, and developer productivity.</p>
+    <nav><a href="../../index.html">Back to ChatGPT</a></nav>
+  </header>
+  <main>
+    <section>
+      <p>Estimated articles: 300</p>
+      <ul>
+        <li>Code examples and automation scripts</li>
+        <li>Debugging support and code review assistance</li>
+        <li>Programming workflows with ChatGPT</li>
+      </ul>
+    </section>
+    
+    
+
+    <section id="articles-section">
+      <h2>Browse Articles</h2>
+      <div class="search-controls">
+        <input type="text" id="search-input" placeholder="Search articles..." onkeyup="filterArticles()">
+        <div id="search-info" style="margin-top:8px; color:#666; font-size:0.9rem;"></div>
+      </div>
+      
+      <div id="articles-container">
+        <div class="category-group">
+          <h3 class="category-title">Python (300)</h3>
+          <div class="articles-grid">
+            <a href="chatgpt-coding-best-practice-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-automation.md">Coding Best Practice For Python Script For Automation</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-backend.md">Coding Best Practice For Python Script For Backend</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-beginners.md">Coding Best Practice For Python Script For Beginners</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-clean-code.md">Coding Best Practice For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-collaboration.md">Coding Best Practice For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-deployment.md">Coding Best Practice For Python Script For Deployment</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-developers.md">Coding Best Practice For Python Script For Developers</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-fast-debugging.md">Coding Best Practice For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-frontend.md">Coding Best Practice For Python Script For Frontend</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-full-stack.md">Coding Best Practice For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-maintainability.md">Coding Best Practice For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-mobile-apps.md">Coding Best Practice For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-modern-stacks.md">Coding Best Practice For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-open-source.md">Coding Best Practice For Python Script For Open Source</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-performance.md">Coding Best Practice For Python Script For Performance</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-productivity.md">Coding Best Practice For Python Script For Productivity</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-scalability.md">Coding Best Practice For Python Script For Scalability</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-security.md">Coding Best Practice For Python Script For Security</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-teams.md">Coding Best Practice For Python Script For Teams</a>
+            <a href="chatgpt-coding-best-practice-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-best-practice-for-python-script-for-web-apps.md">Coding Best Practice For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-automation.md">Coding Checklist For Python Script For Automation</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-backend.md">Coding Checklist For Python Script For Backend</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-beginners.md">Coding Checklist For Python Script For Beginners</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-clean-code.md">Coding Checklist For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-collaboration.md">Coding Checklist For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-deployment.md">Coding Checklist For Python Script For Deployment</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-developers.md">Coding Checklist For Python Script For Developers</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-fast-debugging.md">Coding Checklist For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-frontend.md">Coding Checklist For Python Script For Frontend</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-full-stack.md">Coding Checklist For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-maintainability.md">Coding Checklist For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-mobile-apps.md">Coding Checklist For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-modern-stacks.md">Coding Checklist For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-open-source.md">Coding Checklist For Python Script For Open Source</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-performance.md">Coding Checklist For Python Script For Performance</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-productivity.md">Coding Checklist For Python Script For Productivity</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-scalability.md">Coding Checklist For Python Script For Scalability</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-security.md">Coding Checklist For Python Script For Security</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-teams.md">Coding Checklist For Python Script For Teams</a>
+            <a href="chatgpt-coding-checklist-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-checklist-for-python-script-for-web-apps.md">Coding Checklist For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-automation.md">Coding Debug For Python Script For Automation</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-backend.md">Coding Debug For Python Script For Backend</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-beginners.md">Coding Debug For Python Script For Beginners</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-clean-code.md">Coding Debug For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-collaboration.md">Coding Debug For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-deployment.md">Coding Debug For Python Script For Deployment</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-developers.md">Coding Debug For Python Script For Developers</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-fast-debugging.md">Coding Debug For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-frontend.md">Coding Debug For Python Script For Frontend</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-full-stack.md">Coding Debug For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-maintainability.md">Coding Debug For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-mobile-apps.md">Coding Debug For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-modern-stacks.md">Coding Debug For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-open-source.md">Coding Debug For Python Script For Open Source</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-performance.md">Coding Debug For Python Script For Performance</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-productivity.md">Coding Debug For Python Script For Productivity</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-scalability.md">Coding Debug For Python Script For Scalability</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-security.md">Coding Debug For Python Script For Security</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-teams.md">Coding Debug For Python Script For Teams</a>
+            <a href="chatgpt-coding-debug-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-debug-for-python-script-for-web-apps.md">Coding Debug For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-design-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-automation.md">Coding Design For Python Script For Automation</a>
+            <a href="chatgpt-coding-design-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-backend.md">Coding Design For Python Script For Backend</a>
+            <a href="chatgpt-coding-design-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-beginners.md">Coding Design For Python Script For Beginners</a>
+            <a href="chatgpt-coding-design-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-clean-code.md">Coding Design For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-design-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-collaboration.md">Coding Design For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-design-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-deployment.md">Coding Design For Python Script For Deployment</a>
+            <a href="chatgpt-coding-design-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-developers.md">Coding Design For Python Script For Developers</a>
+            <a href="chatgpt-coding-design-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-fast-debugging.md">Coding Design For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-design-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-frontend.md">Coding Design For Python Script For Frontend</a>
+            <a href="chatgpt-coding-design-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-full-stack.md">Coding Design For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-design-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-maintainability.md">Coding Design For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-design-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-mobile-apps.md">Coding Design For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-design-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-modern-stacks.md">Coding Design For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-design-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-open-source.md">Coding Design For Python Script For Open Source</a>
+            <a href="chatgpt-coding-design-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-performance.md">Coding Design For Python Script For Performance</a>
+            <a href="chatgpt-coding-design-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-productivity.md">Coding Design For Python Script For Productivity</a>
+            <a href="chatgpt-coding-design-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-scalability.md">Coding Design For Python Script For Scalability</a>
+            <a href="chatgpt-coding-design-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-security.md">Coding Design For Python Script For Security</a>
+            <a href="chatgpt-coding-design-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-teams.md">Coding Design For Python Script For Teams</a>
+            <a href="chatgpt-coding-design-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-design-for-python-script-for-web-apps.md">Coding Design For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-example-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-automation.md">Coding Example For Python Script For Automation</a>
+            <a href="chatgpt-coding-example-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-backend.md">Coding Example For Python Script For Backend</a>
+            <a href="chatgpt-coding-example-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-beginners.md">Coding Example For Python Script For Beginners</a>
+            <a href="chatgpt-coding-example-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-clean-code.md">Coding Example For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-example-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-collaboration.md">Coding Example For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-example-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-deployment.md">Coding Example For Python Script For Deployment</a>
+            <a href="chatgpt-coding-example-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-developers.md">Coding Example For Python Script For Developers</a>
+            <a href="chatgpt-coding-example-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-fast-debugging.md">Coding Example For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-example-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-frontend.md">Coding Example For Python Script For Frontend</a>
+            <a href="chatgpt-coding-example-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-full-stack.md">Coding Example For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-example-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-maintainability.md">Coding Example For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-example-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-mobile-apps.md">Coding Example For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-example-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-modern-stacks.md">Coding Example For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-example-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-open-source.md">Coding Example For Python Script For Open Source</a>
+            <a href="chatgpt-coding-example-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-performance.md">Coding Example For Python Script For Performance</a>
+            <a href="chatgpt-coding-example-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-productivity.md">Coding Example For Python Script For Productivity</a>
+            <a href="chatgpt-coding-example-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-scalability.md">Coding Example For Python Script For Scalability</a>
+            <a href="chatgpt-coding-example-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-security.md">Coding Example For Python Script For Security</a>
+            <a href="chatgpt-coding-example-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-teams.md">Coding Example For Python Script For Teams</a>
+            <a href="chatgpt-coding-example-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-example-for-python-script-for-web-apps.md">Coding Example For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-automation.md">Coding Explanation For Python Script For Automation</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-backend.md">Coding Explanation For Python Script For Backend</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-beginners.md">Coding Explanation For Python Script For Beginners</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-clean-code.md">Coding Explanation For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-collaboration.md">Coding Explanation For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-deployment.md">Coding Explanation For Python Script For Deployment</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-developers.md">Coding Explanation For Python Script For Developers</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-fast-debugging.md">Coding Explanation For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-frontend.md">Coding Explanation For Python Script For Frontend</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-full-stack.md">Coding Explanation For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-maintainability.md">Coding Explanation For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-mobile-apps.md">Coding Explanation For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-modern-stacks.md">Coding Explanation For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-open-source.md">Coding Explanation For Python Script For Open Source</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-performance.md">Coding Explanation For Python Script For Performance</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-productivity.md">Coding Explanation For Python Script For Productivity</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-scalability.md">Coding Explanation For Python Script For Scalability</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-security.md">Coding Explanation For Python Script For Security</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-teams.md">Coding Explanation For Python Script For Teams</a>
+            <a href="chatgpt-coding-explanation-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-explanation-for-python-script-for-web-apps.md">Coding Explanation For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-automation.md">Coding Guide For Python Script For Automation</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-backend.md">Coding Guide For Python Script For Backend</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-beginners.md">Coding Guide For Python Script For Beginners</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-clean-code.md">Coding Guide For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-collaboration.md">Coding Guide For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-deployment.md">Coding Guide For Python Script For Deployment</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-developers.md">Coding Guide For Python Script For Developers</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-fast-debugging.md">Coding Guide For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-frontend.md">Coding Guide For Python Script For Frontend</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-full-stack.md">Coding Guide For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-maintainability.md">Coding Guide For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-mobile-apps.md">Coding Guide For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-modern-stacks.md">Coding Guide For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-open-source.md">Coding Guide For Python Script For Open Source</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-performance.md">Coding Guide For Python Script For Performance</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-productivity.md">Coding Guide For Python Script For Productivity</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-scalability.md">Coding Guide For Python Script For Scalability</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-security.md">Coding Guide For Python Script For Security</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-teams.md">Coding Guide For Python Script For Teams</a>
+            <a href="chatgpt-coding-guide-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-guide-for-python-script-for-web-apps.md">Coding Guide For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-automation.md">Coding Refactor For Python Script For Automation</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-backend.md">Coding Refactor For Python Script For Backend</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-beginners.md">Coding Refactor For Python Script For Beginners</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-clean-code.md">Coding Refactor For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-collaboration.md">Coding Refactor For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-deployment.md">Coding Refactor For Python Script For Deployment</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-developers.md">Coding Refactor For Python Script For Developers</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-fast-debugging.md">Coding Refactor For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-frontend.md">Coding Refactor For Python Script For Frontend</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-full-stack.md">Coding Refactor For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-maintainability.md">Coding Refactor For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-mobile-apps.md">Coding Refactor For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-modern-stacks.md">Coding Refactor For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-open-source.md">Coding Refactor For Python Script For Open Source</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-performance.md">Coding Refactor For Python Script For Performance</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-productivity.md">Coding Refactor For Python Script For Productivity</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-scalability.md">Coding Refactor For Python Script For Scalability</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-security.md">Coding Refactor For Python Script For Security</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-teams.md">Coding Refactor For Python Script For Teams</a>
+            <a href="chatgpt-coding-refactor-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-refactor-for-python-script-for-web-apps.md">Coding Refactor For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-review-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-automation.md">Coding Review For Python Script For Automation</a>
+            <a href="chatgpt-coding-review-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-backend.md">Coding Review For Python Script For Backend</a>
+            <a href="chatgpt-coding-review-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-beginners.md">Coding Review For Python Script For Beginners</a>
+            <a href="chatgpt-coding-review-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-clean-code.md">Coding Review For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-review-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-collaboration.md">Coding Review For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-review-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-deployment.md">Coding Review For Python Script For Deployment</a>
+            <a href="chatgpt-coding-review-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-developers.md">Coding Review For Python Script For Developers</a>
+            <a href="chatgpt-coding-review-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-fast-debugging.md">Coding Review For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-review-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-frontend.md">Coding Review For Python Script For Frontend</a>
+            <a href="chatgpt-coding-review-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-full-stack.md">Coding Review For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-review-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-maintainability.md">Coding Review For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-review-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-mobile-apps.md">Coding Review For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-review-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-modern-stacks.md">Coding Review For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-review-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-open-source.md">Coding Review For Python Script For Open Source</a>
+            <a href="chatgpt-coding-review-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-performance.md">Coding Review For Python Script For Performance</a>
+            <a href="chatgpt-coding-review-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-productivity.md">Coding Review For Python Script For Productivity</a>
+            <a href="chatgpt-coding-review-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-scalability.md">Coding Review For Python Script For Scalability</a>
+            <a href="chatgpt-coding-review-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-security.md">Coding Review For Python Script For Security</a>
+            <a href="chatgpt-coding-review-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-teams.md">Coding Review For Python Script For Teams</a>
+            <a href="chatgpt-coding-review-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-review-for-python-script-for-web-apps.md">Coding Review For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-automation.md">Coding Snippet For Python Script For Automation</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-backend.md">Coding Snippet For Python Script For Backend</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-beginners.md">Coding Snippet For Python Script For Beginners</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-clean-code.md">Coding Snippet For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-collaboration.md">Coding Snippet For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-deployment.md">Coding Snippet For Python Script For Deployment</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-developers.md">Coding Snippet For Python Script For Developers</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-fast-debugging.md">Coding Snippet For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-frontend.md">Coding Snippet For Python Script For Frontend</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-full-stack.md">Coding Snippet For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-maintainability.md">Coding Snippet For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-mobile-apps.md">Coding Snippet For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-modern-stacks.md">Coding Snippet For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-open-source.md">Coding Snippet For Python Script For Open Source</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-performance.md">Coding Snippet For Python Script For Performance</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-productivity.md">Coding Snippet For Python Script For Productivity</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-scalability.md">Coding Snippet For Python Script For Scalability</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-security.md">Coding Snippet For Python Script For Security</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-teams.md">Coding Snippet For Python Script For Teams</a>
+            <a href="chatgpt-coding-snippet-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-snippet-for-python-script-for-web-apps.md">Coding Snippet For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-automation.md">Coding Strategy For Python Script For Automation</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-backend.md">Coding Strategy For Python Script For Backend</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-beginners.md">Coding Strategy For Python Script For Beginners</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-clean-code.md">Coding Strategy For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-collaboration.md">Coding Strategy For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-deployment.md">Coding Strategy For Python Script For Deployment</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-developers.md">Coding Strategy For Python Script For Developers</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-fast-debugging.md">Coding Strategy For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-frontend.md">Coding Strategy For Python Script For Frontend</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-full-stack.md">Coding Strategy For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-maintainability.md">Coding Strategy For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-mobile-apps.md">Coding Strategy For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-modern-stacks.md">Coding Strategy For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-open-source.md">Coding Strategy For Python Script For Open Source</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-performance.md">Coding Strategy For Python Script For Performance</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-productivity.md">Coding Strategy For Python Script For Productivity</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-scalability.md">Coding Strategy For Python Script For Scalability</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-security.md">Coding Strategy For Python Script For Security</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-teams.md">Coding Strategy For Python Script For Teams</a>
+            <a href="chatgpt-coding-strategy-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-strategy-for-python-script-for-web-apps.md">Coding Strategy For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-template-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-automation.md">Coding Template For Python Script For Automation</a>
+            <a href="chatgpt-coding-template-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-backend.md">Coding Template For Python Script For Backend</a>
+            <a href="chatgpt-coding-template-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-beginners.md">Coding Template For Python Script For Beginners</a>
+            <a href="chatgpt-coding-template-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-clean-code.md">Coding Template For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-template-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-collaboration.md">Coding Template For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-template-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-deployment.md">Coding Template For Python Script For Deployment</a>
+            <a href="chatgpt-coding-template-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-developers.md">Coding Template For Python Script For Developers</a>
+            <a href="chatgpt-coding-template-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-fast-debugging.md">Coding Template For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-template-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-frontend.md">Coding Template For Python Script For Frontend</a>
+            <a href="chatgpt-coding-template-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-full-stack.md">Coding Template For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-template-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-maintainability.md">Coding Template For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-template-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-mobile-apps.md">Coding Template For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-template-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-modern-stacks.md">Coding Template For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-template-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-open-source.md">Coding Template For Python Script For Open Source</a>
+            <a href="chatgpt-coding-template-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-performance.md">Coding Template For Python Script For Performance</a>
+            <a href="chatgpt-coding-template-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-productivity.md">Coding Template For Python Script For Productivity</a>
+            <a href="chatgpt-coding-template-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-scalability.md">Coding Template For Python Script For Scalability</a>
+            <a href="chatgpt-coding-template-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-security.md">Coding Template For Python Script For Security</a>
+            <a href="chatgpt-coding-template-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-teams.md">Coding Template For Python Script For Teams</a>
+            <a href="chatgpt-coding-template-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-template-for-python-script-for-web-apps.md">Coding Template For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-test-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-automation.md">Coding Test For Python Script For Automation</a>
+            <a href="chatgpt-coding-test-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-backend.md">Coding Test For Python Script For Backend</a>
+            <a href="chatgpt-coding-test-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-beginners.md">Coding Test For Python Script For Beginners</a>
+            <a href="chatgpt-coding-test-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-clean-code.md">Coding Test For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-test-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-collaboration.md">Coding Test For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-test-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-deployment.md">Coding Test For Python Script For Deployment</a>
+            <a href="chatgpt-coding-test-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-developers.md">Coding Test For Python Script For Developers</a>
+            <a href="chatgpt-coding-test-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-fast-debugging.md">Coding Test For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-test-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-frontend.md">Coding Test For Python Script For Frontend</a>
+            <a href="chatgpt-coding-test-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-full-stack.md">Coding Test For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-test-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-maintainability.md">Coding Test For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-test-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-mobile-apps.md">Coding Test For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-test-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-modern-stacks.md">Coding Test For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-test-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-open-source.md">Coding Test For Python Script For Open Source</a>
+            <a href="chatgpt-coding-test-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-performance.md">Coding Test For Python Script For Performance</a>
+            <a href="chatgpt-coding-test-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-productivity.md">Coding Test For Python Script For Productivity</a>
+            <a href="chatgpt-coding-test-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-scalability.md">Coding Test For Python Script For Scalability</a>
+            <a href="chatgpt-coding-test-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-security.md">Coding Test For Python Script For Security</a>
+            <a href="chatgpt-coding-test-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-teams.md">Coding Test For Python Script For Teams</a>
+            <a href="chatgpt-coding-test-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-test-for-python-script-for-web-apps.md">Coding Test For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-automation.md">Coding Tutorial For Python Script For Automation</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-backend.md">Coding Tutorial For Python Script For Backend</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-beginners.md">Coding Tutorial For Python Script For Beginners</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-clean-code.md">Coding Tutorial For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-collaboration.md">Coding Tutorial For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-deployment.md">Coding Tutorial For Python Script For Deployment</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-developers.md">Coding Tutorial For Python Script For Developers</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-fast-debugging.md">Coding Tutorial For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-frontend.md">Coding Tutorial For Python Script For Frontend</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-full-stack.md">Coding Tutorial For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-maintainability.md">Coding Tutorial For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-mobile-apps.md">Coding Tutorial For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-modern-stacks.md">Coding Tutorial For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-open-source.md">Coding Tutorial For Python Script For Open Source</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-performance.md">Coding Tutorial For Python Script For Performance</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-productivity.md">Coding Tutorial For Python Script For Productivity</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-scalability.md">Coding Tutorial For Python Script For Scalability</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-security.md">Coding Tutorial For Python Script For Security</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-teams.md">Coding Tutorial For Python Script For Teams</a>
+            <a href="chatgpt-coding-tutorial-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-tutorial-for-python-script-for-web-apps.md">Coding Tutorial For Python Script For Web Apps</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-automation.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-automation.md">Coding Workflow For Python Script For Automation</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-backend.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-backend.md">Coding Workflow For Python Script For Backend</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-beginners.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-beginners.md">Coding Workflow For Python Script For Beginners</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-clean-code.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-clean-code.md">Coding Workflow For Python Script For Clean Code</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-collaboration.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-collaboration.md">Coding Workflow For Python Script For Collaboration</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-deployment.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-deployment.md">Coding Workflow For Python Script For Deployment</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-developers.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-developers.md">Coding Workflow For Python Script For Developers</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-fast-debugging.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-fast-debugging.md">Coding Workflow For Python Script For Fast Debugging</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-frontend.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-frontend.md">Coding Workflow For Python Script For Frontend</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-full-stack.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-full-stack.md">Coding Workflow For Python Script For Full Stack</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-maintainability.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-maintainability.md">Coding Workflow For Python Script For Maintainability</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-mobile-apps.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-mobile-apps.md">Coding Workflow For Python Script For Mobile Apps</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-modern-stacks.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-modern-stacks.md">Coding Workflow For Python Script For Modern Stacks</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-open-source.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-open-source.md">Coding Workflow For Python Script For Open Source</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-performance.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-performance.md">Coding Workflow For Python Script For Performance</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-productivity.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-productivity.md">Coding Workflow For Python Script For Productivity</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-scalability.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-scalability.md">Coding Workflow For Python Script For Scalability</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-security.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-security.md">Coding Workflow For Python Script For Security</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-teams.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-teams.md">Coding Workflow For Python Script For Teams</a>
+            <a href="chatgpt-coding-workflow-for-python-script-for-web-apps.md" class="article-card" data-title="chatgpt-coding-workflow-for-python-script-for-web-apps.md">Coding Workflow For Python Script For Web Apps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    function filterArticles() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.article-card');
+      const groups = document.querySelectorAll('.category-group');
+      let totalCount = 0;
+      
+      groups.forEach(group => {
+        let visibleCount = 0;
+        const categoryCards = group.querySelectorAll('.article-card');
+        
+        categoryCards.forEach(card => {
+          if (input === '' || card.getAttribute('data-title').includes(input)) {
+            card.style.display = '';
+            visibleCount++;
+            totalCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 카테고리 헤더 표시/숨김
+        if (visibleCount === 0) {
+          group.style.display = 'none';
+        } else {
+          group.style.display = '';
+          const header = group.querySelector('.category-title');
+          if (header) {
+            header.textContent = header.textContent.replace(/\([0-9]+\)/, '(' + visibleCount + ')');
+          }
+        }
+      });
+      
+      const info = document.getElementById('search-info');
+      if (input.length > 0) {
+        info.textContent = totalCount + ' article(s) found';
+      } else {
+        info.textContent = '';
+      }
+    }
+    </script>
+  </main>
+  <footer>SoftGuides · ChatGPT Coding</footer>
+</body>
+</html>

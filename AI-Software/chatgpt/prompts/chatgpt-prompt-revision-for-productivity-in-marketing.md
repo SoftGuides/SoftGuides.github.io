@@ -1,0 +1,3 @@
+# ChatGPT prompt Revision for productivity in Marketing
+
+This prompt file contains the title: ChatGPT prompt Revision for productivity in Marketing.
