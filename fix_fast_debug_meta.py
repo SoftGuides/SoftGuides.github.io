@@ -1,4 +1,4 @@
-from pathlib import Path
+d:\포토\google707004fcceaa9ff3 (1).htmlfrom pathlib import Path
 p = Path('AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-fast-debugging.html')
 s = p.read_text(encoding='utf-8')
 repls = [
