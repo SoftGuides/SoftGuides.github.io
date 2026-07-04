@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ChatGPT Best Practices for Python Script Developers | Developer Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-developers.html">
+  <meta property="og:title" content="ChatGPT Best Practices for Python Script Developers | Developer Guide">
+  <meta property="og:description" content="Practical, SEO-friendly guide for developers: testing, debugging, CI/CD, performance, code reviews, and production readiness for Python scripts using ChatGPT.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-developers.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Best Practices for Python Script Developers | Developer Guide">
+  <meta name="twitter:description" content="Practical, SEO-friendly guide for developers: testing, debugging, CI/CD, performance, code reviews, and production readiness for Python scripts using ChatGPT.">
+  <meta name="keywords" content="security, CI/CD, testing, logging, performance, automation, collaboration, debugging, SOLID, API, GitHub, ChatGPT">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT Best Practices for Python Script Developers | Developer Guide",
+  "description": "Practical, SEO-friendly guide for developers: testing, debugging, CI/CD, performance, code reviews, and production readiness for Python scripts using ChatGPT.",
+  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-developers.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "ChatGPT Best Practices for Python Script Developers | Developer Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-developers.html"
+    }
+  ]
+}
+  </script>
+
+  <meta name="description" content="Practical, SEO-friendly guide for developers: testing, debugging, CI/CD, performance, code reviews, and production readiness for Python scripts using ChatGPT." />
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags -->
+  
+  <!-- Structured Data (Schema.org) -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 700; }
+    header p { font-size: 1.05rem; margin-bottom: 20px; opacity: 0.95; }
+    nav { background: #333; padding: 15px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav a { color: white; text-decoration: none; margin-right: 20px; display: inline-block; font-size: 0.95rem; transition: color 0.3s; }
+    nav a:hover { color: #667eea; }
+    .container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 300px; gap: 30px; padding: 30px 20px; }
+    main { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    aside { display: flex; flex-direction: column; gap: 20px; }
+    .toc { background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; }
+    h2 { color: #333; font-size: 2rem; margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid #667eea; }
+    h3 { color: #555; font-size: 1.4rem; margin: 30px 0 15px 0; }
+    p { margin: 15px 0; line-height: 1.8; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; color: #d63384; font-size: 0.95rem; }
+    pre { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 6px; overflow-x: auto; margin: 20px 0; line-height: 1.5; }
+    .ad-block { background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0; border: 1px solid #ddd; }
+    .cta-button { display: inline-block; background: #667eea; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; margin: 10px 10px 10px 0; transition: background 0.3s; font-weight: 600; }
+    .meta-info { color: #999; font-size: 0.95rem; margin: 20px 0; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    footer { background: #333; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
+    footer a { color: #667eea; text-decoration: none; }
+    @media (max-width: 768px) { .container { grid-template-columns: 1fr; } header h1 { font-size: 1.8rem; } main { padding: 20px; } h2 { font-size: 1.5rem; } nav a { display: block; margin: 10px 0; } }
+  </style>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755" crossorigin="anonymous"></script></head>
+<body>
+  <header>
+    <h1>ChatGPT Best Practices for Python Script Developers</h1>
+    <p>In-depth developer guide: testing, debugging, CI/CD, performance, security, and code-review workflows for Python scripts.</p>
+  </header>
+  
+  <nav>
+    <a href="../../../index.html">Home</a>
+    <a href="../../../AI-Software/index.html">AI Software</a>
+    <a href="../../index.html">ChatGPT</a>
+    <a href="../index.html">Coding</a>
+  </nav>
+  
+  <div class="container">
+    <main>
+      <div class="meta-info">
+        <strong>Category:</strong> ChatGPT Coding Guide | 
+        <strong>Level:</strong> Advanced
+      </div>
+
+      <h2 id="introduction">Introduction</h2>
+      <p>This developer guide is tailored for engineers who want to use ChatGPT while preserving production standards. It focuses on developer workflows, maintainable architecture, testing, CI/CD, logging, performance, security, and team collaboration.</p>
+
+      <h2 id="development-workflow">1. Local Development Workflow</h2>
+      <h3>1.1 Dependency isolation and version control</h3>
+      <p>Use virtual environments like <code>venv</code>, <code>pipenv</code>, or <code>poetry</code> to lock dependencies. Commit dependency manifests and lockfiles so development, CI, and production share the same package versions.</p>
+      <pre><code>[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+sqlalchemy = "^2.0"
+flask = "^2.4.0"
+black = "^24.3.0"
+mypy = "^1.9.0"</code></pre>
+      <p>When ChatGPT offers package upgrades, review release notes and compatibility before changing your dependency graph.</p>
+
+      <h3>1.2 Tooling, linting, and type checking</h3>
+      <p>Integrate <code>Black</code> for formatting, <code>isort</code> for imports, <code>Flake8</code> for linting, and <code>Mypy</code> for static typing. These checks should be part of local development as well as CI.</p>
+      <pre><code>python -m pip install black isort mypy flake8
+black .
+isort .
+mypy src/</code></pre>
+      <p>Use editor plugins to surface issues early and keep formatting consistent across the team.</p>
+
+      <h3>1.3 Configuration, secrets, and environment variables</h3>
+      <p>Keep environment-specific values outside code. Use environment variables, configuration files, or secret stores so your script runs safely in local, staging, and production environments.</p>
+      <pre><code>import os
+
+def load_config():
+    return {
+        'API_URL': os.environ.get('API_URL', 'https://api.example.com'),
+        'DATABASE_URL': os.environ['DATABASE_URL'],
+        'CACHE_TTL': int(os.environ.get('CACHE_TTL', 300)),
+    }</code></pre>
+      <p>If you use ChatGPT to scaffold configuration, verify that default values do not accidentally expose sensitive data.</p>
+
+      <h2 id="architecture">2. Maintainable Script Architecture</h2>
+      <h3>2.1 Separation of concerns</h3>
+      <p>Organize script code into clear layers: configuration, command parsing, domain logic, persistence, and I/O. This makes the code easier to test and evolve.</p>
+      <pre><code>def main():
+    config = load_config()
+    app = create_application(config)
+    result = run_job(app)
+    print(result)
+
+if __name__ == '__main__':
+    main()</code></pre>
+
+      <h3>2.2 SQLAlchemy and persistence</h3>
+      <p>Use SQLAlchemy for database access. Define models clearly and use session scopes to manage transactions safely.</p>
+      <pre><code>from sqlalchemy import create_engine, select
+from sqlalchemy.orm import Session
+
+engine = create_engine(db_url)
+
+with Session(engine) as session:
+    stmt = select(User).where(User.active == True)
+    users = session.execute(stmt).scalars().all()</code></pre>
+      <p>Monitor generated SQL and avoid N+1 query patterns by using eager loading when needed.</p>
+
+      <h3>2.3 Flask or API-based service patterns</h3>
+      <p>For scripts that expose HTTP endpoints, keep business logic outside of the route handlers. Use Flask or FastAPI for lightweight API wrappers.</p>
+      <pre><code>from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/process', methods=['POST'])
+def process_endpoint():
+    data = request.get_json()
+    result = process_payload(data)
+    return jsonify({'result': result})</code></pre>
+
+      <h2 id="testing">3. Testing Strategy</h2>
+      <h3>3.1 Unit testing</h3>
+      <p>Write isolated unit tests for business logic. Use dependency injection and mocks for external systems so tests remain fast and deterministic.</p>
+      <pre><code>def test_calculate_total():
+    from app.order import calculate_total
+    items = [{'price': 10}, {'price': 15}]
+    assert calculate_total(items, tax_rate=0.1) == 27.5</code></pre>
+
+      <h3>3.2 Integration and contract tests</h3>
+      <p>Verify end-to-end behavior against local test doubles or sandbox APIs. Keep contract tests in CI so integrations do not break silently.</p>
+      <pre><code>def test_api_contract(mock_server):
+    response = client.get('/orders')
+    assert response.status_code == 200
+    assert 'orders' in response.json()</code></pre>
+
+      <h3>3.3 Regression and acceptance tests</h3>
+      <p>Document bug fixes with regression tests and capture important flows as acceptance tests. This ensures that critical script behavior remains stable over time.</p>
+      <pre><code>def test_export_csv_path():
+    output = export_data(format='csv')
+    assert 'report.csv' in output</code></pre>
+
+      <h2 id="debugging">4. Debugging and Observability</h2>
+      <h3>4.1 Structured logging and correlation IDs</h3>
+      <p>Structured logs make it much easier to search and analyze issues. Include context values such as request IDs, user IDs, and trace IDs.</p>
+      <pre><code>import logging
+import json_log_formatter
+
+logger = logging.getLogger('app')
+handler = logging.StreamHandler()
+handler.setFormatter(json_log_formatter.JSONFormatter())
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
+
+logger.info('order processed', extra={'correlation_id': correlation_id, 'user_id': user_id})</code></pre>
+
+      <h3>4.2 Debugging workflows</h3>
+      <p>Use <code>pdb</code>, <code>ipdb</code>, or editor-integrated breakpoints for local troubleshooting. For async scripts, wrap the entrypoint with <code>asyncio.run()</code> and inspect event loop behavior.</p>
+      <pre><code>import pdb
+
+def process_item(item):
+    pdb.set_trace()
+    return item['value'] * 2</code></pre>
+
+      <h3>4.3 Monitoring and error reporting</h3>
+      <p>Instrument scripts with metrics and error reporting. Tools like Sentry, Prometheus, or Datadog help you spot regressions and performance issues after deployment.</p>
+
+      <h2 id="ci-cd">5. CI/CD and Docker</h2>
+      <p>Use CI pipelines to validate code quality and build reproducible artifacts. Test, lint, type check, and package in a clean environment before deployment.</p>
+      <ul>
+        <li>Run formatting, linting, type checks, and tests on every pull request.</li>
+        <li>Build Docker images and run smoke tests before pushing images.</li>
+        <li>Use commit SHAs and semantic version tags for traceable releases.</li>
+      </ul>
+      <h3>5.1 GitHub Actions example</h3>
+      <pre><code>name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install black isort mypy pytest
+      - run: black --check .
+      - run: isort --check-only .
+      - run: mypy src/
+      - run: pytest -q</code></pre>
+
+      <h3>5.2 Docker build example</h3>
+      <pre><code>FROM python:3.11-slim
+WORKDIR /app
+COPY pyproject.toml requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "-m", "app"]</code></pre>
+      <p>Use multi-stage builds for smaller images and avoid installing build-only dependencies in production containers.</p>
+
+      <h2 id="performance">6. Performance and Caching</h2>
+      <p>Measure before optimizing. Use profiling tools like <code>cProfile</code>, <code>pyinstrument</code>, or <code>scalene</code> to identify real performance bottlenecks.</p>
+      <h3>6.1 Caching strategy</h3>
+      <p>Cache expensive operations when results are safe to reuse. For scripts that call external services, a TTL cache can dramatically reduce latency and cost.</p>
+      <pre><code>from cachetools import TTLCache, cached
+
+cache = TTLCache(maxsize=1000, ttl=300)
+
+@cached(cache)
+def fetch_data(key):
+    return external_api.get(key)</code></pre>
+
+      <h3>6.2 SQLAlchemy query optimization</h3>
+      <p>Inspect generated SQL and avoid N+1 queries. Use eager loading or explicit joins to fetch related data efficiently.</p>
+
+      <h2 id="security">7. Security Practices</h2>
+      <h3>7.1 JWT-based authentication</h3>
+      <p>When scripts verify JWTs, validate signatures and expiration time. Never accept tokens without proper verification.</p>
+      <pre><code>from jose import jwt
+
+def verify_token(token):
+    return jwt.decode(token, SECRET_KEY, algorithms=['HS256'])</code></pre>
+
+      <h3>7.2 Secrets management and dependency scanning</h3>
+      <p>Use secret stores or CI-managed secret variables. Run dependency vulnerability scans with tools such as <code>safety</code>, <code>Dependabot</code>, or <code>pip-audit</code>.</p>
+      <h3>7.3 Secure coding patterns</h3>
+      <ul>
+        <li>Use parameterized queries for database access.</li>
+        <li>Validate all external input before processing.</li>
+        <li>Minimize third-party dependencies to essential libraries only.</li>
+      </ul>
+
+      <h2 id="code-review">8. Code Review and Collaboration</h2>
+      <p>Use a review checklist for correctness, performance, security, and maintainability. Prefer small, focused pull requests with clear scope and testing instructions.</p>
+      <ul>
+        <li>Is the implementation aligned with architecture guidelines?</li>
+        <li>Does the PR include tests and documentation?</li>
+        <li>Are edge cases and failure modes considered?</li>
+      </ul>
+
+      <h2 id="chatgpt-guidance">9. Using ChatGPT Effectively</h2>
+      <p>Treat ChatGPT as a productivity partner for generating ideas, code snippets, and documentation. Always validate generated output and use it to accelerate tasks rather than replace judgment.</p>
+      <ul>
+        <li>Ask for targeted refactors instead of large rewrites.</li>
+        <li>Request concrete examples for specific libraries like <code>Flask</code>, <code>SQLAlchemy</code>, or <code>Docker</code>.</li>
+        <li>Use ChatGPT to explain failed tests, error messages, and stack traces.</li>
+      </ul>
+
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          <!-- Developer Sidebar Ad -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9374368296307755" data-ad-slot="4652042516" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </p>
+      </div>
+
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Reliable Python script development requires consistent environments, automated validation, performance measurement, and security-conscious design. Use ChatGPT to speed up routine tasks, but keep final implementation decisions anchored in tests, reviews, and production validation.</p>
+
+      <div class="cta-button-group" style="margin-top: 30px;">
+        <a href="../../index.html" class="cta-button">Back to ChatGPT Guides</a>
+        <a href="../index.html" class="cta-button">View All Coding Articles</a>
+      </div>
+    </main>
+    
+    <aside>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#development-workflow">Local Development</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#debugging">Debugging</a></li>
+          <li><a href="#ci-cd">CI/CD</a></li>
+          <li><a href="#performance">Performance</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#code-review">Code Review</a></li>
+          <li><a href="#examples">Examples</a></li>
+        </ul>
+      </div>
+
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- Sidebar Ad -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9374368296307755" data-ad-slot="4652042516" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </p>
+      </div>
+
+      <div style="background: #667eea; color: white; padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: white; margin-top: 0;">Quick Tips</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>✓ Run tests on PRs</li>
+          <li>✓ Use type hints and linters</li>
+          <li>✓ CI should build artifacts</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved.</p>
+    <p><a href="../../../about.html">About Us</a> | <a href="../../../contact.html">Contact</a> | <a href="../../../privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ChatGPT Best Practices for Python Script for Beginners | Complete Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-beginners.html">
+  <meta property="og:title" content="ChatGPT Best Practices for Python Script for Beginners | Complete Guide">
+  <meta property="og:description" content="Learn Python basics with ChatGPT assistance. Complete beginner guide with examples, projects, and best practices for learning Python.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-beginners.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Best Practices for Python Script for Beginners | Complete Guide">
+  <meta name="twitter:description" content="Learn Python basics with ChatGPT assistance. Complete beginner guide with examples, projects, and best practices for learning Python.">
+  <meta name="keywords" content="automation, backend, debugging, SOLID, GitHub, ChatGPT, Best, Practices, for, Python, Script">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT Best Practices for Python Script for Beginners | Complete Guide",
+  "description": "Learn Python basics with ChatGPT assistance. Complete beginner guide with examples, projects, and best practices for learning Python.",  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-beginners.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "ChatGPT Best Practices for Python Script for Beginners | Complete Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-beginners.html"
+    }
+  ]
+}
+  </script>
+
+  <meta name="description" content="Learn Python basics with ChatGPT assistance. Complete beginner guide with examples, projects, and best practices for learning Python.">
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags -->
+  
+  <!-- Structured Data (Schema.org) -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      color: white;
+      padding: 15px 20px;
+      z-index: 100;
+      font-size: 0.9rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .meta-info {
+      background: #e8e8e8;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    
+    main {
+      background: white;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    main h2 {
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+      color: #333;
+    }
+    
+    main h2:first-child {
+      margin-top: 0;
+    }
+    
+    main h3 {
+      font-size: 1.4rem;
+      margin: 25px 0 15px 0;
+      color: #555;
+    }
+    
+    main h4 {
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+      color: #666;
+      font-weight: 600;
+    }
+    
+    main p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    main ul, main ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    
+    main li {
+      margin-bottom: 8px;
+    }
+    
+    main a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    main a:hover {
+      text-decoration: underline;
+    }
+    
+    main code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+    }
+    
+    main pre {
+      background: #282c34;
+      color: #abb2bf;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    main pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+      border-radius: 0;
+    }
+    
+    aside {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: fit-content;
+      position: sticky;
+      top: 80px;
+    }
+    
+    aside h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #333;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 10px;
+    }
+    
+    .toc {
+      list-style: none;
+    }
+    
+    .toc li {
+      margin-bottom: 10px;
+    }
+    
+    .toc a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    
+    .ads {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      margin: 30px 0;
+      border-radius: 5px;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+    }
+    
+    .related-articles {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid #e0e0e0;
+    }
+    
+    .related-articles h3 {
+      margin-bottom: 20px;
+    }
+    
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    
+    .article-card {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 20px;
+      text-decoration: none;
+      color: #333;
+      transition: box-shadow 0.3s;
+    }
+    
+    .article-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-decoration: none;
+      color: #667eea;
+    }
+    
+    .article-card h4 {
+      margin-top: 0;
+      color: #667eea;
+    }
+    
+    footer {
+      background: #f0f0f0;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 50px;
+    }
+    
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+      aside {
+        position: static;
+        top: auto;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      main h2 {
+        font-size: 1.5rem;
+      }
+      
+      main h3 {
+        font-size: 1.2rem;
+      }
+      
+      nav {
+        padding: 10px;
+        font-size: 0.8rem;
+      }
+      
+      nav a {
+        margin-right: 10px;
+      }
+    }
+  </style>
+  
+  <!-- Google AdSense 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755"
+     crossorigin="anonymous"></script></head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>ChatGPT Best Practices for Python Script for Beginners</h1>
+    <p>Master Python basics with ChatGPT assistance - Complete guide for absolute beginners</p>
+  </header>
+  
+  <!-- Navigation -->
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/AI-Software/index.html">AI-Software</a>
+    <a href="/AI-Software/chatgpt/index.html">ChatGPT</a>
+    <a href="/AI-Software/chatgpt/coding/index.html">Coding</a>
+  </nav>
+  
+  <!-- Meta Info -->
+  <div class="meta-info">
+    <strong>Category:</strong> AI-Software / ChatGPT / Coding &nbsp; | &nbsp;
+    <strong>Level:</strong> Beginner &nbsp; | &nbsp;
+      </div>
+  
+  <!-- Main Content -->
+  <div class="container">
+    <main>
+      <!-- AdSense Block 1 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Python is one of the most beginner-friendly programming languages. Combined with ChatGPT, learning Python becomes easier and more interactive. This guide will help you master Python basics using ChatGPT as your coding assistant.</p>
+      
+      <h3>Why Python for Beginners?</h3>
+      <ul>
+        <li><strong>Easy to read:</strong> Python syntax is clean and intuitive</li>
+        <li><strong>Powerful:</strong> Used in data science, web development, and automation</li>
+        <li><strong>Community:</strong> Large community with abundant resources</li>
+        <li><strong>ChatGPT Integration:</strong> Get instant help with explanations and code examples</li>
+      </ul>
+      
+      <h3>How to Use ChatGPT While Learning Python</h3>
+      <p>When learning Python with ChatGPT:</p>
+      <ul>
+        <li>Ask for explanations before diving into code</li>
+        <li>Request beginner-friendly examples</li>
+        <li>Ask ChatGPT to break down complex concepts</li>
+        <li>Practice writing code yourself before asking ChatGPT</li>
+      </ul>
+      
+      <h2 id="setting-up-python-environment">Setting Up Python Environment</h2>
+      
+      <h3>Installing Python</h3>
+      
+      <h4>Windows</h4>
+      <ol>
+        <li>Download from <a href="https://www.python.org/downloads/">python.org</a></li>
+        <li>Run the installer</li>
+        <li><strong>Important:</strong> Check "Add Python to PATH"</li>
+        <li>Click "Install Now"</li>
+      </ol>
+      
+      <h4>macOS</h4>
+      <pre><code># Using Homebrew
+brew install python3</code></pre>
+      
+      <h4>Linux</h4>
+      <pre><code># Ubuntu/Debian
+sudo apt-get install python3 python3-pip</code></pre>
+      
+      <h3>Verifying Installation</h3>
+      <p>Open your terminal/command prompt and run:</p>
+      <pre><code>python --version
+# or
+python3 --version</code></pre>
+      <p>You should see Python 3.8 or higher.</p>
+      
+      <h3>Setting Up Your First Project</h3>
+      <pre><code># Create a project folder
+mkdir my_python_project
+cd my_python_project
+
+# Create a virtual environment (recommended)
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate</code></pre>
+      
+      <h3>Using an IDE or Editor</h3>
+      <p><strong>Recommended for Beginners:</strong></p>
+      <ul>
+        <li><strong>VS Code</strong> (Free, lightweight)</li>
+        <li><strong>PyCharm Community</strong> (Free, full-featured)</li>
+        <li><strong>Thonny</strong> (Simplest for beginners)</li>
+      </ul>
+      
+      <!-- AdSense Block 2 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="python-fundamentals-with-chatgpt">Python Fundamentals with ChatGPT</h2>
+      
+      <h3>Variables and Data Types</h3>
+      <p>Python automatically determines data types:</p>
+      <pre><code># Strings
+name = "Alice"
+print(name)  # Output: Alice
+
+# Numbers
+age = 25
+height = 5.8
+
+# Booleans
+is_student = True</code></pre>
+      <p><strong>ChatGPT Tip:</strong> Ask "What's the difference between int and float in Python?" for detailed explanations.</p>
+      
+      <h3>Basic Operations</h3>
+      <pre><code># Arithmetic
+a = 10
+b = 3
+print(a + b)   # 13
+print(a - b)   # 7
+print(a * b)   # 30
+print(a / b)   # 3.333...
+print(a // b)  # 3 (integer division)
+print(a % b)   # 1 (remainder)
+print(a ** b)  # 1000 (power)</code></pre>
+      
+      <h3>String Manipulation</h3>
+      <pre><code># Concatenation
+first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+print(full_name)  # John Doe
+
+# String methods
+message = "Hello, Python!"
+print(message.lower())      # hello, python!
+print(message.upper())      # HELLO, PYTHON!
+print(message.replace("Python", "ChatGPT"))  # Hello, ChatGPT!</code></pre>
+      
+      <h3>Getting User Input</h3>
+      <pre><code># Simple input
+name = input("What's your name? ")
+print(f"Hello, {name}!")
+
+# Converting input to number
+age = int(input("How old are you? "))
+print(f"Next year you'll be {age + 1}")</code></pre>
+      
+      <h2 id="control-flow-and-logic">Control Flow and Logic</h2>
+      
+      <h3>If-Else Statements</h3>
+      <pre><code>age = 15
+
+if age >= 18:
+    print("You are an adult")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")</code></pre>
+      
+      <h3>Comparison Operators</h3>
+      <pre><code>a = 10
+b = 5
+
+print(a == b)  # False
+print(a != b)  # True
+print(a > b)   # True
+print(a < b)   # False
+print(a >= b)  # True
+print(a <= b)  # False</code></pre>
+      
+      <h3>Logical Operators</h3>
+      <pre><code>age = 25
+has_license = True
+
+if age >= 18 and has_license:
+    print("You can drive")
+
+# OR example
+if age < 13 or age > 70:
+    print("Special consideration needed")
+
+# NOT example
+if not has_license:
+    print("You need a license")</code></pre>
+      
+      <h3>Loops - For Loop</h3>
+      <pre><code># Loop through a range
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# Loop through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+      
+      <h3>Loops - While Loop</h3>
+      <pre><code>count = 0
+while count < 5:
+    print(count)
+    count += 1  # Same as count = count + 1</code></pre>
+      
+      <h2 id="working-with-functions">Working with Functions</h2>
+      
+      <h3>Creating Your First Function</h3>
+      <pre><code>def greet():
+    print("Hello!")
+
+greet()  # Call the function</code></pre>
+      
+      <h3>Functions with Parameters</h3>
+      <pre><code>def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Hello, Alice!
+greet("Bob")    # Hello, Bob!</code></pre>
+      
+      <h3>Functions with Return Values</h3>
+      <pre><code>def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # 8</code></pre>
+      
+      <h3>Multiple Parameters and Default Values</h3>
+      <pre><code>def describe_person(name, age=18):
+    print(f"{name} is {age} years old")
+
+describe_person("Alice")        # Alice is 18 years old
+describe_person("Bob", 25)      # Bob is 25 years old</code></pre>
+      
+      <h3>Best Practices for Functions</h3>
+      <ol>
+        <li><strong>Use clear names:</strong> <code>calculate_total()</code> not <code>calc()</code></li>
+        <li><strong>One task per function:</strong> Don't do everything in one function</li>
+        <li><strong>Document your code:</strong> Use comments</li>
+        <li><strong>Test your functions:</strong> Make sure they work correctly</li>
+      </ol>
+      
+      <h2 id="data-structures-and-collections">Data Structures and Collections</h2>
+      
+      <h3>Lists</h3>
+      <pre><code># Creating a list
+fruits = ["apple", "banana", "cherry"]
+
+# Accessing elements
+print(fruits[0])      # apple
+print(fruits[-1])     # cherry (last item)
+
+# Modifying lists
+fruits.append("date")           # Add at end
+fruits.insert(1, "blueberry")   # Insert at position
+fruits.remove("banana")         # Remove specific item
+
+# List operations
+print(len(fruits))    # Number of items
+print("apple" in fruits)  # Check if item exists</code></pre>
+      
+      <h3>Dictionaries</h3>
+      <pre><code># Creating a dictionary
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+# Accessing values
+print(person["name"])  # Alice
+
+# Adding new key-value pair
+person["email"] = "alice@example.com"
+
+# Removing items
+del person["city"]</code></pre>
+      
+      <h3>Tuples</h3>
+      <pre><code># Tuples are immutable (can't change)
+coordinates = (10, 20)
+print(coordinates[0])  # 10
+
+# Unpacking tuples
+x, y = coordinates
+print(x, y)  # 10 20</code></pre>
+      
+      <h3>Sets</h3>
+      <pre><code># Sets contain unique items
+numbers = {1, 2, 3, 3, 4}
+print(numbers)  # {1, 2, 3, 4}
+
+# Set operations
+numbers.add(5)
+numbers.remove(1)</code></pre>
+      
+      <!-- AdSense Block 3 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="file-input-and-output">File Input and Output</h2>
+      
+      <h3>Reading Files</h3>
+      <pre><code># Simple read
+with open("data.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Read line by line
+with open("data.txt", "r") as file:
+    for line in file:
+        print(line.strip())</code></pre>
+      
+      <h3>Writing Files</h3>
+      <pre><code># Write new file (creates if doesn't exist, overwrites if does)
+with open("output.txt", "w") as file:
+    file.write("Hello, Python!\n")
+    file.write("This is line 2")
+
+# Append to file
+with open("output.txt", "a") as file:
+    file.write("\nThis is a new line")</code></pre>
+      
+      <h3>Working with CSV Files</h3>
+      <pre><code>import csv
+
+# Reading CSV
+with open("data.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+# Writing CSV
+with open("output.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age"])
+    writer.writerow(["Alice", 25])</code></pre>
+      
+      <h2 id="error-handling-basics">Error Handling Basics</h2>
+      
+      <h3>Try-Except Blocks</h3>
+      <pre><code># Basic error handling
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(result)
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")</code></pre>
+      
+      <h3>Finally Block</h3>
+      <pre><code>try:
+    file = open("data.txt", "r")
+    content = file.read()
+except FileNotFoundError:
+    print("File not found!")
+finally:
+    # This always runs
+    if 'file' in locals():
+        file.close()</code></pre>
+      
+      <h3>Common Errors to Watch For</h3>
+      <pre><code># NameError: Using undefined variable
+# print(undefined_var)  # ERROR
+
+# IndexError: Accessing list item that doesn't exist
+# my_list = [1, 2, 3]
+# print(my_list[10])  # ERROR
+
+# KeyError: Accessing non-existent dictionary key
+# person = {"name": "Alice"}
+# print(person["age"])  # ERROR</code></pre>
+      
+      <h2 id="using-python-libraries">Using Python Libraries</h2>
+      
+      <h3>Importing Libraries</h3>
+      <pre><code># Import entire module
+import math
+print(math.pi)      # 3.14159...
+print(math.sqrt(16))  # 4.0
+
+# Import specific function
+from math import sqrt
+print(sqrt(25))     # 5.0
+
+# Import with alias
+import random as rnd
+print(rnd.randint(1, 10))</code></pre>
+      
+      <h3>Popular Beginner-Friendly Libraries</h3>
+      <p><strong>Random:</strong></p>
+      <pre><code>import random
+print(random.choice([1, 2, 3, 4, 5]))  # Random number
+print(random.shuffle([1, 2, 3]))  # Shuffle list</code></pre>
+      
+      <p><strong>DateTime:</strong></p>
+      <pre><code>from datetime import datetime
+now = datetime.now()
+print(now)  # Current date and time</code></pre>
+      
+      <p><strong>OS (System Operations):</strong></p>
+      <pre><code>import os
+print(os.getcwd())  # Current working directory
+files = os.listdir('.')  # List files in folder</code></pre>
+      
+      <h2 id="learning-tips-and-best-practices">Learning Tips and Best Practices</h2>
+      
+      <h3>Best Practices for Beginners</h3>
+      <ol>
+        <li><strong>Write Code Regularly</strong>
+          <ul>
+            <li>Practice every day, even 15 minutes helps</li>
+            <li>Repetition builds muscle memory</li>
+          </ul>
+        </li>
+        <li><strong>Read Other People's Code</strong>
+          <ul>
+            <li>Learn different approaches</li>
+            <li>See best practices in action</li>
+          </ul>
+        </li>
+        <li><strong>Use Comments Wisely</strong>
+          <pre><code># Calculate total price with tax
+total = price * (1 + tax_rate)</code></pre>
+        </li>
+        <li><strong>Test Your Code</strong>
+          <pre><code># Always test with different inputs
+def add(a, b):
+    return a + b
+
+assert add(2, 3) == 5
+assert add(-1, 1) == 0</code></pre>
+        </li>
+        <li><strong>Keep It Simple (KISS)</strong>
+          <ul>
+            <li>Don't over-complicate solutions</li>
+            <li>Simple code is easier to debug</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <h3>Using ChatGPT Effectively</h3>
+      <p><strong>Good Questions to Ask:</strong></p>
+      <ul>
+        <li>"Explain list comprehension with examples"</li>
+        <li>"What's the best way to organize a Python project?"</li>
+        <li>"Why am I getting this error?" (include error message)</li>
+      </ul>
+      
+      <p><strong>Less Effective:</strong></p>
+      <ul>
+        <li>"Write my homework for me" (defeats the purpose!)</li>
+        <li>Vague questions without context</li>
+      </ul>
+      
+      <h3>Debugging Tips</h3>
+      <pre><code># Use print() to debug
+x = 10
+print(f"x = {x}")  # See variable values
+
+# Use type() to check data type
+value = "123"
+print(type(value))  # &lt;class 'str'&gt;</code></pre>
+      
+      <h2 id="practice-projects-for-beginners">Practice Projects for Beginners</h2>
+      
+      <h3>Project 1: Temperature Converter</h3>
+      <pre><code>def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+temp = float(input("Enter temperature in Celsius: "))
+result = celsius_to_fahrenheit(temp)
+print(f"{temp}°C = {result}°F")</code></pre>
+      
+      <h3>Project 2: Number Guessing Game</h3>
+      <pre><code>import random
+
+secret = random.randint(1, 100)
+attempts = 0
+
+while True:
+    guess = int(input("Guess a number (1-100): "))
+    attempts += 1
+    
+    if guess == secret:
+        print(f"You won in {attempts} attempts!")
+        break
+    elif guess < secret:
+        print("Too low, try higher")
+    else:
+        print("Too high, try lower")</code></pre>
+      
+      <h3>Project 3: Simple To-Do List</h3>
+      <pre><code>tasks = []
+
+while True:
+    print("\n1. Add task\n2. View tasks\n3. Remove task\n4. Exit")
+    choice = input("Choose: ")
+    
+    if choice == "1":
+        task = input("Enter task: ")
+        tasks.append(task)
+    elif choice == "2":
+        for i, task in enumerate(tasks):
+            print(f"{i+1}. {task}")
+    elif choice == "3":
+        num = int(input("Task number to remove: "))
+        if 0 < num <= len(tasks):
+            tasks.pop(num-1)
+    elif choice == "4":
+        break</code></pre>
+      
+      <h3>Project 4: File Analysis</h3>
+      <pre><code># Count words in a file
+with open("document.txt", "r") as file:
+    content = file.read()
+    words = content.split()
+    print(f"Total words: {len(words)}")
+    print(f"Unique words: {len(set(words))}")</code></pre>
+      
+      <!-- AdSense Block 4 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <!-- Related Articles -->
+      <div class="related-articles">
+        <h3>Related Articles</h3>
+        <div class="article-grid">
+          <a href="/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html" class="article-card">
+            <h4>Python Automation Scripts</h4>
+            <p>Learn best practices for writing efficient Python automation scripts with ChatGPT assistance.</p>
+          </a>
+          <a href="/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-backend.html" class="article-card">
+            <h4>Python Backend Development</h4>
+            <p>Master backend development with Python and ChatGPT-assisted learning approach.</p>
+          </a>
+          <a href="/AI-Software/chatgpt/index.html" class="article-card">
+            <h4>ChatGPT Coding Guides</h4>
+            <p>Explore comprehensive ChatGPT guides for various programming topics and languages.</p>
+          </a>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Sidebar -->
+    <aside>
+      <h3>Table of Contents</h3>
+      <ul class="toc">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#setting-up-python-environment">Setting Up Python Environment</a></li>
+        <li><a href="#python-fundamentals-with-chatgpt">Python Fundamentals</a></li>
+        <li><a href="#control-flow-and-logic">Control Flow and Logic</a></li>
+        <li><a href="#working-with-functions">Working with Functions</a></li>
+        <li><a href="#data-structures-and-collections">Data Structures</a></li>
+        <li><a href="#file-input-and-output">File I/O</a></li>
+        <li><a href="#error-handling-basics">Error Handling</a></li>
+        <li><a href="#using-python-libraries">Python Libraries</a></li>
+        <li><a href="#learning-tips-and-best-practices">Learning Tips</a></li>
+        <li><a href="#practice-projects-for-beginners">Practice Projects</a></li>
+      </ul>
+      
+       <div class="ads" style="margin-top: 30px;">
+         <p style="font-size: 0.8rem;">
+        
+    <!-- 반려동물 -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9374368296307755"
+      data-ad-slot="4652042516"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+         </p>
+       </div>
+    </aside>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/contact.html">Contact</a></p>
+  </footer>
+</body>
+</html>

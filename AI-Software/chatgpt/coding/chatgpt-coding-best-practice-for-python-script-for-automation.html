@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ChatGPT Best Practices for Python Automation Scripts | Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html">
+  <meta property="og:title" content="ChatGPT Best Practices for Python Automation Scripts | Guide">
+  <meta property="og:description" content="Learn ChatGPT best practices for writing efficient Python automation scripts. Expert guide with examples, tips, and code patterns for developers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Best Practices for Python Automation Scripts | Guide">
+  <meta name="twitter:description" content="Learn ChatGPT best practices for writing efficient Python automation scripts. Expert guide with examples, tips, and code patterns for developers.">
+  <meta name="keywords" content="security, testing, logging, performance, automation, debugging, design patterns, SOLID, API, GitHub, ChatGPT, Best">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT Best Practices for Python Automation Scripts | Guide",
+  "description": "Learn ChatGPT best practices for writing efficient Python automation scripts. Expert guide with examples, tips, and code patterns for developers.",  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "ChatGPT Best Practices for Python Automation Scripts | Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html"
+    }
+  ]
+}
+  </script>
+
+  <meta name="description" content="Learn ChatGPT best practices for writing efficient Python automation scripts. Expert guide with examples, tips, and code patterns for developers.">
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags -->
+  
+  <!-- Structured Data (Schema.org) -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+    
+    nav {
+      background: #333;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #667eea;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+    
+    main {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .toc {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .toc h3 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 1.1rem;
+    }
+    
+    .toc ul {
+      list-style: none;
+    }
+    
+    .toc ul li {
+      margin: 8px 0;
+    }
+    
+    .toc a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    
+    .toc a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+    
+    h3 {
+      color: #555;
+      font-size: 1.4rem;
+      margin: 30px 0 15px 0;
+    }
+    
+    h4 {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+    
+    p {
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+      font-size: 0.95rem;
+    }
+    
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+    
+    pre code {
+      color: inherit;
+      background: none;
+      padding: 0;
+    }
+    
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    
+    .highlight-box {
+      background: #e8f4f8;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .highlight-box strong {
+      color: #667eea;
+    }
+    
+    .ad-block {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+    }
+    
+    .ad-block p {
+      color: #999;
+      font-size: 0.85rem;
+      margin: 5px 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px 10px 10px 0;
+      transition: background 0.3s;
+      font-weight: 600;
+    }
+    
+    .cta-button:hover {
+      background: #764ba2;
+    }
+    
+    .meta-info {
+      color: #999;
+      font-size: 0.95rem;
+      margin: 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    .related-articles {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    
+    .related-articles h3 {
+      margin-top: 0;
+    }
+    
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .article-card {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: #667eea;
+      transition: all 0.3s;
+    }
+    
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(102,126,234,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  
+  <!-- Google AdSense 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755"
+     crossorigin="anonymous"></script></head>
+<body>
+  <header>
+    <h1>ChatGPT Best Practices for Python Automation Scripts</h1>
+    <p>Master the art of using ChatGPT to write efficient, maintainable, and scalable Python automation scripts</p>
+  </header>
+  
+  <nav>
+    <a href="../../../index.html">Home</a>
+    <a href="../../../AI-Software/index.html">AI Software</a>
+    <a href="../../index.html">ChatGPT</a>
+    <a href="../index.html">Coding</a>
+  </nav>
+  
+  <div class="container">
+    <main>
+      <div class="meta-info">
+        <strong>Category:</strong> ChatGPT Coding Guide | 
+        <strong>Level:</strong> Intermediate to Advanced | 
+              </div>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Python automation scripts are essential tools for modern developers and system administrators. When combined with ChatGPT's capabilities, you can create more efficient, readable, and maintainable automation solutions. This comprehensive guide explores best practices for leveraging ChatGPT to develop Python automation scripts.</p>
+      
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- 반려동물 -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9374368296307755"
+          data-ad-slot="4652042516"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </p>
+      </div>
+      
+      <h2 id="planning">1. Planning Your Automation Scripts with ChatGPT</h2>
+      <h3>1.1 Define Clear Requirements</h3>
+      <p>Before writing a single line of code, use ChatGPT to help clarify your automation goals. Ask ChatGPT to:</p>
+      <ul>
+        <li>Outline the main tasks your script should accomplish</li>
+        <li>Identify potential edge cases and error handling scenarios</li>
+        <li>Suggest a logical flow and structure for the script</li>
+        <li>Recommend libraries and tools that are best suited for your needs</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <strong>Best Practice:</strong> Use ChatGPT to create a detailed specification document before coding. This saves time and reduces bugs later in development.
+      </div>
+      
+      <h3>1.2 Architecture and Design Patterns</h3>
+      <p>ChatGPT can suggest appropriate design patterns for your automation tasks:</p>
+      <ul>
+        <li><strong>Observer Pattern:</strong> For monitoring file changes or system events</li>
+        <li><strong>Strategy Pattern:</strong> For different automation approaches based on conditions</li>
+        <li><strong>Singleton Pattern:</strong> For managing shared resources like database connections</li>
+        <li><strong>Factory Pattern:</strong> For creating different types of automation tasks</li>
+      </ul>
+      
+      <h2 id="structure">2. Code Structure and Organization</h2>
+      <h3>2.1 Modular Design</h3>
+      <p>Break your automation scripts into smaller, reusable modules. Here's a basic structure:</p>
+      
+      <pre><code>automation_project/
+├── main.py
+├── config.py
+├── modules/
+│   ├── file_operations.py
+│   ├── api_interactions.py
+│   ├── data_processing.py
+│   └── notifications.py
+├── utils/
+│   ├── logger.py
+│   └── error_handler.py
+├── tests/
+│   ├── test_file_operations.py
+│   └── test_api_interactions.py
+└── requirements.txt</code></pre>
+      
+      <h3>2.2 Configuration Management</h3>
+      <p>Use configuration files instead of hardcoding values:</p>
+      
+      <pre><code>import json
+import os
+
+def load_config(config_file='config.json'):
+    """Load configuration from JSON file"""
+    if not os.path.exists(config_file):
+        raise FileNotFoundError(f"Config file {config_file} not found")
+    
+    with open(config_file, 'r') as f:
+        config = json.load(f)
+    return config
+
+# Usage
+config = load_config()
+api_key = config.get('api_key')
+timeout = config.get('timeout', 30)</code></pre>
+      
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- 반려동물 -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9374368296307755"
+          data-ad-slot="4652042516"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </p>
+      </div>
+      
+      <h2 id="error-handling">3. Error Handling and Logging</h2>
+      <h3>3.1 Comprehensive Error Handling</h3>
+      <p>Always implement robust error handling in your automation scripts:</p>
+      
+      <pre><code>import logging
+from typing import Optional
+
+logger = logging.getLogger(__name__)
+
+def safe_file_operation(filepath: str) -> Optional[str]:
+    """Safely read a file with error handling"""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return content
+    except FileNotFoundError:
+        logger.error(f"File not found: {filepath}")
+        return None
+    except IOError as e:
+        logger.error(f"IO error reading {filepath}: {str(e)}")
+        return None
+    except Exception as e:
+        logger.error(f"Unexpected error: {str(e)}")
+        return None</code></pre>
+      
+      <h3>3.2 Logging Best Practices</h3>
+      <ul>
+        <li>Use appropriate logging levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)</li>
+        <li>Include timestamps and context in log messages</li>
+        <li>Store logs in a separate file for debugging</li>
+        <li>Implement log rotation for long-running scripts</li>
+      </ul>
+      
+      <h2 id="performance">4. Performance Optimization</h2>
+      <h3>4.1 Asynchronous Operations</h3>
+      <p>For I/O-bound operations, use asyncio or concurrent.futures:</p>
+      
+      <pre><code>import asyncio
+
+async def fetch_multiple_urls(urls):
+    """Fetch multiple URLs asynchronously"""
+    tasks = [fetch_url(url) for url in urls]
+    results = await asyncio.gather(*tasks)
+    return results
+
+async def fetch_url(url):
+    """Fetch a single URL"""
+    # Implementation here
+    pass</code></pre>
+      
+      <h3>4.2 Resource Management</h3>
+      <ul>
+        <li>Use context managers for resource handling</li>
+        <li>Implement batch processing for large datasets</li>
+        <li>Cache results when appropriate</li>
+        <li>Monitor memory usage in long-running scripts</li>
+      </ul>
+      
+      <h2 id="testing">5. Testing Your Automation Scripts</h2>
+      <h3>5.1 Unit Testing</h3>
+      
+      <pre><code>import unittest
+from modules.file_operations import read_file
+
+class TestFileOperations(unittest.TestCase):
+    def test_read_existing_file(self):
+        result = read_file('test_file.txt')
+        self.assertIsNotNone(result)
+    
+    def test_read_nonexistent_file(self):
+        result = read_file('nonexistent.txt')
+        self.assertIsNone(result)
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+      
+      <h3>5.2 Integration Testing</h3>
+      <p>Test how different components work together, especially API interactions and database operations.</p>
+      
+      <h2 id="security">6. Security Considerations</h2>
+      <ul>
+        <li><strong>Environment Variables:</strong> Store sensitive data (API keys, passwords) in environment variables</li>
+        <li><strong>Input Validation:</strong> Always validate and sanitize user inputs</li>
+        <li><strong>Secure Storage:</strong> Use encryption for sensitive configuration files</li>
+        <li><strong>Dependency Management:</strong> Keep Python packages updated to patch security vulnerabilities</li>
+        <li><strong>Permissions:</strong> Run scripts with minimal required permissions</li>
+      </ul>
+      
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- 반려동물 -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-9374368296307755"
+          data-ad-slot="4652042516"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </p>
+      </div>
+      
+      <h2 id="documentation">7. Documentation and Maintenance</h2>
+      <h3>7.1 Code Documentation</h3>
+      <ul>
+        <li>Write clear, concise docstrings for all functions and classes</li>
+        <li>Include type hints for better code clarity</li>
+        <li>Maintain a README with usage instructions</li>
+        <li>Document any external dependencies and their versions</li>
+      </ul>
+      
+      <h3>7.2 Version Control</h3>
+      <p>Use Git to track changes and maintain version history. This is crucial for automation scripts in production environments.</p>
+      
+      <h2 id="example">8. Real-World Example: File Organization Automation</h2>
+      <p>Here's a practical example combining several best practices:</p>
+      
+      <pre><code>#!/usr/bin/env python3
+"""
+File Organization Automation Script
+Organizes files in a directory by type and date
+"""
+
+import os
+import shutil
+from datetime import datetime
+from pathlib import Path
+import logging
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('file_organizer.log'),
+        logging.StreamHandler()
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
+def organize_files(source_dir: str, target_dir: str = None) -> bool:
+    """
+    Organize files in source directory by type and date
+    
+    Args:
+        source_dir: Directory to organize
+        target_dir: Target directory (defaults to source_dir)
+    
+    Returns:
+        bool: Success status
+    """
+    try:
+        source_path = Path(source_dir)
+        if not source_path.exists():
+            logger.error(f"Source directory does not exist: {source_dir}")
+            return False
+        
+        target_path = Path(target_dir) if target_dir else source_path
+        
+        for file_path in source_path.iterdir():
+            if file_path.is_file():
+                extension = file_path.suffix.lower()
+                file_date = datetime.fromtimestamp(file_path.stat().st_mtime)
+                
+                # Create directory structure
+                organize_dir = target_path / file_date.strftime('%Y/%m')
+                organize_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Move file
+                new_file_path = organize_dir / file_path.name
+                shutil.move(str(file_path), str(new_file_path))
+                logger.info(f"Moved: {file_path.name} -> {new_file_path}")
+        
+        logger.info("File organization completed successfully")
+        return True
+    
+    except Exception as e:
+        logger.error(f"Error organizing files: {str(e)}")
+        return False
+
+if __name__ == "__main__":
+    organize_files("./downloads")</code></pre>
+      
+      <h2 id="pitfalls">9. Common Pitfalls to Avoid</h2>
+      <ul>
+        <li><strong>Hardcoded Values:</strong> Never hardcode paths, API keys, or other configuration</li>
+        <li><strong>Poor Error Handling:</strong> Don't ignore exceptions; log and handle them properly</li>
+        <li><strong>Missing Logging:</strong> Always implement logging for production scripts</li>
+        <li><strong>Insufficient Testing:</strong> Test edge cases and error conditions</li>
+        <li><strong>Resource Leaks:</strong> Always clean up resources (files, connections, etc.)</li>
+        <li><strong>Documentation Gaps:</strong> Document your code and how to use it</li>
+      </ul>
+      
+      <h2 id="tools">10. Tools and Resources</h2>
+      <h3>Recommended Tools:</h3>
+      <ul>
+        <li><strong>Black:</strong> Code formatter for consistent style</li>
+        <li><strong>Pylint:</strong> Code quality analyzer</li>
+        <li><strong>Pytest:</strong> Advanced testing framework</li>
+        <li><strong>APScheduler:</strong> For scheduling automated tasks</li>
+        <li><strong>Click:</strong> For building command-line interfaces</li>
+      </ul>
+      
+      <div class="related-articles">
+        <h3>Related Articles</h3>
+        <div class="article-grid">
+          <a href="chatgpt-coding-guide-for-python-script-for-beginners.html" class="article-card">
+            Python Basics with ChatGPT
+          </a>
+          <a href="chatgpt-coding-debugging-for-python-script-for-developers.html" class="article-card">
+            Debugging Python Scripts
+          </a>
+          <a href="chatgpt-coding-best-practice-for-javascript-function-for-web-apps.html" class="article-card">
+            Web Development Best Practices
+          </a>
+        </div>
+      </div>
+      
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Using ChatGPT to develop Python automation scripts can significantly improve your productivity and code quality. By following these best practices, you'll create scripts that are:</p>
+      <ul>
+        <li><strong>Maintainable:</strong> Easy to understand and modify</li>
+        <li><strong>Reliable:</strong> Robust error handling and logging</li>
+        <li><strong>Scalable:</strong> Can handle growing complexity and data volumes</li>
+        <li><strong>Secure:</strong> Protected against common vulnerabilities</li>
+        <li><strong>Documented:</strong> Clear documentation for future reference</li>
+      </ul>
+      
+      <p style="margin-top: 30px;">Start implementing these practices in your next automation project and watch your productivity soar!</p>
+      
+      <div class="cta-button-group" style="margin-top: 30px;">
+        <a href="../../index.html" class="cta-button">Back to ChatGPT Guides</a>
+        <a href="../index.html" class="cta-button">View All Coding Articles</a>
+      </div>
+    </main>
+    
+    <aside>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#planning">Planning Scripts</a></li>
+          <li><a href="#structure">Code Structure</a></li>
+          <li><a href="#error-handling">Error Handling</a></li>
+          <li><a href="#performance">Performance</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+          <li><a href="#example">Example</a></li>
+          <li><a href="#pitfalls">Common Pitfalls</a></li>
+          <li><a href="#tools">Tools & Resources</a></li>
+        </ul>
+      </div>
+      
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- Sidebar Ad -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+          data-ad-slot="3456789012"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </p>
+      </div>
+      
+      <div style="background: #667eea; color: white; padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: white; margin-top: 0;">Quick Tips</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>✓ Always use version control</li>
+          <li>✓ Test your scripts thoroughly</li>
+          <li>✓ Document your code</li>
+          <li>✓ Use environment variables</li>
+          <li>✓ Implement proper logging</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved.</p>
+    <p><a href="../../../about.html">About Us</a> | <a href="../../../contact.html">Contact</a> | <a href="../../../privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

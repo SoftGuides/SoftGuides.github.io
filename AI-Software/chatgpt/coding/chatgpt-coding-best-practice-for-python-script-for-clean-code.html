@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ChatGPT Best Practices for Python Script for Clean Code | Intermediate Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-clean-code.html">
+  <meta property="og:title" content="ChatGPT Best Practices for Python Script for Clean Code | Intermediate Guide">
+  <meta property="og:description" content="Master clean code principles in Python with ChatGPT assistance. Learn naming conventions, design patterns, refactoring, and code quality best practices.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-clean-code.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Best Practices for Python Script for Clean Code | Intermediate Guide">
+  <meta name="twitter:description" content="Master clean code principles in Python with ChatGPT assistance. Learn naming conventions, design patterns, refactoring, and code quality best practices.">
+  <meta name="keywords" content="security, testing, performance, automation, backend, maintainability, collaboration, refactoring, design patterns, SOLID, PEP 8, API">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT Best Practices for Python Script for Clean Code | Intermediate Guide",
+  "description": "Master clean code principles in Python with ChatGPT assistance. Learn naming conventions, design patterns, refactoring, and code quality best practices.",  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-clean-code.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "ChatGPT Best Practices for Python Script for Clean Code | Intermediate Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-clean-code.html"
+    }
+  ]
+}
+  </script>
+
+  <meta name="description" content="Master clean code principles in Python with ChatGPT assistance. Learn naming conventions, design patterns, refactoring, and code quality best practices.">
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags -->
+  
+  <!-- Structured Data (Schema.org) -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      color: white;
+      padding: 15px 20px;
+      z-index: 100;
+      font-size: 0.9rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .meta-info {
+      background: #e8e8e8;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    
+    main {
+      background: white;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    main h2 {
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+      color: #333;
+    }
+    
+    main h2:first-child {
+      margin-top: 0;
+    }
+    
+    main h3 {
+      font-size: 1.4rem;
+      margin: 25px 0 15px 0;
+      color: #555;
+    }
+    
+    main h4 {
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+      color: #666;
+      font-weight: 600;
+    }
+    
+    main p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    main ul, main ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    
+    main li {
+      margin-bottom: 8px;
+    }
+    
+    main a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    main a:hover {
+      text-decoration: underline;
+    }
+    
+    main code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+    }
+    
+    main pre {
+      background: #282c34;
+      color: #abb2bf;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    main pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+      border-radius: 0;
+    }
+    
+    aside {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: fit-content;
+      position: sticky;
+      top: 80px;
+    }
+    
+    aside h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #333;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 10px;
+    }
+    
+    .toc {
+      list-style: none;
+    }
+    
+    .toc li {
+      margin-bottom: 10px;
+    }
+    
+    .toc a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    
+    .ads {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      margin: 30px 0;
+      border-radius: 5px;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+    }
+    
+    .related-articles {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid #e0e0e0;
+    }
+    
+    .related-articles h3 {
+      margin-bottom: 20px;
+    }
+    
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    
+    .article-card {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 20px;
+      text-decoration: none;
+      color: #333;
+      transition: box-shadow 0.3s;
+    }
+    
+    .article-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-decoration: none;
+      color: #667eea;
+    }
+    
+    .article-card h4 {
+      margin-top: 0;
+      color: #667eea;
+    }
+    
+    footer {
+      background: #f0f0f0;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 50px;
+    }
+    
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+      aside {
+        position: static;
+        top: auto;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      main h2 {
+        font-size: 1.5rem;
+      }
+      
+      main h3 {
+        font-size: 1.2rem;
+      }
+      
+      nav {
+        padding: 10px;
+        font-size: 0.8rem;
+      }
+      
+      nav a {
+        margin-right: 10px;
+      }
+    }
+  </style>
+  
+  <!-- Google AdSense 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755"
+     crossorigin="anonymous"></script></head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>ChatGPT Best Practices for Python Script for Clean Code</h1>
+    <p>Master clean code principles - Intermediate guide for professional Python development</p>
+  </header>
+  
+  <!-- Navigation -->
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/AI-Software/index.html">AI-Software</a>
+    <a href="/AI-Software/chatgpt/index.html">ChatGPT</a>
+    <a href="/AI-Software/chatgpt/coding/index.html">Coding</a>
+  </nav>
+  
+  <!-- Meta Info -->
+  <div class="meta-info">
+    <strong>Category:</strong> AI-Software / ChatGPT / Coding &nbsp; | &nbsp;
+    <strong>Level:</strong> Intermediate &nbsp; | &nbsp;
+      </div>
+  
+  <!-- Main Content -->
+  <div class="container">
+    <main>
+      <!-- AdSense Block 1 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Writing clean code is not just about making it work—it's about creating code that is readable, maintainable, and efficient. This guide explores ChatGPT-assisted techniques for writing clean, professional Python code that scales well and is easy for others to understand.</p>
+      
+      <h3>Why Clean Code Matters</h3>
+      <ul>
+        <li><strong>Maintainability:</strong> Easy to modify and debug</li>
+        <li><strong>Collaboration:</strong> Easier for team members to understand</li>
+        <li><strong>Professionalism:</strong> Demonstrates coding maturity</li>
+        <li><strong>Long-term Value:</strong> Reduces technical debt</li>
+        <li><strong>Performance:</strong> Well-structured code often performs better</li>
+      </ul>
+      
+      <h3>Using ChatGPT for Code Quality</h3>
+      <p>ChatGPT can help you:</p>
+      <ul>
+        <li>Review and improve code structure</li>
+        <li>Identify code smells and anti-patterns</li>
+        <li>Suggest refactoring opportunities</li>
+        <li>Explain why certain practices are better</li>
+        <li>Generate test cases</li>
+      </ul>
+      
+      <h2 id="code-formatting-and-style">Code Formatting and Style</h2>
+      
+      <h3>PEP 8 Guidelines</h3>
+      <p>PEP 8 is Python's official style guide. Following it ensures consistency:</p>
+      <pre><code># Good: PEP 8 compliant
+def calculate_total_price(items, tax_rate):
+    """Calculate total price with tax."""
+    subtotal = sum(item['price'] for item in items)
+    total = subtotal * (1 + tax_rate)
+    return total
+
+# Bad: Not following conventions
+def calc(items,tax):
+    subtotal=sum([item['price'] for item in items])
+    total=subtotal*(1+tax)
+    return total</code></pre>
+      
+      <h3>Line Length and Breaks</h3>
+      <ul>
+        <li>Keep lines to 79 characters (or 99 for flexibility)</li>
+        <li>Break long lines logically</li>
+      </ul>
+      <pre><code># Good: Breaking at logical points
+result = function_one(arg1, arg2) + \
+         function_two(arg3, arg4)
+
+# Also good: Using parentheses
+result = (function_one(arg1, arg2) + 
+          function_two(arg3, arg4))</code></pre>
+      
+      <h3>Whitespace Usage</h3>
+      <pre><code># Good: Proper spacing
+if x > 5 and y < 10:
+    result = {'key': 'value'}
+    items = [1, 2, 3, 4, 5]
+
+# Bad: Inconsistent spacing
+if x>5and y<10:
+    result = { 'key' : 'value' }
+    items = [1,2,3,4,5]</code></pre>
+      
+      <h3>Imports Organization</h3>
+      <pre><code># Good: Organized in groups
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+
+from mymodule import function1, function2
+from mymodule.submodule import Class1</code></pre>
+      
+      <!-- AdSense Block 2 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="naming-conventions">Naming Conventions</h2>
+      
+      <h3>Variable Names</h3>
+      <pre><code># Good: Descriptive, snake_case
+user_count = 42
+is_active = True
+customer_email = "john@example.com"
+
+# Bad: Unclear abbreviations
+uc = 42
+ia = True
+ce = "john@example.com"</code></pre>
+      
+      <h3>Function Names</h3>
+      <pre><code># Good: Verb + noun, snake_case
+def get_user_by_id(user_id):
+    pass
+
+def validate_email_format(email):
+    pass
+
+def calculate_monthly_revenue(sales_data):
+    pass
+
+# Bad: Unclear names
+def process(data):
+    pass
+
+def handle_it(x):
+    pass</code></pre>
+      
+      <h3>Class Names</h3>
+      <pre><code># Good: PascalCase, noun-based
+class UserManager:
+    pass
+
+class DataProcessor:
+    pass
+
+class APIClient:
+    pass
+
+# Bad: Lowercase or vague
+class user:
+    pass
+
+class processor:
+    pass</code></pre>
+      
+      <h3>Constants</h3>
+      <pre><code># Good: UPPER_CASE
+MAX_RETRIES = 3
+DEFAULT_TIMEOUT = 30
+API_BASE_URL = "https://api.example.com"
+
+# Bad: Not clearly constant
+max_retries = 3
+timeout = 30</code></pre>
+      
+      <h2 id="functions-and-methods">Functions and Methods</h2>
+      
+      <h3>Function Design Principles</h3>
+      <p><strong>Single Responsibility Principle:</strong></p>
+      <pre><code># Good: Each function does one thing
+def validate_user_input(user_input):
+    return len(user_input) > 0 and '@' in user_input
+
+def save_user_to_database(user_data):
+    # Save logic here
+    pass
+
+# Bad: Multiple responsibilities
+def process_user(user_input):
+    if not user_input or '@' not in user_input:
+        print("Invalid input")
+        return False
+    # Save to database
+    # Send email
+    # Log activity
+    pass</code></pre>
+      
+      <h3>Function Length</h3>
+      <pre><code># Good: Focused, short function
+def calculate_discount(price, customer_type):
+    """Calculate discount based on customer type."""
+    discounts = {
+        'gold': 0.20,
+        'silver': 0.10,
+        'bronze': 0.05
+    }
+    discount_rate = discounts.get(customer_type, 0)
+    return price * (1 - discount_rate)
+
+# Bad: Too long with mixed concerns
+def process_order(order_data, customer_type, apply_discount, 
+                  send_email, update_inventory):
+    # Hundreds of lines of code
+    pass</code></pre>
+      
+      <h3>Documentation Strings</h3>
+      <pre><code># Good: Clear docstring
+def fetch_user_data(user_id, include_metadata=False):
+    """
+    Fetch user data from the database.
+    
+    Args:
+        user_id (int): The unique user identifier.
+        include_metadata (bool): Whether to include metadata.
+    
+    Returns:
+        dict: User data dictionary.
+    
+    Raises:
+        ValueError: If user_id is negative.
+        UserNotFoundError: If user doesn't exist.
+    """
+    if user_id < 0:
+        raise ValueError("user_id must be positive")
+    # Implementation
+    pass</code></pre>
+      
+      <h2 id="classes-and-object-oriented-design">Classes and Object-Oriented Design</h2>
+      
+      <h3>Class Structure</h3>
+      <pre><code># Good: Well-organized class
+class UserRepository:
+    """Handle user data operations."""
+    
+    def __init__(self, database_connection):
+        """Initialize with database connection."""
+        self.db = database_connection
+    
+    def create_user(self, user_data):
+        """Create a new user."""
+        # Implementation
+        pass
+    
+    def get_user(self, user_id):
+        """Retrieve user by ID."""
+        # Implementation
+        pass
+    
+    def update_user(self, user_id, updated_data):
+        """Update existing user."""
+        # Implementation
+        pass
+    
+    def delete_user(self, user_id):
+        """Delete user by ID."""
+        # Implementation
+        pass</code></pre>
+      
+      <h3>Inheritance and Composition</h3>
+      <pre><code># Good: Using composition over inheritance
+class Logger:
+    def log(self, message):
+        print(f"[LOG] {message}")
+
+class UserService:
+    def __init__(self, logger, repository):
+        self.logger = logger
+        self.repository = repository
+    
+    def create_user(self, user_data):
+        self.logger.log("Creating new user")
+        return self.repository.create_user(user_data)
+
+# Bad: Over-using inheritance
+class UserService(Logger, Repository, Database):
+    pass</code></pre>
+      
+      <!-- AdSense Block 3 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <h2 id="error-handling">Error Handling</h2>
+      
+      <h3>Specific Exception Handling</h3>
+      <pre><code># Good: Handle specific exceptions
+def read_json_file(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Invalid JSON in: {file_path}")
+        return None
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        raise
+
+# Bad: Catching all exceptions
+def read_json_file(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            return json.load(f)
+    except:
+        return None</code></pre>
+      
+      <h3>Custom Exceptions</h3>
+      <pre><code># Good: Custom exceptions for clarity
+class InsufficientFundsError(Exception):
+    """Raised when account doesn't have enough balance."""
+    pass
+
+class InvalidTransactionError(Exception):
+    """Raised when transaction parameters are invalid."""
+    pass
+
+def withdraw(account, amount):
+    if amount <= 0:
+        raise InvalidTransactionError("Amount must be positive")
+    if account.balance < amount:
+        raise InsufficientFundsError("Not enough balance")
+    account.balance -= amount</code></pre>
+      
+      <h2 id="code-documentation">Code Documentation</h2>
+      
+      <h3>Inline Comments</h3>
+      <pre><code># Good: Explain WHY, not WHAT
+def calculate_compound_interest(principal, rate, years):
+    # Using the compound interest formula: A = P(1 + r/n)^(nt)
+    # where n = 12 (compounded monthly)
+    return principal * (1 + rate / 12) ** (years * 12)
+
+# Bad: Obvious comments
+def calculate_compound_interest(principal, rate, years):
+    # Multiply principal by the compound interest formula
+    return principal * (1 + rate / 12) ** (years * 12)</code></pre>
+      
+      <h3>Module-Level Documentation</h3>
+      <pre><code>"""
+User Management Module
+
+This module provides classes and functions for managing user data,
+including creation, validation, authentication, and CRUD operations.
+
+Classes:
+    User: Represents a single user
+    UserRepository: Handles database operations
+    UserValidator: Validates user data
+
+Functions:
+    create_user_from_dict: Factory function for User creation
+    hash_password: Securely hash user passwords
+"""</code></pre>
+      
+      <h2 id="testing-best-practices">Testing Best Practices</h2>
+      
+      <h3>Writing Testable Code</h3>
+      <pre><code># Good: Easy to test (dependency injection)
+class OrderProcessor:
+    def __init__(self, payment_service, email_service):
+        self.payment = payment_service
+        self.email = email_service
+    
+    def process_order(self, order):
+        if not self.payment.charge(order.total):
+            raise PaymentFailedError("Payment declined")
+        self.email.send_confirmation(order)
+        return order
+
+# Bad: Hard to test (tight coupling)
+class OrderProcessor:
+    def process_order(self, order):
+        payment = PaymentService()  # Hard to mock
+        if not payment.charge(order.total):
+            raise PaymentFailedError("Payment declined")
+        email = EmailService()  # Hard to mock
+        email.send_confirmation(order)</code></pre>
+      
+      <h3>Test Organization</h3>
+      <pre><code># Good: Clear test structure
+def test_user_creation_with_valid_data():
+    """Test that valid user data creates user successfully."""
+    user_data = {'name': 'John', 'email': 'john@example.com'}
+    user = User.create(user_data)
+    
+    assert user.name == 'John'
+    assert user.email == 'john@example.com'
+
+def test_user_creation_with_invalid_email():
+    """Test that invalid email raises ValueError."""
+    user_data = {'name': 'John', 'email': 'invalid'}
+    
+    with pytest.raises(ValueError):
+        User.create(user_data)</code></pre>
+      
+      <h2 id="performance-optimization">Performance Optimization</h2>
+      
+      <h3>Efficient Data Structures</h3>
+      <pre><code># Good: Using appropriate data structures
+def find_user_quickly(users_list, user_id):
+    # Convert to dict for O(1) lookup
+    users_dict = {user['id']: user for user in users_list}
+    return users_dict.get(user_id)
+
+# Bad: Linear search each time
+def find_user_slowly(users_list, user_id):
+    for user in users_list:
+        if user['id'] == user_id:
+            return user
+    return None</code></pre>
+      
+      <h3>List Comprehensions</h3>
+      <pre><code># Good: List comprehension (faster and cleaner)
+squared = [x ** 2 for x in range(1000) if x % 2 == 0]
+
+# Acceptable: Traditional loop
+squared = []
+for x in range(1000):
+    if x % 2 == 0:
+        squared.append(x ** 2)</code></pre>
+      
+      <h2 id="security-considerations">Security Considerations</h2>
+      
+      <h3>Input Validation</h3>
+      <pre><code># Good: Validate all inputs
+def create_user(user_data):
+    if not isinstance(user_data, dict):
+        raise TypeError("user_data must be a dictionary")
+    if 'email' not in user_data:
+        raise ValueError("email is required")
+    if not validate_email(user_data['email']):
+        raise ValueError("Invalid email format")
+    
+    # Proceed with creation
+    return User.create(user_data)
+
+# Bad: No validation
+def create_user(user_data):
+    return User.create(user_data)</code></pre>
+      
+      <h3>Secure Password Handling</h3>
+      <pre><code># Good: Hash passwords with salt
+import bcrypt
+
+def hash_password(password):
+    return bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+
+def verify_password(password, hashed):
+    return bcrypt.checkpw(password.encode(), hashed)
+
+# Bad: Storing plain text passwords
+def create_user(username, password):
+    user = User(username=username, password=password)
+    user.save()</code></pre>
+      
+      <h2 id="refactoring-techniques">Refactoring Techniques</h2>
+      
+      <h3>Reducing Complexity</h3>
+      <pre><code># Bad: High cyclomatic complexity
+def validate_user(user):
+    if user.age < 18:
+        return False
+    elif user.age > 120:
+        return False
+    elif not user.email:
+        return False
+    elif not user.name:
+        return False
+    elif len(user.password) < 8:
+        return False
+    return True
+
+# Good: Extract validation logic
+def validate_user(user):
+    """Validate user data."""
+    validators = [
+        is_valid_age,
+        has_email,
+        has_name,
+        has_strong_password
+    ]
+    return all(validator(user) for validator in validators)
+
+def is_valid_age(user):
+    return 18 <= user.age <= 120</code></pre>
+      
+      <!-- AdSense Block 4 -->
+      
+<!-- 반려동물 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9374368296307755"
+     data-ad-slot="4652042516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+      <!-- Related Articles -->
+      <div class="related-articles">
+        <h3>Related Articles</h3>
+        <div class="article-grid">
+          <a href="/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-beginners.html" class="article-card">
+            <h4>Python Beginners Guide</h4>
+            <p>Start your Python journey with ChatGPT assistance and practical examples.</p>
+          </a>
+          <a href="/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-backend.html" class="article-card">
+            <h4>Backend Development</h4>
+            <p>Master backend development with Python and professional practices.</p>
+          </a>
+          <a href="/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-automation.html" class="article-card">
+            <h4>Automation Scripts</h4>
+            <p>Write efficient automation scripts using Python best practices.</p>
+          </a>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Sidebar -->
+    <aside>
+      <h3>Table of Contents</h3>
+      <ul class="toc">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#code-formatting-and-style">Code Formatting</a></li>
+        <li><a href="#naming-conventions">Naming Conventions</a></li>
+        <li><a href="#functions-and-methods">Functions & Methods</a></li>
+        <li><a href="#classes-and-object-oriented-design">Classes & OOP</a></li>
+        <li><a href="#error-handling">Error Handling</a></li>
+        <li><a href="#code-documentation">Documentation</a></li>
+        <li><a href="#testing-best-practices">Testing</a></li>
+        <li><a href="#performance-optimization">Performance</a></li>
+        <li><a href="#security-considerations">Security</a></li>
+        <li><a href="#refactoring-techniques">Refactoring</a></li>
+      </ul>
+      
+      <div class="ads" style="margin-top: 30px;">
+      </div>
+    </aside>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/contact.html">Contact</a></p>
+  </footer>
+</body>
+</html>

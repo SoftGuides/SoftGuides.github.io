@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ChatGPT Best Practices for Python Script Collaboration | Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-collaboration.html">
+  <meta property="og:title" content="ChatGPT Best Practices for Python Script Collaboration | Guide">
+  <meta property="og:description" content="Practical practices for collaborating on Python projects with ChatGPT—workflows, reviews, CI, and team communication.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-collaboration.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT Best Practices for Python Script Collaboration | Guide">
+  <meta name="twitter:description" content="Practical practices for collaborating on Python projects with ChatGPT—workflows, reviews, CI, and team communication.">
+  <meta name="keywords" content="testing, logging, collaboration, refactoring, SOLID, API, GitHub, ChatGPT, Best, Practices, for, Python">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ChatGPT Best Practices for Python Script Collaboration | Guide",
+  "description": "Practical practices for collaborating on Python projects with ChatGPT—workflows, reviews, CI, and team communication.",  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-collaboration.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "ChatGPT Best Practices for Python Script Collaboration | Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-collaboration.html"
+    }
+  ]
+}
+  </script>
+
+  <meta name="description" content="Practical practices for collaborating on Python projects with ChatGPT—workflows, reviews, CI, and team communication.">
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Tags -->
+  
+  <!-- Structured Data (Schema.org) -->
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+    
+    nav {
+      background: #333;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #667eea;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+    
+    main {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .toc {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .toc h3 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 1.1rem;
+    }
+    
+    .toc ul {
+      list-style: none;
+    }
+    
+    .toc ul li {
+      margin: 8px 0;
+    }
+    
+    .toc a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    
+    .toc a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+    
+    h3 {
+      color: #555;
+      font-size: 1.4rem;
+      margin: 30px 0 15px 0;
+    }
+    
+    h4 {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+    
+    p {
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+      font-size: 0.95rem;
+    }
+    
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+    
+    pre code {
+      color: inherit;
+      background: none;
+      padding: 0;
+    }
+    
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    
+    .highlight-box {
+      background: #e8f4f8;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .highlight-box strong {
+      color: #667eea;
+    }
+    
+    .ad-block {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+    }
+    
+    .ad-block p {
+      color: #999;
+      font-size: 0.85rem;
+      margin: 5px 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px 10px 10px 0;
+      transition: background 0.3s;
+      font-weight: 600;
+    }
+    
+    .cta-button:hover {
+      background: #764ba2;
+    }
+    
+    .meta-info {
+      color: #999;
+      font-size: 0.95rem;
+      margin: 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    .related-articles {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    
+    .related-articles h3 {
+      margin-top: 0;
+    }
+    
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .article-card {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: #667eea;
+      transition: all 0.3s;
+    }
+    
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(102,126,234,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  
+  <!-- Google AdSense 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755"
+     crossorigin="anonymous"></script></head>
+<body>
+  <header>
+    <h1>ChatGPT Best Practices for Python Script Collaboration</h1>
+    <p>Practical practices for collaborating on Python projects using ChatGPT while preserving team standards and review.</p>
+  </header>
+  
+  <nav>
+    <a href="../../../index.html">Home</a>
+    <a href="../../../AI-Software/index.html">AI Software</a>
+    <a href="../../index.html">ChatGPT</a>
+    <a href="../index.html">Coding</a>
+  </nav>
+  
+  <div class="container">
+    <main>
+      <div class="meta-info">
+        <strong>Category:</strong> ChatGPT Coding Guide | 
+        <strong>Level:</strong> Intermediate
+      </div>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Collaborating effectively on Python code requires shared conventions, automated checks, and clear communication. ChatGPT can accelerate routine tasks—drafting PR descriptions, suggesting refactors, or scaffolding tests—but its suggestions must be reviewed and validated by humans.</p>
+      
+      <h2 id="code-review-best-practices">Code Review Best Practices</h2>
+      <p>Code reviews improve code quality and shared understanding. Use ChatGPT to generate review checklists, draft review comments, or propose refactorings, but always validate suggestions with human reviewers.</p>
+      
+      <h3 id="review-checklist">Review checklist (example)</h3>
+      <ul>
+        <li>Are names (variables, functions, classes) clear and intention-revealing?</li>
+        <li>Does each function follow single responsibility principles?</li>
+        <li>Are edge cases and input validation handled?</li>
+        <li>Are there unit tests covering critical behavior?</li>
+        <li>Are secrets or credentials absent from source code?</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <strong>Example concise review message:</strong>
+        <p style="margin-top:10px;">Suggestion: Consider splitting <code>process_items()</code> into smaller functions to reduce cyclomatic complexity. Add explicit input validation and a unit test for the empty input case.</p>
+      </div>
+      
+      <h2 id="pair-programming">Pair Programming with ChatGPT</h2>
+      <blockquote>
+        When pair-programming, alternate roles: one developer drives design while the other implements and verifies. Use ChatGPT to quickly generate alternative implementations, explain unfamiliar APIs, or rewrite code snippets into clearer forms for discussion.
+      </blockquote>
+      
+      <h4>Prompts that help</h4>
+      <pre><code>Suggest a more efficient implementation for this function and explain trade-offs:
+&lt;insert code&gt;</code></pre>
+      
+      <h2 id="branching-and-pr">Branching and Pull Request Strategy</h2>
+      <p>Prefer small, focused pull requests with descriptive titles and clear descriptions of what changed and why. Adopt a branch naming convention and a PR template that lists testing steps, scope, and related issues.</p>
+      
+      <h3>Branch name examples</h3>
+      <ul>
+        <li><code>feature/auth-rate-limiter</code></li>
+        <li><code>fix/session-timeout</code></li>
+      </ul>
+      
+      <h3>PR title example</h3>
+      <p><code>feat(auth): add rate limiting for login attempts</code></p>
+      
+      <h3>PR template fields</h3>
+      <ul>
+        <li>Summary of changes</li>
+        <li>How to reproduce / test</li>
+        <li>Screenshots or logs (if applicable)</li>
+        <li>Related issue number</li>
+      </ul>
+      
+      <h2 id="testing-linters-ci">Testing, Linters, and CI</h2>
+      <p>Automate tests and static checks in CI to ensure every PR meets baseline quality gates. ChatGPT can scaffold unit tests or CI YAML files, but maintain ownership of test logic and expectations.</p>
+      
+      <pre><code># pytest unit test example
+def test_add():
+	from mymodule import add
+	assert add(2, 3) == 5</code></pre>
+      
+      <pre><code># Minimal GitHub Actions workflow
+name: CI
+on: [push, pull_request]
+jobs:
+	test:
+		runs-on: ubuntu-latest
+		steps:
+			- uses: actions/checkout@v3
+			- uses: actions/setup-python@v4
+				with:
+					python-version: '3.10'
+			- run: pip install -r requirements.txt
+			- run: pytest -q</code></pre>
+      
+      <h2 id="documentation">Documentation and Team Communication</h2>
+      <p>Keep README, CHANGELOG, and in-code docstrings up to date. Use ChatGPT to draft documentation from code and tests, then edit for correctness and style. Ensure onboarding docs explain local setup and test commands.</p>
+      
+      <h4>Prompt example</h4>
+      <pre><code>Create a usage section and examples for this function:
+&lt;insert function code&gt;</code></pre>
+      
+      <h2 id="conclusion">Conclusion and Practical Checklist</h2>
+      <p>ChatGPT accelerates many collaboration tasks but should not replace human judgement. Use it to remove friction—scaffolding tests, drafting PR descriptions, and suggesting refactors—while enforcing team validation steps.</p>
+      
+      <ul>
+        <li>Keep PRs small and focused with clear descriptions</li>
+        <li>Run automated tests and linters in CI for each PR</li>
+        <li>Use a consistent code review checklist</li>
+        <li>Maintain documentation: README, CHANGELOG, docstrings</li>
+        <li>Always review and test ChatGPT-generated code or suggestions</li>
+      </ul>
+      
+      <p style="margin-top: 30px;">If you want, I can generate a <a href="/ .github/PULL_REQUEST_TEMPLATE.md">PULL_REQUEST_TEMPLATE.md</a>, a one-page review checklist, or a team onboarding doc based on this article. Tell me which artifact to create first.</p>
+      
+      <div class="cta-button-group" style="margin-top: 30px;">
+        <a href="../../index.html" class="cta-button">Back to ChatGPT Guides</a>
+        <a href="../index.html" class="cta-button">View All Coding Articles</a>
+      </div>
+    </main>
+    
+    <aside>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#code-review-best-practices">Code Review Best Practices</a></li>
+          <li><a href="#pair-programming">Pair Programming with ChatGPT</a></li>
+          <li><a href="#branching-and-pr">Branching & Pull Requests</a></li>
+          <li><a href="#testing-linters-ci">Testing & CI</a></li>
+          <li><a href="#documentation">Documentation</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </div>
+      
+      <div class="ad-block">
+        <p style="font-size: 0.8rem;">
+          
+          <!-- Sidebar Ad -->
+          <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+          data-ad-slot="3456789012"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </p>
+      </div>
+      
+      <div style="background: #667eea; color: white; padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: white; margin-top: 0;">Quick Tips</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>✓ Always use version control</li>
+          <li>✓ Test your scripts thoroughly</li>
+          <li>✓ Document your code</li>
+          <li>✓ Use environment variables</li>
+          <li>✓ Implement proper logging</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved.</p>
+    <p><a href="../../../about.html">About Us</a> | <a href="../../../contact.html">Contact</a> | <a href="../../../privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
