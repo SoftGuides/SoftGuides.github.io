@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fast Debugging Techniques for Python Scripts | ChatGPT Debugging Guide</title>
+  <link rel="canonical" href="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-fast-debugging.html">
+  <meta property="og:title" content="Fast Debugging Techniques for Python Scripts | ChatGPT Debugging Guide">
+  <meta property="og:description" content="A practical guide to fast debugging for Python scripts with reproduction, logging, trace analysis, profiling, testing, and ChatGPT-assisted triage.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-fast-debugging.html">
+  <meta property="og:site_name" content="SoftGuides">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fast Debugging Techniques for Python Scripts | ChatGPT Debugging Guide">
+  <meta name="twitter:description" content="A practical guide to fast debugging for Python scripts with reproduction, logging, trace analysis, profiling, testing, and ChatGPT-assisted triage.">
+  <meta name="keywords" content="Python debugging, fast debugging, ChatGPT triage, tracebacks, structured logging, profiling, test-driven debugging, production diagnostics">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fast Debugging Techniques for Python Scripts | ChatGPT Debugging Guide",
+  "description": "A practical guide to fast debugging for Python scripts with reproduction, logging, trace analysis, profiling, testing, and ChatGPT-assisted triage.",
+  "author": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftGuides"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-fast-debugging.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://softguides.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Software",
+      "item": "https://softguides.github.io/AI-Software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Coding",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Fast Debugging Techniques for Python Scripts | ChatGPT Debugging Guide",
+      "item": "https://softguides.github.io/AI-Software/chatgpt/coding/chatgpt-coding-best-practice-for-python-script-for-fast-debugging.html"
+    }
+  ]
+}
+  </script>
+  <meta name="description" content="A practical guide to fast debugging for Python scripts with reproduction, logging, trace analysis, profiling, testing, and ChatGPT-assisted triage.">
+  <meta name="author" content="SoftGuides">
+  <meta name="robots" content="index, follow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #f5f5f5;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+    nav {
+      background: #333;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #667eea;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 30px;
+      padding: 30px 20px;
+      align-items: start;
+    }
+    main {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      min-width: 0;
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      min-width: 0;
+    }
+    .toc {
+      display: block;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      width: 100%;
+    }
+    .toc h3 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 1.1rem;
+    }
+    .toc ul {
+      list-style: none;
+    }
+    .toc ul li {
+      margin: 8px 0;
+    }
+    .toc a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    .toc a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    h2 {
+      color: #333;
+      font-size: 2rem;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+    h3 {
+      color: #555;
+      font-size: 1.4rem;
+      margin: 30px 0 15px 0;
+    }
+    h4 {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+    p {
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+      font-size: 0.95rem;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+    pre code {
+      color: inherit;
+      background: none;
+      padding: 0;
+    }
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .highlight-box {
+      background: #e8f4f8;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .highlight-box strong {
+      color: #1a3566;
+    }
+    .ad-block {
+      background: #f8f9ff;
+      padding: 18px 18px 16px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #dfe3f9;
+      margin: 24px 0;
+    }
+    .ad-block p {
+      color: #7b7f9b;
+      font-size: 0.88rem;
+      margin: 0;
+    }
+    .meta-info {
+      color: #6c6c80;
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e6e8f3;
+      padding-bottom: 22px;
+    }
+    .meta-info strong {
+      color: #3340a0;
+    }
+    .tip-card {
+      background: #eef7f8;
+      border-left: 5px solid #1d8a82;
+      padding: 20px 20px 18px;
+      border-radius: 14px;
+    }
+    .tip-card h4 {
+      margin-bottom: 14px;
+      color: #164d50;
+    }
+    .tip-card ul {
+      margin-top: 0;
+    }
+    .cta-button-group {
+      margin-top: 36px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #3f5ed8;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-right: 14px;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      background: #2d47b0;
+    }
+    footer {
+      background: #141a32;
+      color: #c8d0ff;
+      text-align: center;
+      padding: 34px 20px;
+      border-radius: 0 0 18px 18px;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #8aa0ff;
+      text-decoration: none;
+    }
+    .section-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .section-row article {
+      background: #f8fbff;
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid #e1e7f8;
+    }
+    .keyword-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .keyword-list li {
+      margin: 8px 0;
+      padding-left: 6px;
+    }
+    @media (max-width: 1040px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 14px;
+      }
+      main {
+        padding: 24px 18px;
+      }
+      aside {
+        order: 2;
+      }
+      .toc {
+        display: block;
+        position: static;
+        top: auto;
+      }
+    }
+    @media (max-width: 720px) {
+      .section-row { grid-template-columns: 1fr; }
+      header h1 { font-size: 2.2rem; }
+      header { padding: 40px 16px; }
+      nav { padding: 12px 14px; }
+      nav a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 6px;
+      }
+      .keyword-list { grid-template-columns: 1fr; }
+      .cta-button {
+        display: block;
+        margin: 8px 0;
+        text-align: center;
+      }
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9374368296307755" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Fast Debugging Techniques for Python Scripts</h1>
+    <p>Build a reproducible, reliable debugging workflow for Python scripts with focused diagnostics, smarter logging, interactive inspection, profiling, testing, and targeted ChatGPT-assisted triage.</p>
+  </header>
+  <nav>
+    <a href="../../../index.html">Home</a>
+    <a href="../../../AI-Software/index.html">AI Software</a>
+    <a href="../../index.html">ChatGPT</a>
+    <a href="../index.html">Coding</a>
+  </nav>
+  <div class="container">
+    <main>
+      <div class="meta-info">
+        <strong>Category:</strong> ChatGPT Coding Guide |
+        <strong>Focus:</strong> Fast debugging, production diagnosis, root cause analysis
+      </div>
+
+      <h2 id="introduction">Introduction</h2>
+      <p>Fast debugging is a discipline that helps you identify the root cause of failures quickly and verify the fix confidently. It is especially valuable for Python scripts used in automation, data processing, deployment, and incident response.</p>
+      <p>This guide gives you a repeatable workflow to reduce wasted time, isolate the real cause, and turn each bug into a stronger, better-documented system.</p>
+
+      <h2 id="why-fast-debugging">Why Fast Debugging Matters</h2>
+      <p>Every minute spent chasing an unclear bug costs time and confidence. Fast debugging shortens recovery time, improves reliability, and gives teams a better foundation for collaboration.</p>
+      <ul>
+        <li>Faster incident response</li>
+        <li>Less downtime and fewer repeated failures</li>
+        <li>Clearer bug reports and handoffs</li>
+        <li>Better long-term test coverage</li>
+        <li>Less frustration during production issues</li>
+      </ul>
+
+      <h2 id="prepare">1. Prepare for Debugging</h2>
+      <p>Preparation reduces wasted effort. Before you start, verify the runtime environment, inputs, and code version so you are debugging the right thing.</p>
+      <h3>1.1 Validate the runtime environment</h3>
+      <p>Check the Python version, virtual environment, installed packages, and any system-level dependencies that affect the script.</p>
+      <pre><code>python --version
+pip show -f mypackage
+pip freeze | grep requests</code></pre>
+      <h3>1.2 Capture the exact failing inputs</h3>
+      <p>Save the command, configuration, sample data, and logs that triggered the problem. Reproduce the issue with exactly the same conditions when possible.</p>
+
+      <h2 id="reproduce">2. Reproduce the Failure</h2>
+      <p>A reliable reproduction is the foundation of debugging. If the issue cannot be reproduced, the fix cannot be safely validated.</p>
+      <h3>2.1 Create a minimal reproduction</h3>
+      <p>Reduce the problem to the smallest snippet that still triggers the bug. This often surfaces the actual cause much faster.</p>
+      <pre><code>from my_app.pipeline import run_step
+
+payload = {"user_id": 123, "payload": "sample"}
+print(run_step(payload))</code></pre>
+      <h3>2.2 Reproduce in a controlled environment</h3>
+      <p>Use a local or isolated environment whenever possible so you can test hypotheses without external noise.</p>
+
+      <h2 id="signal">3. Separate Signal from Noise</h2>
+      <p>Focus on the first meaningful failure and its surrounding state. Ignore warnings and downstream errors that are symptoms rather than the root cause.</p>
+      <div class="highlight-box">
+        <strong>Tip:</strong> If the issue disappears after a restart or rebuild, stale state or cached data may be involved. Capture the previous state before retrying.
+      </div>
+
+      <h2 id="logging">4. Logging for Fast Diagnosis</h2>
+      <p>Good logs make failures visible and easier to reason about. Structured logs are especially helpful because they are easier to filter and search.</p>
+      <h3>4.1 Structured log messages</h3>
+      <pre><code>import logging
+from pythonjsonlogger import jsonlogger
+
+logger = logging.getLogger("app")
+handler = logging.StreamHandler()
+formatter = jsonlogger.JsonFormatter("%(asctime)s %(name)s %(levelname)s %(message)s %(trace_id)s")
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
+
+logger.info("step complete", extra={"trace_id": "abc123"})</code></pre>
+      <h3>4.2 Log relevant context</h3>
+      <p>Include request IDs, function names, payload summaries, timing data, and service names so you can reconstruct the failing execution path.</p>
+      <h3>4.3 Use log levels intentionally</h3>
+      <p>Reserve ERROR for hard failures, WARNING for suspicious states, INFO for major workflow events, and DEBUG for detailed state inspection.</p>
+
+      <h2 id="interactive-debugging">5. Interactive Debugging Techniques</h2>
+      <p>Interactive debugging lets you inspect variables, step through code, and test hypotheses in real time.</p>
+      <h3>5.1 Using pdb</h3>
+      <pre><code>import pdb
+
+def calculate_score(data):
+    pdb.set_trace()
+    return sum(data)</code></pre>
+      <p>Use breakpoints in development or controlled integration environments. Avoid leaving them in production code.</p>
+      <h3>5.2 Using ipdb</h3>
+      <pre><code>import ipdb
+
+ipdb.set_trace()</code></pre>
+      <p>ipdb provides a more interactive experience and is often easier to use for exploratory debugging.</p>
+
+      <h2 id="traceback-analysis">6. Traceback Analysis</h2>
+      <p>Tracebacks are your fastest path to the failing frame. Read them from the first application-level frame downward and inspect the values around that point.</p>
+      <h3>6.1 Common exception patterns</h3>
+      <ul>
+        <li><strong>KeyError</strong>: missing dictionary key or unexpected input shape</li>
+        <li><strong>TypeError</strong>: wrong type or function contract violation</li>
+        <li><strong>ValueError</strong>: invalid parsing or unexpected value</li>
+        <li><strong>AttributeError</strong>: missing attribute or unexpected None</li>
+      </ul>
+
+      <h2 id="profiling">7. Profiling and Performance Debugging</h2>
+      <p>Performance issues often look like bugs during execution. Profiling shows where the script spends time and where bottlenecks begin.</p>
+      <h3>7.1 Sampling profiling with pyinstrument</h3>
+      <pre><code>pip install pyinstrument
+pyinstrument my_script.py</code></pre>
+      <h3>7.2 Deterministic profiling with cProfile</h3>
+      <pre><code>import cProfile
+
+cProfile.run("run_pipeline()", "profile.stats")</code></pre>
+      <p>Use the output with pstats or visualization tools such as snakeviz.</p>
+
+      <h2 id="test-driven-debugging">8. Reproduce Bugs with Tests</h2>
+      <p>Regression tests turn an obscure issue into a stable safety net. Add a test as soon as you isolate the bug.</p>
+      <h3>8.1 Add direct regression tests</h3>
+      <pre><code>def test_invalid_input_returns_error():
+    payload = {"name": "", "amount": "ten"}
+    result = validate_request(payload)
+    assert result["valid"] is False</code></pre>
+      <h3>8.2 Parameterized edge case coverage</h3>
+      <pre><code>import pytest
+
+@pytest.mark.parametrize("payload", [
+    {"id": None},
+    {"name": ""},
+    {"value": "abc"},
+])
+def test_edge_cases(payload):
+    assert validate_payload(payload)["valid"] is False</code></pre>
+
+      <h2 id="debugging-workflow">9. Debugging Workflow and Collaboration</h2>
+      <p>A consistent workflow makes debugging faster and easier to share with teammates.</p>
+      <ul>
+        <li>Describe what happened and what was expected</li>
+        <li>Include exact reproduction steps</li>
+        <li>Record what hypotheses were already tested</li>
+        <li>Keep the fix small and easy to review</li>
+      </ul>
+
+      <h2 id="chatgpt-triage">10. Using ChatGPT for Debugging Triage</h2>
+      <p>ChatGPT can accelerate debugging when you provide it with enough context to reason about the failure.</p>
+      <h3>10.1 Provide the right context</h3>
+      <ul>
+        <li>A concise problem description</li>
+        <li>The relevant code snippet</li>
+        <li>The full traceback</li>
+        <li>Recent configuration or code changes</li>
+        <li>The reproduction steps and inputs</li>
+      </ul>
+      <h3>10.2 Example prompt</h3>
+      <pre><code>"A Python script fails with a KeyError on the 'email' field. Here is the function and traceback. What is the most likely root cause and what debugging steps should I take first?"</code></pre>
+      <p>Use its suggestions as hypotheses to test, not as a substitute for your own verification.</p>
+
+      <h2 id="remote-debugging">11. Remote and Production Debugging</h2>
+      <p>For production issues, prefer non-invasive instrumentation and preserve the original behavior while you gather evidence.</p>
+      <ul>
+        <li>Attach a debugger remotely when needed</li>
+        <li>Add temporary logs and metrics</li>
+        <li>Avoid changing logic until the failure is understood</li>
+      </ul>
+
+      <h2 id="root-cause-analysis">12. Root Cause Analysis</h2>
+      <p>Fast debugging should end with a verified root cause and a durable fix. Write a short statement that explains the failure clearly.</p>
+      <h3>12.1 Confirm with tests</h3>
+      <p>Make sure the bug cannot recur under the same conditions and that nearby edge cases remain safe.</p>
+
+      <h2 id="common-patterns">13. Common Fast Debugging Patterns</h2>
+      <div class="section-row">
+        <article>
+          <h4>Validate inputs at boundaries</h4>
+          <p>Catch bad data early so the failure is explicit and actionable.</p>
+        </article>
+        <article>
+          <h4>Trace the first change</h4>
+          <p>Find where the data first becomes invalid or unexpected.</p>
+        </article>
+      </div>
+      <div class="section-row">
+        <article>
+          <h4>Log before and after</h4>
+          <p>Compare state before and after an operation to find where the bug is introduced.</p>
+        </article>
+        <article>
+          <h4>Keep a failure timeline</h4>
+          <p>Track when the issue started, what changed, and when it was resolved.</p>
+        </article>
+      </div>
+
+      <h2 id="tooling">14. Recommended Tools</h2>
+      <ul class="keyword-list">
+        <li><code>pdb</code>, <code>ipdb</code>, <code>debugpy</code></li>
+        <li><code>pyinstrument</code>, <code>cProfile</code>, <code>py-spy</code></li>
+        <li><code>python-json-logger</code>, <code>structlog</code>, <code>loguru</code></li>
+        <li><code>pytest</code>, <code>hypothesis</code>, <code>unittest</code></li>
+      </ul>
+
+      <h2 id="checklist">15. Fast Debugging Checklist</h2>
+      <ul>
+        <li>Capture an exact reproduction</li>
+        <li>Verify runtime and package versions</li>
+        <li>Create a minimal failing example</li>
+        <li>Add structured diagnostic logs</li>
+        <li>Use a debugger or trace to inspect state</li>
+        <li>Turn the failure into a regression test</li>
+        <li>Review the fix before deployment</li>
+        <li>Document the root cause clearly</li>
+      </ul>
+
+      <h2 id="common-mistakes">16. Common Debugging Mistakes to Avoid</h2>
+      <ul>
+        <li>Changing too much code at once</li>
+        <li>Ignoring the first failing frame</li>
+        <li>Assuming the environment is correct without verifying it</li>
+        <li>Removing logging before the issue is understood</li>
+        <li>Treating ChatGPT suggestions as definitive answers</li>
+      </ul>
+
+      <h2 id="next-steps">17. Next Steps</h2>
+      <p>After fixing a bug, update your tests and documentation so the same issue becomes easier to detect and resolve next time.</p>
+      <p>Continuous improvement of your debugging workflow makes every future incident faster to solve.</p>
+
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Fast debugging is about making failure diagnosis reliable, repeatable, and visible. A strong combination of reproduction, logging, inspection, profiling, and tests will help you resolve bugs faster with less risk.</p>
+      <p>Use this guide as a practical reference for everything from small local errors to production incident triage.</p>
+
+      <div class="cta-button-group">
+        <a href="../../index.html" class="cta-button">Back to ChatGPT Guides</a>
+        <a href="../index.html" class="cta-button">View All Coding Articles</a>
+      </div>
+    </main>
+    <aside>
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#why-fast-debugging">Why Fast Debugging Matters</a></li>
+          <li><a href="#prepare">Prepare for Debugging</a></li>
+          <li><a href="#reproduce">Reproduce the Failure</a></li>
+          <li><a href="#signal">Separate Signal from Noise</a></li>
+          <li><a href="#logging">Logging for Fast Diagnosis</a></li>
+          <li><a href="#interactive-debugging">Interactive Debugging Techniques</a></li>
+          <li><a href="#traceback-analysis">Traceback Analysis</a></li>
+          <li><a href="#profiling">Profiling and Performance Debugging</a></li>
+          <li><a href="#test-driven-debugging">Reproduce Bugs with Tests</a></li>
+          <li><a href="#debugging-workflow">Debugging Workflow</a></li>
+          <li><a href="#chatgpt-triage">ChatGPT Triage</a></li>
+          <li><a href="#remote-debugging">Remote Debugging</a></li>
+          <li><a href="#root-cause-analysis">Root Cause Analysis</a></li>
+          <li><a href="#common-patterns">Common Patterns</a></li>
+          <li><a href="#tooling">Recommended Tools</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#common-mistakes">Common Mistakes</a></li>
+          <li><a href="#next-steps">Next Steps</a></li>
+        </ul>
+      </div>
+      <div class="ad-block">
+        <p>Useful debugging habits often save more time than changing code quickly.</p>
+      </div>
+      <div class="tip-card">
+        <h4>Fast Debugging Quick Tips</h4>
+        <ul>
+          <li>Reproduce first</li>
+          <li>Log the failing state</li>
+          <li>Inspect the first real exception</li>
+          <li>Turn the bug into a test</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h4>Debugging Workflow</h4>
+        <p>Capture evidence, isolate the cause, test a small fix, and verify the outcome before shipping.</p>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <p>&copy; SoftGuides. All rights reserved.</p>
+    <p><a href="../../../about.html">About Us</a> | <a href="../../../contact.html">Contact</a> | <a href="../../../privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
